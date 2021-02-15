@@ -41,8 +41,17 @@ namespace Talegen.AspNetCore.Multitenant
         /// Initializes a new instance of the <see cref="MultiTenantMiddleware{TTenant}" /> class.
         /// </summary>
         /// <param name="next">The next request delegate.</param>
-        /// <param name="logger">Contains an optional logger instance.</param>
-        public MultiTenantMiddleware(RequestDelegate next, ILogger logger = null)
+        public MultiTenantMiddleware(RequestDelegate next)
+            : this(next, null)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MultiTenantMiddleware{TTenant}" /> class.
+        /// </summary>
+        /// <param name="next">The next request delegate.</param>
+        /// <param name="logger">Contains a logger instance.</param>
+        public MultiTenantMiddleware(RequestDelegate next, ILogger logger)
         {
             this.nextRequest = next;
             this.logger = logger;

@@ -5,6 +5,7 @@ items:
   id: MultiTenantMiddleware`1
   parent: Talegen.AspNetCore.Multitenant
   children:
+  - Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)
   - Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger)
   - Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.Invoke(Microsoft.AspNetCore.Http.HttpContext)
   langs:
@@ -54,6 +55,44 @@ items:
   - Class
   fullName.vb: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware(Of TTenant)
   name.vb: MultiTenantMiddleware(Of TTenant)
+- uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)
+  commentId: M:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)
+  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate)'
+  parent: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+  langs:
+  - csharp
+  - vb
+  name: MultiTenantMiddleware(RequestDelegate)
+  nameWithType: MultiTenantMiddleware<TTenant>.MultiTenantMiddleware(RequestDelegate)
+  fullName: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware<TTenant>.MultiTenantMiddleware(Microsoft.AspNetCore.Http.RequestDelegate)
+  type: Constructor
+  source:
+    remote:
+      path: src/MultiTenantMiddleware.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: .ctor
+    path: MultiTenantMiddleware.cs
+    startLine: 43
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.AspNetCore.Multitenant.MultiTenantMiddleware%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public MultiTenantMiddleware(RequestDelegate next)
+    parameters:
+    - id: next
+      type: Microsoft.AspNetCore.Http.RequestDelegate
+      description: The next request delegate.
+    content.vb: Public Sub New(next As RequestDelegate)
+  overload: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor*
+  nameWithType.vb: MultiTenantMiddleware(Of TTenant).MultiTenantMiddleware(RequestDelegate)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware(Of TTenant).MultiTenantMiddleware(Microsoft.AspNetCore.Http.RequestDelegate)
 - uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger)
   commentId: M:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger)
   id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger)'
@@ -72,22 +111,22 @@ items:
       repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
     id: .ctor
     path: MultiTenantMiddleware.cs
-    startLine: 44
+    startLine: 53
   assemblies:
   - Talegen.AspNetCore.Multitenant
   namespace: Talegen.AspNetCore.Multitenant
   summary: "\nInitializes a new instance of the <xref href=\"Talegen.AspNetCore.Multitenant.MultiTenantMiddleware%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
   example: []
   syntax:
-    content: public MultiTenantMiddleware(RequestDelegate next, ILogger logger = null)
+    content: public MultiTenantMiddleware(RequestDelegate next, ILogger logger)
     parameters:
     - id: next
       type: Microsoft.AspNetCore.Http.RequestDelegate
       description: The next request delegate.
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger
-      description: Contains an optional logger instance.
-    content.vb: Public Sub New(next As RequestDelegate, logger As ILogger = Nothing)
+      description: Contains a logger instance.
+    content.vb: Public Sub New(next As RequestDelegate, logger As ILogger)
   overload: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor*
   nameWithType.vb: MultiTenantMiddleware(Of TTenant).MultiTenantMiddleware(RequestDelegate, ILogger)
   modifiers.csharp:
@@ -113,7 +152,7 @@ items:
       repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
     id: Invoke
     path: MultiTenantMiddleware.cs
-    startLine: 57
+    startLine: 66
   assemblies:
   - Talegen.AspNetCore.Multitenant
   namespace: Talegen.AspNetCore.Multitenant
@@ -484,6 +523,12 @@ references:
   name: RequestDelegate
   nameWithType: RequestDelegate
   fullName: Microsoft.AspNetCore.Http.RequestDelegate
+- uid: Microsoft.AspNetCore.Http
+  commentId: N:Microsoft.AspNetCore.Http
+  isExternal: true
+  name: Microsoft.AspNetCore.Http
+  nameWithType: Microsoft.AspNetCore.Http
+  fullName: Microsoft.AspNetCore.Http
 - uid: Microsoft.Extensions.Logging.ILogger
   commentId: T:Microsoft.Extensions.Logging.ILogger
   parent: Microsoft.Extensions.Logging
@@ -491,12 +536,6 @@ references:
   name: ILogger
   nameWithType: ILogger
   fullName: Microsoft.Extensions.Logging.ILogger
-- uid: Microsoft.AspNetCore.Http
-  commentId: N:Microsoft.AspNetCore.Http
-  isExternal: true
-  name: Microsoft.AspNetCore.Http
-  nameWithType: Microsoft.AspNetCore.Http
-  fullName: Microsoft.AspNetCore.Http
 - uid: Microsoft.Extensions.Logging
   commentId: N:Microsoft.Extensions.Logging
   isExternal: true

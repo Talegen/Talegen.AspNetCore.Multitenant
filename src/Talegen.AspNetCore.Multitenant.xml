@@ -157,12 +157,18 @@
             Contains the next request
             </summary>
         </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1" /> class.
+            </summary>
+            <param name="next">The next request delegate.</param>
+        </member>
         <member name="M:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger)">
             <summary>
             Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1" /> class.
             </summary>
             <param name="next">The next request delegate.</param>
-            <param name="logger">Contains an optional logger instance.</param>
+            <param name="logger">Contains a logger instance.</param>
         </member>
         <member name="M:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
             <summary>

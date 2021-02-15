@@ -23,6 +23,7 @@
   "Talegen.AspNetCore.Multitenant.MultiTenantException": "Talegen.AspNetCore.Multitenant.MultiTenantException.yml",
   "Talegen.AspNetCore.Multitenant.MultiTenantException.#ctor(System.String,System.Exception)": "Talegen.AspNetCore.Multitenant.MultiTenantException.yml",
   "Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1": "Talegen.AspNetCore.Multitenant.MultiTenantMiddleware-1.yml",
+  "Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)": "Talegen.AspNetCore.Multitenant.MultiTenantMiddleware-1.yml",
   "Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger)": "Talegen.AspNetCore.Multitenant.MultiTenantMiddleware-1.yml",
   "Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.Invoke(Microsoft.AspNetCore.Http.HttpContext)": "Talegen.AspNetCore.Multitenant.MultiTenantMiddleware-1.yml",
   "Talegen.AspNetCore.Multitenant.SimpleTenant": "Talegen.AspNetCore.Multitenant.SimpleTenant.yml",

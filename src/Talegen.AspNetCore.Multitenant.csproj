@@ -11,8 +11,8 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.AspNetCore.Multitenant</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Tenant</PackageTags>
-    <PackageReleaseNotes>Added tenant logging into the middeware for debugging purposes. Refactored some minor changes to store. Example project added.</PackageReleaseNotes>
-    <Version>1.0.1.0</Version>
+    <PackageReleaseNotes>Tweaked WithSource(). Version change to push to nuget.</PackageReleaseNotes>
+    <Version>1.0.2.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <ApplicationIcon>assets\logo.ico</ApplicationIcon>
     <PackageIcon>logo.png</PackageIcon>

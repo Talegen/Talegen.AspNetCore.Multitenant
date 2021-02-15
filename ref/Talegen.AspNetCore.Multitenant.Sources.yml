@@ -4,7 +4,7 @@ items:
   commentId: N:Talegen.AspNetCore.Multitenant.Sources
   id: Talegen.AspNetCore.Multitenant.Sources
   children:
-  - Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+  - Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService`1
   - Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
   - Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
   - Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource`1
@@ -18,19 +18,19 @@ items:
   assemblies:
   - Talegen.AspNetCore.Multitenant
 references:
-- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
-  commentId: T:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
-  name: TenantApiServerService<TTenant>
-  nameWithType: TenantApiServerService<TTenant>
-  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService<TTenant>
-  nameWithType.vb: TenantApiServerService(Of TTenant)
-  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService(Of TTenant)
-  name.vb: TenantApiServerService(Of TTenant)
+- uid: Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService`1
+  commentId: T:Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService`1
+  name: ITenantApiServerService<TTenant>
+  nameWithType: ITenantApiServerService<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService<TTenant>
+  nameWithType.vb: ITenantApiServerService(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService(Of TTenant)
+  name.vb: ITenantApiServerService(Of TTenant)
   spec.csharp:
-  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
-    name: TenantApiServerService
-    nameWithType: TenantApiServerService
-    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService
+  - uid: Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService`1
+    name: ITenantApiServerService
+    nameWithType: ITenantApiServerService
+    fullName: Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService
   - name: <
     nameWithType: <
     fullName: <
@@ -41,10 +41,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
-    name: TenantApiServerService
-    nameWithType: TenantApiServerService
-    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService
+  - uid: Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService`1
+    name: ITenantApiServerService
+    nameWithType: ITenantApiServerService
+    fullName: Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '

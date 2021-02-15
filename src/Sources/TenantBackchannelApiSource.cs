@@ -29,7 +29,7 @@ namespace Talegen.AspNetCore.Multitenant.Sources
     /// <seealso cref="Talegen.AspNetCore.Multitenant.ITenantSource{TTenant}" />
     public class TenantBackchannelApiSource<TTenant, TService> : ITenantSource<TTenant>
         where TTenant : class, ITenant, new()
-        where TService : TenantApiServerService<TTenant>
+        where TService : ITenantApiServerService<TTenant>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TenantBackchannelApiSource{TTenant, TService}" /> class.

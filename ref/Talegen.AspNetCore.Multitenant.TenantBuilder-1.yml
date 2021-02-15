@@ -32,7 +32,6 @@ items:
   syntax:
     content: >-
       public class TenantBuilder<TTenant>
-
           where TTenant : class, ITenant, new()
     typeParameters:
     - id: TTenant
@@ -122,7 +121,6 @@ items:
   syntax:
     content: >-
       public TenantBuilder<TTenant> WithResolutionStrategy<TStrategy>(ServiceLifetime lifetime = ServiceLifetime.Transient)
-
           where TStrategy : class, ITenantResolverStrategy
     parameters:
     - id: lifetime
@@ -170,7 +168,6 @@ items:
   syntax:
     content: >-
       public TenantBuilder<TTenant> WithStore<TStore>(ServiceLifetime lifetime = ServiceLifetime.Transient)
-
           where TStore : class, ITenantStore<TTenant>
     parameters:
     - id: lifetime
@@ -217,8 +214,7 @@ items:
   example: []
   syntax:
     content: >-
-      public TenantBuilder<TTenant> WithSource<TSource>(ServiceLifetime lifetime = ServiceLifetime.Singleton)
-
+      public TenantBuilder<TTenant> WithSource<TSource>(ServiceLifetime lifetime = ServiceLifetime.Transient)
           where TSource : class, ITenantSource<TTenant>
     parameters:
     - id: lifetime
@@ -230,7 +226,7 @@ items:
     return:
       type: Talegen.AspNetCore.Multitenant.TenantBuilder`1
       description: Returns the tenant builder.
-    content.vb: Public Function WithSource(Of TSource As {Class, ITenantSource(Of TTenant)})(lifetime As ServiceLifetime = ServiceLifetime.Singleton) As TenantBuilder(Of TTenant)
+    content.vb: Public Function WithSource(Of TSource As {Class, ITenantSource(Of TTenant)})(lifetime As ServiceLifetime = ServiceLifetime.Transient) As TenantBuilder(Of TTenant)
   overload: Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithSource*
   nameWithType.vb: TenantBuilder(Of TTenant).WithSource(Of TSource)(ServiceLifetime)
   modifiers.csharp:

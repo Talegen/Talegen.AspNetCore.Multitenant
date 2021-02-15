@@ -30,9 +30,7 @@ items:
     content: 'public class MultiTenantException : Exception, ISerializable'
     content.vb: >-
       Public Class MultiTenantException
-
           Inherits Exception
-
           Implements ISerializable
   seealso:
   - linkId: System.Exception

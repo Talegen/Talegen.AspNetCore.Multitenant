@@ -30,7 +30,6 @@ items:
     content: 'public class TenantHostResolverStrategy : ITenantResolverStrategy'
     content.vb: >-
       Public Class TenantHostResolverStrategy
-
           Implements ITenantResolverStrategy
   seealso:
   - linkId: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy

@@ -31,7 +31,6 @@ items:
   syntax:
     content: >-
       public interface ITenantStore<TTenant>
-
           where TTenant : class, ITenant, new()
     typeParameters:
     - id: TTenant

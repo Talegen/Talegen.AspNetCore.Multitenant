@@ -33,7 +33,6 @@ items:
       description: The type of the tenant.
     content.vb: >-
       Public Class TenantContext(Of TTenant As {Class, ITenant})
-
           Implements ITenantContext(Of TTenant)
   seealso:
   - linkId: Talegen.AspNetCore.Multitenant.ITenantContext`1

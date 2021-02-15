@@ -31,16 +31,14 @@ items:
   syntax:
     content: >-
       public class TenantBackchannelApiSource<TTenant, TService> : ITenantSource<TTenant> where TTenant : class, ITenant, new()
-
-          where TService : TenantApiServerService<TTenant>
+          where TService : ITenantApiServerService<TTenant>
     typeParameters:
     - id: TTenant
       description: The type of the tenant.
     - id: TService
       description: The type of the service class used for interaction.
     content.vb: >-
-      Public Class TenantBackchannelApiSource(Of TTenant As {Class, ITenant, New}, TService As TenantApiServerService(Of TTenant))
-
+      Public Class TenantBackchannelApiSource(Of TTenant As {Class, ITenant, New}, TService As ITenantApiServerService(Of TTenant))
           Implements ITenantSource(Of TTenant)
   seealso:
   - linkId: Talegen.AspNetCore.Multitenant.ITenantSource`1

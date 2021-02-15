@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Vasont Inspire Models Documentation | Talegen ASP.net Core Multitenancy Middleware library </title>
+    <title>Talegen ASP.net Core Multitenancy Middleware library | Talegen ASP.net Core Multitenancy Middleware library </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Vasont Inspire Models Documentation | Talegen ASP.net Core Multitenancy Middleware library ">
+    <meta name="title" content="Talegen ASP.net Core Multitenancy Middleware library | Talegen ASP.net Core Multitenancy Middleware library ">
     <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -60,19 +60,66 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="vasont-inspire-models-documentation">Vasont Inspire Models Documentation</h1>
+<h1 id="talegen-aspnet-core-multitenancy-middleware-library">Talegen ASP.net Core Multitenancy Middleware library</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>The GlobalLink Inspire CCMS Models is an open-source connector library, maintained by GlobalLink Vasont in GitHub, that provides the specific class models used within the Vasont Inspire Api and SDK.</p>
-<p>The Inspire Web API is organized around <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a>. Our API has predictable resource-oriented URLs, accepts <a href="https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms">form-encoded request bodies</a>, in almost all cases returns <a href="https://www.json.org/">JSON-encoded responses</a>, returns <a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a> in most cases, and uses standard HTTP response codes, authentication, and verbs.</p>
-<p>Developers who are working within the Inspire Preview environment (Sandbox, Demo, 3rd Party Developers) will work with Preview versions of the API and related SDK versions.</p>
-<p>Live Inspire customers will work with <a href="https://en.wikipedia.org/wiki/Long-term_support">LTS</a> versions of the API and related SDK versions.</p>
-<h2 id="just-getting-started">Just Getting Started?</h2>
-<p>Check out the <a href="https://vasont-systems.github.io/Vasont.Inspire.SDK/sdk/Vasont.Inspire.SDK.html">SDK Documentation</a></p>
-<h2 id="not-a-developer">Not A Developer?</h2>
-<p>Use apps and connectors developed by our partners to get started integrating your instance of Inspire with your tools and applications.</p>
+<p>The Talegen ASP.net Core Multitenancy Middleware library is an open-source middleware library, maintained by <a href="https://talegen.com">Talegen</a> in GitHub, providing a quick and easy way to implement several tenant identification strategies seamlessly into an ASP.net Core Web Application.</p>
+<h3 id="multitenancy-strategies">Multitenancy Strategies</h3>
+<p>There are typically three overall multi-tenant strategies when building SaaS applications.</p>
+<h4 id="one-instance-per-tenant">One Instance Per Tenant</h4>
+<p>The first is to have a single instance of an application for every tenant. This is the simplest strategy in that each tenant has their own instance of the application and resources assigned.</p>
+<p>The cons to using the approach are that costs increase as each tenant uses their own resources and thus cloud compute service costs can grow quickly. This strategy can also add complexity when deploying updates and new releases across all tenants.</p>
+<h4 id="multiple-tenants-one-instance">Multiple Tenants, One Instance</h4>
+<p>The other two strategies use a single instance of the application require a tenant identifier to determine which tenant the web request is for. One using a single database for all tenants (sharding data), and the other using a single application with a different database for each tenant.</p>
+<p><em>The most common and suggested strategy is to have a single database per tenant.</em></p>
+<h2 id="determining-the-tenant-identifier">Determining The Tenant Identifier</h2>
+<p>One problem typically found when building a multi-tenant application, is how the server knows which tenant is being requested.</p>
+<p>This is where this Middleware library is designed to assist the developer by removing the complexities of tenant identification, storage, and retrieval.</p>
+<p>There are three typical strategies in determining the tenant identifier and this middleware supports all three.</p>
+<p>The first is through the host name. Your single web application can be multi-homed with several unique sub-domains, each unique to the tenant it represents, and that host name can be used as the tenant identifier for tenant information lookups. This strategy is pretty easy to implement, but comes with some cons. The first is the need to create a sub-domain in the DNS for every tenant. If the web application address changes, this can be problematic. When setting up CORS, redirects in IdPs, this becomes a can of worms and doesn't scale well for support.</p>
+<p>The second is through a custom HTTP request header. We use <code>x-tenant</code> as our custom parameter. This allows the web request to have the tenant identifier specified right in the header of the request. The problem here, is there's no easy way to add this by default on the first request, and must be made through Ajax calls only.</p>
+<p>The third approach is through the request route. The first slug (/path/) of the route itself will now contain the tenant identifier. This allows the end user to specify and bookmark the tenant identifier directly in the web address of the application. The con here is this can add complexity to addresses and break bookmarks if the identifier is changed.</p>
+<p>Recent best practices suggest a hybrid approach, where the initial request for the application may contain the tenant identifier in the route, and all subsequent Ajax calls will contain the identifier in the header. Our middleware's Route strategy method supports this hybrid approach by first checking for the identifier in the <code>x-tenant</code> header and then attempting to extract the identifier from the first part of the route (e.g. <code>https://myapp.com/Talegen/SomeCall</code>)</p>
+<h2 id="middleware-library">Middleware Library</h2>
+<p>Talegen's Multitenant Middleware Library provides several out-of-the-box components to help the developer implement three main components to determining the tenant, storing tenant information, and providing a backing source for tenant information.</p>
+<h3 id="tenant-resolution-strategies">Tenant Resolution Strategies</h3>
+<p>Tenant resolution strategies are defined in the <code>Talegen.AspNetCore.Multitenant.Strategies</code> namespace. The following strategies are provided for the developer:</p>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Class Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Derived from Host Name</td>
+<td><code>TenantHostResolverStrategy</code></td>
+</tr>
+<tr>
+<td>Derived from <code>x-tenant</code> Header</td>
+<td><code>TenantHeaderResolverStrategy</code></td>
+</tr>
+<tr>
+<td>Derived from Route</td>
+<td><code>TenantRouteResolverStrategy</code></td>
+</tr>
+</tbody>
+</table>
+<p>To implement a strategy, the developer will call the extension method <code>WithResolutionStrategy&lt;TTenant&gt;</code> during the <code>ConfigServices</code> call in <code>Startup</code>.</p>
+<pre><code class="lang-c#">// add the multi-tenant capabilities. Using the rout strategy, using a memory store, 
+// and an example memory source backer.
+services.AddMultiTenancy&lt;SimpleTenant&gt;()
+    .WithResolutionStrategy&lt;TenantRouteResolverStrategy&gt;()
+    .WithStore&lt;TenantMemoryStore&lt;SimpleTenant&gt;&gt;()
+    .WithSource&lt;ExampleMemorySource&lt;SimpleTenant&gt;&gt;();
+</code></pre>
+<p>In the example provided, the <code>AddMultiTenancy&lt;TTenant&gt;</code> call returns a <code>TenantBuilder</code> object, allowing the additional extension methods for defining the strategy, storage, and source middleware.</p>
+<h2 id="more-information">More Information</h2>
+<p>Check out the <a href="https://talegen.github.io/Talegen.AspNetCore.Multitenant/sdk/Talegen.AspNetCore.Multitenant.html">Source Documentation Reference</a></p>
+<p>Check out the <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/tree/main/examples/">example projects in GitHub</a>.</p>
 <h2 id="available-library-platforms">Available Library Platforms</h2>
-<p><a href="https://nuget.org/Vasont.Inspire.Models">.NET � Nuget.org</a></p>
+<p><a href="https://www.nuget.org/packages/Talegen.AspNetCore.Multitenant/">.NET � Nuget.org</a></p>
 </article>
           </div>
           

@@ -233,33 +233,19 @@
             </summary>
             <value>The properties.</value>
         </member>
-        <member name="T:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1">
+        <member name="T:Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService`1">
             <summary>
-            This class implements the tenant license server service used to interact with the license server for tenant information purposes.
+            This interface defines the minimum service used to interact with an API resource for tenant information purposes.
             </summary>
             <typeparam name="TTenant">The type of the tenant.</typeparam>
         </member>
-        <member name="M:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor(Talegen.Backchannel.BackchannelConfig)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1" /> class.
-            </summary>
-            <param name="settings">The settings.</param>
-            <exception cref="T:System.ArgumentNullException">Exception is thrown if settings is not specified.</exception>
-        </member>
-        <member name="M:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1" /> class.
-            </summary>
-            <param name="settings">The settings.</param>
-            <exception cref="T:System.ArgumentNullException">Exception is thrown if settings is not specified.</exception>
-        </member>
-        <member name="P:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.Client">
+        <member name="P:Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService`1.Client">
             <summary>
             Gets the client.
             </summary>
             <value>The client.</value>
         </member>
-        <member name="M:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindTenantFromApiServerAsync(System.String,System.Threading.CancellationToken)">
+        <member name="M:Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService`1.FindTenantFromApiServerAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Finds the tenant from license server.
             </summary>
@@ -267,7 +253,7 @@
             <param name="cancellationToken">Contains an optional cancellation token.</param>
             <returns>Returns the Publisher Tenant record found on the license server.</returns>
         </member>
-        <member name="M:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindAllTenantsFromApiServerAsync(System.Threading.CancellationToken)">
+        <member name="M:Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService`1.FindAllTenantsFromApiServerAsync(System.Threading.CancellationToken)">
             <summary>
             Finds all tenants from license server asynchronous.
             </summary>

@@ -29,9 +29,7 @@ items:
     content: 'public class TenantSettings : Dictionary<string, string>, IDictionary<string, string>, ICollection<KeyValuePair<string, string>>, IReadOnlyDictionary<string, string>, IReadOnlyCollection<KeyValuePair<string, string>>, IEnumerable<KeyValuePair<string, string>>, IDictionary, ICollection, IEnumerable, IDeserializationCallback, ISerializable'
     content.vb: >-
       Public Class TenantSettings
-
           Inherits Dictionary(Of String, String)
-
           Implements IDictionary(Of String, String), ICollection(Of KeyValuePair(Of String, String)), IReadOnlyDictionary(Of String, String), IReadOnlyCollection(Of KeyValuePair(Of String, String)), IEnumerable(Of KeyValuePair(Of String, String)), IDictionary, ICollection, IEnumerable, IDeserializationCallback, ISerializable
   seealso:
   - linkId: Talegen.Backchannel.BackchannelConfig

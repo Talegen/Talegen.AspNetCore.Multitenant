@@ -36,7 +36,6 @@ items:
       description: The type of the tenant model stored.
     content.vb: >-
       Public Class TenantRedisStore(Of TTenant As {Class, ITenant, New})
-
           Implements ITenantStore(Of TTenant)
   seealso:
   - linkId: Talegen.AspNetCore.Multitenant.ITenantStore`1

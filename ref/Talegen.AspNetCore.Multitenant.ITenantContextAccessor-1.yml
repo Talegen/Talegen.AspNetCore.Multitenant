@@ -29,7 +29,6 @@ items:
   syntax:
     content: >-
       public interface ITenantContextAccessor<TTenant>
-
           where TTenant : class, ITenant
     typeParameters:
     - id: TTenant

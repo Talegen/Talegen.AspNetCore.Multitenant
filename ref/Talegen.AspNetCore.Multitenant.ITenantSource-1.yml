@@ -29,7 +29,6 @@ items:
   syntax:
     content: >-
       public interface ITenantSource<TTenant>
-
           where TTenant : class, ITenant, new()
     typeParameters:
     - id: TTenant

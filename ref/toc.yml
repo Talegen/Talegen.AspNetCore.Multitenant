@@ -47,9 +47,9 @@
 - uid: Talegen.AspNetCore.Multitenant.Sources
   name: Talegen.AspNetCore.Multitenant.Sources
   items:
-  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
-    name: TenantApiServerService<TTenant>
-    name.vb: TenantApiServerService(Of TTenant)
+  - uid: Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService`1
+    name: ITenantApiServerService<TTenant>
+    name.vb: ITenantApiServerService(Of TTenant)
   - uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
     name: TenantApiSourceBackchannelExtensions
   - uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2

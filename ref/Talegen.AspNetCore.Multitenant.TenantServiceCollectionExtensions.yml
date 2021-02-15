@@ -74,7 +74,6 @@ items:
   syntax:
     content: >-
       public static TenantBuilder<TTenant> AddMultiTenancy<TTenant>(this IServiceCollection services)
-
           where TTenant : class, ITenant, new()
     parameters:
     - id: services

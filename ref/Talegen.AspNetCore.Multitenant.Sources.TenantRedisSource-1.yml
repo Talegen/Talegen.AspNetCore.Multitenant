@@ -34,7 +34,6 @@ items:
       description: The type of the tenant.
     content.vb: >-
       Public Class TenantRedisSource(Of TTenant As {Class, ITenant, New})
-
           Implements ITenantSource(Of TTenant)
   seealso:
   - linkId: Talegen.AspNetCore.Multitenant.ITenantSource`1

@@ -32,7 +32,6 @@ items:
     content: 'public class SimpleTenant : ITenant'
     content.vb: >-
       Public Class SimpleTenant
-
           Implements ITenant
   seealso:
   - linkId: Talegen.AspNetCore.Multitenant.ITenant

@@ -1,0 +1,331 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  id: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions
+  - Talegen.AspNetCore.Multitenant.ITenant
+  - Talegen.AspNetCore.Multitenant.ITenantContext`1
+  - Talegen.AspNetCore.Multitenant.ITenantContextAccessor`1
+  - Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+  - Talegen.AspNetCore.Multitenant.ITenantSource`1
+  - Talegen.AspNetCore.Multitenant.ITenantStore`1
+  - Talegen.AspNetCore.Multitenant.MultiTenantException
+  - Talegen.AspNetCore.Multitenant.SimpleTenant
+  - Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  - Talegen.AspNetCore.Multitenant.TenantContext`1
+  - Talegen.AspNetCore.Multitenant.TenantContextAccessor`1
+  - Talegen.AspNetCore.Multitenant.TenantDefaults
+  - Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions
+  - Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+  type: Namespace
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+references:
+- uid: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions
+  commentId: T:Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions
+  name: ApplicationBuilderExtensions
+  nameWithType: ApplicationBuilderExtensions
+  fullName: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions
+- uid: Talegen.AspNetCore.Multitenant.ITenant
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenant
+  parent: Talegen.AspNetCore.Multitenant
+  name: ITenant
+  nameWithType: ITenant
+  fullName: Talegen.AspNetCore.Multitenant.ITenant
+- uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantContext`1
+  name: ITenantContext<TTenant>
+  nameWithType: ITenantContext<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.ITenantContext<TTenant>
+  nameWithType.vb: ITenantContext(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantContext(Of TTenant)
+  name.vb: ITenantContext(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+    name: ITenantContext
+    nameWithType: ITenantContext
+    fullName: Talegen.AspNetCore.Multitenant.ITenantContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+    name: ITenantContext
+    nameWithType: ITenantContext
+    fullName: Talegen.AspNetCore.Multitenant.ITenantContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.ITenantContextAccessor`1
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantContextAccessor`1
+  name: ITenantContextAccessor<TTenant>
+  nameWithType: ITenantContextAccessor<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.ITenantContextAccessor<TTenant>
+  nameWithType.vb: ITenantContextAccessor(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantContextAccessor(Of TTenant)
+  name.vb: ITenantContextAccessor(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContextAccessor`1
+    name: ITenantContextAccessor
+    nameWithType: ITenantContextAccessor
+    fullName: Talegen.AspNetCore.Multitenant.ITenantContextAccessor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContextAccessor`1
+    name: ITenantContextAccessor
+    nameWithType: ITenantContextAccessor
+    fullName: Talegen.AspNetCore.Multitenant.ITenantContextAccessor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+  parent: Talegen.AspNetCore.Multitenant
+  name: ITenantResolverStrategy
+  nameWithType: ITenantResolverStrategy
+  fullName: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+- uid: Talegen.AspNetCore.Multitenant.ITenantSource`1
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantSource`1
+  name: ITenantSource<TTenant>
+  nameWithType: ITenantSource<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.ITenantSource<TTenant>
+  nameWithType.vb: ITenantSource(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantSource(Of TTenant)
+  name.vb: ITenantSource(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantSource`1
+    name: ITenantSource
+    nameWithType: ITenantSource
+    fullName: Talegen.AspNetCore.Multitenant.ITenantSource
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantSource`1
+    name: ITenantSource
+    nameWithType: ITenantSource
+    fullName: Talegen.AspNetCore.Multitenant.ITenantSource
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.ITenantStore`1
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantStore`1
+  name: ITenantStore<TTenant>
+  nameWithType: ITenantStore<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.ITenantStore<TTenant>
+  nameWithType.vb: ITenantStore(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantStore(Of TTenant)
+  name.vb: ITenantStore(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantStore`1
+    name: ITenantStore
+    nameWithType: ITenantStore
+    fullName: Talegen.AspNetCore.Multitenant.ITenantStore
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantStore`1
+    name: ITenantStore
+    nameWithType: ITenantStore
+    fullName: Talegen.AspNetCore.Multitenant.ITenantStore
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.MultiTenantException
+  commentId: T:Talegen.AspNetCore.Multitenant.MultiTenantException
+  name: MultiTenantException
+  nameWithType: MultiTenantException
+  fullName: Talegen.AspNetCore.Multitenant.MultiTenantException
+- uid: Talegen.AspNetCore.Multitenant.SimpleTenant
+  commentId: T:Talegen.AspNetCore.Multitenant.SimpleTenant
+  name: SimpleTenant
+  nameWithType: SimpleTenant
+  fullName: Talegen.AspNetCore.Multitenant.SimpleTenant
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  parent: Talegen.AspNetCore.Multitenant
+  name: TenantBuilder<TTenant>
+  nameWithType: TenantBuilder<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>
+  nameWithType.vb: TenantBuilder(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant)
+  name.vb: TenantBuilder(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+    name: TenantBuilder
+    nameWithType: TenantBuilder
+    fullName: Talegen.AspNetCore.Multitenant.TenantBuilder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+    name: TenantBuilder
+    nameWithType: TenantBuilder
+    fullName: Talegen.AspNetCore.Multitenant.TenantBuilder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.TenantContext`1
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantContext`1
+  name: TenantContext<TTenant>
+  nameWithType: TenantContext<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.TenantContext<TTenant>
+  nameWithType.vb: TenantContext(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantContext(Of TTenant)
+  name.vb: TenantContext(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.TenantContext`1
+    name: TenantContext
+    nameWithType: TenantContext
+    fullName: Talegen.AspNetCore.Multitenant.TenantContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.TenantContext`1
+    name: TenantContext
+    nameWithType: TenantContext
+    fullName: Talegen.AspNetCore.Multitenant.TenantContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.TenantContextAccessor`1
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantContextAccessor`1
+  name: TenantContextAccessor<TTenant>
+  nameWithType: TenantContextAccessor<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.TenantContextAccessor<TTenant>
+  nameWithType.vb: TenantContextAccessor(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantContextAccessor(Of TTenant)
+  name.vb: TenantContextAccessor(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.TenantContextAccessor`1
+    name: TenantContextAccessor
+    nameWithType: TenantContextAccessor
+    fullName: Talegen.AspNetCore.Multitenant.TenantContextAccessor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.TenantContextAccessor`1
+    name: TenantContextAccessor
+    nameWithType: TenantContextAccessor
+    fullName: Talegen.AspNetCore.Multitenant.TenantContextAccessor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.TenantDefaults
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantDefaults
+  name: TenantDefaults
+  nameWithType: TenantDefaults
+  fullName: Talegen.AspNetCore.Multitenant.TenantDefaults
+- uid: Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions
+  name: TenantHttpContextExtensions
+  nameWithType: TenantHttpContextExtensions
+  fullName: Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions
+- uid: Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions
+  name: TenantServiceCollectionExtensions
+  nameWithType: TenantServiceCollectionExtensions
+  fullName: Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant

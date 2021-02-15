@@ -1,0 +1,551 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy
+  commentId: T:Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy
+  id: TenantHostResolverStrategy
+  parent: Talegen.AspNetCore.Multitenant.Strategies
+  children:
+  - Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)
+  langs:
+  - csharp
+  - vb
+  name: TenantHostResolverStrategy
+  nameWithType: TenantHostResolverStrategy
+  fullName: Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy
+  type: Class
+  source:
+    remote:
+      path: src/Strategies/TenantHostResolverStrategy.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: TenantHostResolverStrategy
+    path: Strategies/TenantHostResolverStrategy.cs
+    startLine: 26
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Strategies
+  summary: "\nThis class implements a header resolver strategy for retrieving the tenant id from a request header.\n"
+  example: []
+  syntax:
+    content: 'public class TenantHostResolverStrategy : ITenantResolverStrategy'
+    content.vb: >-
+      Public Class TenantHostResolverStrategy
+
+          Implements ITenantResolverStrategy
+  seealso:
+  - linkId: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+    commentId: T:Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+  inheritance:
+  - System.Object
+  implements:
+  - Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)
+  commentId: M:Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)
+  id: GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)
+  parent: Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy
+  langs:
+  - csharp
+  - vb
+  name: GetTenantIdentifierAsync(HttpContext)
+  nameWithType: TenantHostResolverStrategy.GetTenantIdentifierAsync(HttpContext)
+  fullName: Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)
+  type: Method
+  source:
+    remote:
+      path: src/Strategies/TenantHostResolverStrategy.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: GetTenantIdentifierAsync
+    path: Strategies/TenantHostResolverStrategy.cs
+    startLine: 33
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Strategies
+  summary: "\nGets the tenant identifier from the request.\n"
+  example: []
+  syntax:
+    content: public Task<string> GetTenantIdentifierAsync(HttpContext context)
+    parameters:
+    - id: context
+      type: Microsoft.AspNetCore.Http.HttpContext
+      description: The context.
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: Returns the tenant identifier if found.
+    content.vb: Public Function GetTenantIdentifierAsync(context As HttpContext) As Task(Of String)
+  overload: Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy.GetTenantIdentifierAsync*
+  implements:
+  - Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+  parent: Talegen.AspNetCore.Multitenant
+  name: ITenantResolverStrategy
+  nameWithType: ITenantResolverStrategy
+  fullName: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+- uid: Talegen.AspNetCore.Multitenant.Strategies
+  commentId: N:Talegen.AspNetCore.Multitenant.Strategies
+  name: Talegen.AspNetCore.Multitenant.Strategies
+  nameWithType: Talegen.AspNetCore.Multitenant.Strategies
+  fullName: Talegen.AspNetCore.Multitenant.Strategies
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy.GetTenantIdentifierAsync*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy.GetTenantIdentifierAsync
+  name: GetTenantIdentifierAsync
+  nameWithType: TenantHostResolverStrategy.GetTenantIdentifierAsync
+  fullName: Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy.GetTenantIdentifierAsync
+- uid: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)
+  commentId: M:Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)
+  parent: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+  isExternal: true
+  name: GetTenantIdentifierAsync(HttpContext)
+  nameWithType: ITenantResolverStrategy.GetTenantIdentifierAsync(HttpContext)
+  fullName: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)
+    name: GetTenantIdentifierAsync
+    nameWithType: ITenantResolverStrategy.GetTenantIdentifierAsync
+    fullName: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Http.HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: Microsoft.AspNetCore.Http.HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)
+    name: GetTenantIdentifierAsync
+    nameWithType: ITenantResolverStrategy.GetTenantIdentifierAsync
+    fullName: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Http.HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: Microsoft.AspNetCore.Http.HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Http.HttpContext
+  commentId: T:Microsoft.AspNetCore.Http.HttpContext
+  parent: Microsoft.AspNetCore.Http
+  isExternal: true
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: Microsoft.AspNetCore.Http.HttpContext
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: System.Threading.Tasks.Task<System.String>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of System.String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Http
+  commentId: N:Microsoft.AspNetCore.Http
+  isExternal: true
+  name: Microsoft.AspNetCore.Http
+  nameWithType: Microsoft.AspNetCore.Http
+  fullName: Microsoft.AspNetCore.Http
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

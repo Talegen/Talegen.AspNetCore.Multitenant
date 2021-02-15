@@ -1,0 +1,151 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.Sources
+  commentId: N:Talegen.AspNetCore.Multitenant.Sources
+  id: Talegen.AspNetCore.Multitenant.Sources
+  children:
+  - Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+  - Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
+  - Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+  - Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource`1
+  langs:
+  - csharp
+  - vb
+  name: Talegen.AspNetCore.Multitenant.Sources
+  nameWithType: Talegen.AspNetCore.Multitenant.Sources
+  fullName: Talegen.AspNetCore.Multitenant.Sources
+  type: Namespace
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+references:
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+  commentId: T:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+  name: TenantApiServerService<TTenant>
+  nameWithType: TenantApiServerService<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService<TTenant>
+  nameWithType.vb: TenantApiServerService(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService(Of TTenant)
+  name.vb: TenantApiServerService(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+    name: TenantApiServerService
+    nameWithType: TenantApiServerService
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+    name: TenantApiServerService
+    nameWithType: TenantApiServerService
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
+  commentId: T:Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
+  parent: Talegen.AspNetCore.Multitenant.Sources
+  name: TenantApiSourceBackchannelExtensions
+  nameWithType: TenantApiSourceBackchannelExtensions
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+  commentId: T:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+  name: TenantBackchannelApiSource<TTenant, TService>
+  nameWithType: TenantBackchannelApiSource<TTenant, TService>
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource<TTenant, TService>
+  nameWithType.vb: TenantBackchannelApiSource(Of TTenant, TService)
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource(Of TTenant, TService)
+  name.vb: TenantBackchannelApiSource(Of TTenant, TService)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+    name: TenantBackchannelApiSource
+    nameWithType: TenantBackchannelApiSource
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TService
+    nameWithType: TService
+    fullName: TService
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+    name: TenantBackchannelApiSource
+    nameWithType: TenantBackchannelApiSource
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TService
+    nameWithType: TService
+    fullName: TService
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource`1
+  commentId: T:Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource`1
+  name: TenantRedisSource<TTenant>
+  nameWithType: TenantRedisSource<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource<TTenant>
+  nameWithType.vb: TenantRedisSource(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource(Of TTenant)
+  name.vb: TenantRedisSource(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource`1
+    name: TenantRedisSource
+    nameWithType: TenantRedisSource
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource`1
+    name: TenantRedisSource
+    nameWithType: TenantRedisSource
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.Sources
+  commentId: N:Talegen.AspNetCore.Multitenant.Sources
+  name: Talegen.AspNetCore.Multitenant.Sources
+  nameWithType: Talegen.AspNetCore.Multitenant.Sources
+  fullName: Talegen.AspNetCore.Multitenant.Sources

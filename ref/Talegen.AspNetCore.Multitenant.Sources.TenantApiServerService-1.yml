@@ -1,0 +1,836 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+  commentId: T:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+  id: TenantApiServerService`1
+  parent: Talegen.AspNetCore.Multitenant.Sources
+  children:
+  - Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  - Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor(Talegen.Backchannel.BackchannelConfig)
+  - Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.Client
+  - Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindAllTenantsFromApiServerAsync(System.Threading.CancellationToken)
+  - Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindTenantFromApiServerAsync(System.String,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: TenantApiServerService<TTenant>
+  nameWithType: TenantApiServerService<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService<TTenant>
+  type: Class
+  source:
+    remote:
+      path: src/Sources/TenantApiServerService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: TenantApiServerService
+    path: Sources/TenantApiServerService.cs
+    startLine: 30
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Sources
+  summary: "\nThis class implements the tenant license server service used to interact with the license server for tenant information purposes.\n"
+  example: []
+  syntax:
+    content: >-
+      public class TenantApiServerService<TTenant>
+
+          where TTenant : class, ITenant, new()
+    typeParameters:
+    - id: TTenant
+      description: The type of the tenant.
+    content.vb: Public Class TenantApiServerService(Of TTenant As {Class, ITenant, New})
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: TenantApiServerService(Of TTenant)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService(Of TTenant)
+  name.vb: TenantApiServerService(Of TTenant)
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor(Talegen.Backchannel.BackchannelConfig)
+  commentId: M:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor(Talegen.Backchannel.BackchannelConfig)
+  id: '#ctor(Talegen.Backchannel.BackchannelConfig)'
+  parent: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+  langs:
+  - csharp
+  - vb
+  name: TenantApiServerService(BackchannelConfig)
+  nameWithType: TenantApiServerService<TTenant>.TenantApiServerService(BackchannelConfig)
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService<TTenant>.TenantApiServerService(Talegen.Backchannel.BackchannelConfig)
+  type: Constructor
+  source:
+    remote:
+      path: src/Sources/TenantApiServerService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: .ctor
+    path: Sources/TenantApiServerService.cs
+    startLine: 38
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Sources
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public TenantApiServerService(BackchannelConfig settings)
+    parameters:
+    - id: settings
+      type: Talegen.Backchannel.BackchannelConfig
+      description: The settings.
+    content.vb: Public Sub New(settings As BackchannelConfig)
+  overload: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Exception is thrown if settings is not specified.
+  nameWithType.vb: TenantApiServerService(Of TTenant).TenantApiServerService(BackchannelConfig)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService(Of TTenant).TenantApiServerService(Talegen.Backchannel.BackchannelConfig)
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  commentId: M:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  id: '#ctor(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)'
+  parent: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+  langs:
+  - csharp
+  - vb
+  name: TenantApiServerService(TenantSettings)
+  nameWithType: TenantApiServerService<TTenant>.TenantApiServerService(TenantSettings)
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService<TTenant>.TenantApiServerService(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  type: Constructor
+  source:
+    remote:
+      path: src/Sources/TenantApiServerService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: .ctor
+    path: Sources/TenantApiServerService.cs
+    startLine: 48
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Sources
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public TenantApiServerService(TenantSettings settings)
+    parameters:
+    - id: settings
+      type: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+      description: The settings.
+    content.vb: Public Sub New(settings As TenantSettings)
+  overload: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Exception is thrown if settings is not specified.
+  nameWithType.vb: TenantApiServerService(Of TTenant).TenantApiServerService(TenantSettings)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService(Of TTenant).TenantApiServerService(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.Client
+  commentId: P:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.Client
+  id: Client
+  parent: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+  langs:
+  - csharp
+  - vb
+  name: Client
+  nameWithType: TenantApiServerService<TTenant>.Client
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService<TTenant>.Client
+  type: Property
+  source:
+    remote:
+      path: src/Sources/TenantApiServerService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: Client
+    path: Sources/TenantApiServerService.cs
+    startLine: 57
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Sources
+  summary: "\nGets the client.\n"
+  example: []
+  syntax:
+    content: protected BackchannelClient Client { get; }
+    parameters: []
+    return:
+      type: Talegen.Backchannel.BackchannelClient
+      description: The client.
+    content.vb: Protected ReadOnly Property Client As BackchannelClient
+  overload: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.Client*
+  nameWithType.vb: TenantApiServerService(Of TTenant).Client
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService(Of TTenant).Client
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindTenantFromApiServerAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindTenantFromApiServerAsync(System.String,System.Threading.CancellationToken)
+  id: FindTenantFromApiServerAsync(System.String,System.Threading.CancellationToken)
+  parent: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+  langs:
+  - csharp
+  - vb
+  name: FindTenantFromApiServerAsync(String, CancellationToken)
+  nameWithType: TenantApiServerService<TTenant>.FindTenantFromApiServerAsync(String, CancellationToken)
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService<TTenant>.FindTenantFromApiServerAsync(System.String, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/Sources/TenantApiServerService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: FindTenantFromApiServerAsync
+    path: Sources/TenantApiServerService.cs
+    startLine: 65
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Sources
+  summary: "\nFinds the tenant from license server.\n"
+  example: []
+  syntax:
+    content: public virtual Task<TTenant> FindTenantFromApiServerAsync(string tenantIdentifier, CancellationToken cancellationToken = default(CancellationToken))
+    parameters:
+    - id: tenantIdentifier
+      type: System.String
+      description: Contains the tenant identifier to find.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Contains an optional cancellation token.
+    return:
+      type: System.Threading.Tasks.Task{{TTenant}}
+      description: Returns the Publisher Tenant record found on the license server.
+    content.vb: Public Overridable Function FindTenantFromApiServerAsync(tenantIdentifier As String, cancellationToken As CancellationToken = Nothing) As Task(Of TTenant)
+  overload: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindTenantFromApiServerAsync*
+  nameWithType.vb: TenantApiServerService(Of TTenant).FindTenantFromApiServerAsync(String, CancellationToken)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService(Of TTenant).FindTenantFromApiServerAsync(System.String, System.Threading.CancellationToken)
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindAllTenantsFromApiServerAsync(System.Threading.CancellationToken)
+  commentId: M:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindAllTenantsFromApiServerAsync(System.Threading.CancellationToken)
+  id: FindAllTenantsFromApiServerAsync(System.Threading.CancellationToken)
+  parent: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+  langs:
+  - csharp
+  - vb
+  name: FindAllTenantsFromApiServerAsync(CancellationToken)
+  nameWithType: TenantApiServerService<TTenant>.FindAllTenantsFromApiServerAsync(CancellationToken)
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService<TTenant>.FindAllTenantsFromApiServerAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/Sources/TenantApiServerService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: FindAllTenantsFromApiServerAsync
+    path: Sources/TenantApiServerService.cs
+    startLine: 75
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Sources
+  summary: "\nFinds all tenants from license server asynchronous.\n"
+  example: []
+  syntax:
+    content: public virtual Task<List<TTenant>> FindAllTenantsFromApiServerAsync(CancellationToken cancellationToken = default(CancellationToken))
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Contains an optional cancellation token.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{{TTenant}}}
+      description: Returns a list of tenant objects.
+    content.vb: Public Overridable Function FindAllTenantsFromApiServerAsync(cancellationToken As CancellationToken = Nothing) As Task(Of List(Of TTenant))
+  overload: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindAllTenantsFromApiServerAsync*
+  nameWithType.vb: TenantApiServerService(Of TTenant).FindAllTenantsFromApiServerAsync(CancellationToken)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService(Of TTenant).FindAllTenantsFromApiServerAsync(System.Threading.CancellationToken)
+references:
+- uid: Talegen.AspNetCore.Multitenant.Sources
+  commentId: N:Talegen.AspNetCore.Multitenant.Sources
+  name: Talegen.AspNetCore.Multitenant.Sources
+  nameWithType: Talegen.AspNetCore.Multitenant.Sources
+  fullName: Talegen.AspNetCore.Multitenant.Sources
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+  commentId: T:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+  name: TenantApiServerService<TTenant>
+  nameWithType: TenantApiServerService<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService<TTenant>
+  nameWithType.vb: TenantApiServerService(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService(Of TTenant)
+  name.vb: TenantApiServerService(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+    name: TenantApiServerService
+    nameWithType: TenantApiServerService
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1
+    name: TenantApiServerService
+    nameWithType: TenantApiServerService
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor
+  name: TenantApiServerService
+  nameWithType: TenantApiServerService<TTenant>.TenantApiServerService
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService<TTenant>.TenantApiServerService
+  nameWithType.vb: TenantApiServerService(Of TTenant).TenantApiServerService
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService(Of TTenant).TenantApiServerService
+- uid: Talegen.Backchannel.BackchannelConfig
+  commentId: T:Talegen.Backchannel.BackchannelConfig
+  parent: Talegen.Backchannel
+  isExternal: true
+  name: BackchannelConfig
+  nameWithType: BackchannelConfig
+  fullName: Talegen.Backchannel.BackchannelConfig
+- uid: Talegen.Backchannel
+  commentId: N:Talegen.Backchannel
+  isExternal: true
+  name: Talegen.Backchannel
+  nameWithType: Talegen.Backchannel
+  fullName: Talegen.Backchannel
+- uid: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+  commentId: T:Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+  parent: Talegen.AspNetCore.Multitenant.Configuration
+  name: TenantSettings
+  nameWithType: TenantSettings
+  fullName: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+- uid: Talegen.AspNetCore.Multitenant.Configuration
+  commentId: N:Talegen.AspNetCore.Multitenant.Configuration
+  name: Talegen.AspNetCore.Multitenant.Configuration
+  nameWithType: Talegen.AspNetCore.Multitenant.Configuration
+  fullName: Talegen.AspNetCore.Multitenant.Configuration
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.Client*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.Client
+  name: Client
+  nameWithType: TenantApiServerService<TTenant>.Client
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService<TTenant>.Client
+  nameWithType.vb: TenantApiServerService(Of TTenant).Client
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService(Of TTenant).Client
+- uid: Talegen.Backchannel.BackchannelClient
+  commentId: T:Talegen.Backchannel.BackchannelClient
+  parent: Talegen.Backchannel
+  isExternal: true
+  name: BackchannelClient
+  nameWithType: BackchannelClient
+  fullName: Talegen.Backchannel.BackchannelClient
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindTenantFromApiServerAsync*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindTenantFromApiServerAsync
+  name: FindTenantFromApiServerAsync
+  nameWithType: TenantApiServerService<TTenant>.FindTenantFromApiServerAsync
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService<TTenant>.FindTenantFromApiServerAsync
+  nameWithType.vb: TenantApiServerService(Of TTenant).FindTenantFromApiServerAsync
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService(Of TTenant).FindTenantFromApiServerAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{{TTenant}}
+  commentId: T:System.Threading.Tasks.Task{`0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<TTenant>
+  nameWithType: Task<TTenant>
+  fullName: System.Threading.Tasks.Task<TTenant>
+  nameWithType.vb: Task(Of TTenant)
+  fullName.vb: System.Threading.Tasks.Task(Of TTenant)
+  name.vb: Task(Of TTenant)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindAllTenantsFromApiServerAsync*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindAllTenantsFromApiServerAsync
+  name: FindAllTenantsFromApiServerAsync
+  nameWithType: TenantApiServerService<TTenant>.FindAllTenantsFromApiServerAsync
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService<TTenant>.FindAllTenantsFromApiServerAsync
+  nameWithType.vb: TenantApiServerService(Of TTenant).FindAllTenantsFromApiServerAsync
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService(Of TTenant).FindAllTenantsFromApiServerAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{{TTenant}}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{`0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<List<TTenant>>
+  nameWithType: Task<List<TTenant>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<TTenant>>
+  nameWithType.vb: Task(Of List(Of TTenant))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of TTenant))
+  name.vb: Task(Of List(Of TTenant))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )

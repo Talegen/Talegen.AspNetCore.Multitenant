@@ -68,7 +68,7 @@ namespace Talegen.AspNetCore.Multitenant
         /// <typeparam name="TSource">The type of the source.</typeparam>
         /// <param name="lifetime">The lifetime.</param>
         /// <returns>Returns the tenant builder.</returns>
-        public TenantBuilder<TTenant> WithSource<TSource>(ServiceLifetime lifetime = ServiceLifetime.Singleton) where TSource : class, ITenantSource<TTenant>
+        public TenantBuilder<TTenant> WithSource<TSource>(ServiceLifetime lifetime = ServiceLifetime.Transient) where TSource : class, ITenantSource<TTenant>
         {
             this.services.Add(ServiceDescriptor.Describe(typeof(ITenantSource<TTenant>), typeof(TSource), lifetime));
             return this;

@@ -1,0 +1,508 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.TenantContext`1
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantContext`1
+  id: TenantContext`1
+  parent: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.TenantContext`1.Tenant
+  langs:
+  - csharp
+  - vb
+  name: TenantContext<TTenant>
+  nameWithType: TenantContext<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.TenantContext<TTenant>
+  type: Class
+  source:
+    remote:
+      path: src/TenantContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: TenantContext
+    path: TenantContext.cs
+    startLine: 23
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThis class implements the base tenant context.\n"
+  example: []
+  syntax:
+    content: 'public class TenantContext<TTenant> : ITenantContext<TTenant> where TTenant : class, ITenant'
+    typeParameters:
+    - id: TTenant
+      description: The type of the tenant.
+    content.vb: >-
+      Public Class TenantContext(Of TTenant As {Class, ITenant})
+
+          Implements ITenantContext(Of TTenant)
+  seealso:
+  - linkId: Talegen.AspNetCore.Multitenant.ITenantContext`1
+    commentId: T:Talegen.AspNetCore.Multitenant.ITenantContext`1
+  inheritance:
+  - System.Object
+  implements:
+  - Talegen.AspNetCore.Multitenant.ITenantContext{{TTenant}}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: TenantContext(Of TTenant)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantContext(Of TTenant)
+  name.vb: TenantContext(Of TTenant)
+- uid: Talegen.AspNetCore.Multitenant.TenantContext`1.Tenant
+  commentId: P:Talegen.AspNetCore.Multitenant.TenantContext`1.Tenant
+  id: Tenant
+  parent: Talegen.AspNetCore.Multitenant.TenantContext`1
+  langs:
+  - csharp
+  - vb
+  name: Tenant
+  nameWithType: TenantContext<TTenant>.Tenant
+  fullName: Talegen.AspNetCore.Multitenant.TenantContext<TTenant>.Tenant
+  type: Property
+  source:
+    remote:
+      path: src/TenantContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: Tenant
+    path: TenantContext.cs
+    startLine: 29
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nGets or sets the tenant.\n"
+  example: []
+  syntax:
+    content: public TTenant Tenant { get; set; }
+    parameters: []
+    return:
+      type: '{TTenant}'
+      description: The tenant.
+    content.vb: Public Property Tenant As TTenant
+  overload: Talegen.AspNetCore.Multitenant.TenantContext`1.Tenant*
+  implements:
+  - Talegen.AspNetCore.Multitenant.ITenantContext{{TTenant}}.Tenant
+  nameWithType.vb: TenantContext(Of TTenant).Tenant
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantContext(Of TTenant).Tenant
+references:
+- uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantContext`1
+  name: ITenantContext<TTenant>
+  nameWithType: ITenantContext<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.ITenantContext<TTenant>
+  nameWithType.vb: ITenantContext(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantContext(Of TTenant)
+  name.vb: ITenantContext(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+    name: ITenantContext
+    nameWithType: ITenantContext
+    fullName: Talegen.AspNetCore.Multitenant.ITenantContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+    name: ITenantContext
+    nameWithType: ITenantContext
+    fullName: Talegen.AspNetCore.Multitenant.ITenantContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Talegen.AspNetCore.Multitenant.ITenantContext{{TTenant}}
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantContext{`0}
+  parent: Talegen.AspNetCore.Multitenant
+  definition: Talegen.AspNetCore.Multitenant.ITenantContext`1
+  name: ITenantContext<TTenant>
+  nameWithType: ITenantContext<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.ITenantContext<TTenant>
+  nameWithType.vb: ITenantContext(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantContext(Of TTenant)
+  name.vb: ITenantContext(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+    name: ITenantContext
+    nameWithType: ITenantContext
+    fullName: Talegen.AspNetCore.Multitenant.ITenantContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+    name: ITenantContext
+    nameWithType: ITenantContext
+    fullName: Talegen.AspNetCore.Multitenant.ITenantContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Talegen.AspNetCore.Multitenant.TenantContext`1.Tenant*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.TenantContext`1.Tenant
+  name: Tenant
+  nameWithType: TenantContext<TTenant>.Tenant
+  fullName: Talegen.AspNetCore.Multitenant.TenantContext<TTenant>.Tenant
+  nameWithType.vb: TenantContext(Of TTenant).Tenant
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantContext(Of TTenant).Tenant
+- uid: Talegen.AspNetCore.Multitenant.ITenantContext{{TTenant}}.Tenant
+  commentId: P:Talegen.AspNetCore.Multitenant.ITenantContext{`0}.Tenant
+  parent: Talegen.AspNetCore.Multitenant.ITenantContext{{TTenant}}
+  definition: Talegen.AspNetCore.Multitenant.ITenantContext`1.Tenant
+  name: Tenant
+  nameWithType: ITenantContext<TTenant>.Tenant
+  fullName: Talegen.AspNetCore.Multitenant.ITenantContext<TTenant>.Tenant
+  nameWithType.vb: ITenantContext(Of TTenant).Tenant
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantContext(Of TTenant).Tenant
+- uid: '{TTenant}'
+  commentId: '!:TTenant'
+  definition: TTenant
+  name: TTenant
+  nameWithType: TTenant
+  fullName: TTenant
+- uid: Talegen.AspNetCore.Multitenant.ITenantContext`1.Tenant
+  commentId: P:Talegen.AspNetCore.Multitenant.ITenantContext`1.Tenant
+  name: Tenant
+  nameWithType: ITenantContext<TTenant>.Tenant
+  fullName: Talegen.AspNetCore.Multitenant.ITenantContext<TTenant>.Tenant
+  nameWithType.vb: ITenantContext(Of TTenant).Tenant
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantContext(Of TTenant).Tenant
+- uid: TTenant
+  name: TTenant
+  nameWithType: TTenant
+  fullName: TTenant

@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Contributing | Talegen ASP.net Core Multitenancy Middleware library </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Contributing | Talegen ASP.net Core Multitenancy Middleware library ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="contributing">Contributing</h1>
+
+<p>Thanks for your interest in contributing! Please read carefully through our guidelines below to ensure that your contribution adheres to our project's standards.</p>
+<h2 id="code-of-conduct">Code of Conduct</h2>
+<p>To hold a safe space for all contributors, we expect all project participants to adhere to our <a href="https://talegen.com/open-source-code-of-conduct">Code of Conduct</a>. Please do not skip reading this so that you can understand what actions will and will not be tolerated.</p>
+<h2 id="issue-tracking">Issue Tracking</h2>
+<p>For this Project, we use <a href="https://github.com/Talegen/Talegen.Tenant.Models/issues">GitHub Issues</a> to track all tasks related to this project.</p>
+<h2 id="style-guide">Style Guide</h2>
+<p>We follow the <a href="https://talegen.com/c-programming-style-guide/">Talegen Style Guide for C#</a>.</p>
+<p><strong>We will not accept contributions with StyleCop errors.</strong></p>
+<h2 id="build-the-project-locally">Build the project locally</h2>
+<p>In order to contribute to a project on GitHub, you must first get a copy of the project running locally on your computer. This process is sometimes called a &quot;build process&quot;, and every project's process will have different requirements. Some requirements are due to the project being hosted on GitHub, some are due to the programming language used, some are due to the project's dependencies.</p>
+<p>There are five steps to building this project:</p>
+<ol>
+<li><a href="#set-up-git-and-install-visualstudio">Set up Git and Install Visual Stuido</a></li>
+<li><a href="#fork-the-repository">Fork the repository</a></li>
+<li><a href="#clone-your-fork">Clone your fork</a></li>
+<li><a href="#install-dependencies">Install dependencies</a></li>
+<li><a href="#run-the-project">Run the project</a></li>
+</ol>
+<p>Once you get the project built, see if you can fix some <a href="https://github.com/Talegen/Talegen.Tenant.Models/issues">issues</a>.</p>
+<h3 id="set-up-git-and-install-visual-studio">Set up Git and Install Visual Studio</h3>
+<blockquote>
+<p><strong>If you've never written C# before, don't sweat!</strong> This exercise only requires fundamental language skills, you should be able to adapt from your favorite language.</p>
+</blockquote>
+<p>All GitHub projects are backed by a version control software called <em>Git</em>. You'll need to <a href="https://duckduckgo.com/?q=setting+up+git&amp;atb=v134-1&amp;ia=web">set up Git</a> in order to contribute to <em>any</em> project on GitHub.</p>
+<p>This specific project is written in C# and was built with Visual Studio. You can use this IDE or Visual Studio Code.</p>
+<h3 id="fork-the-repository">Fork the repository</h3>
+<p>A <em>fork</em> is a copy of a repository. Forking a repository lets you to make changes to your copy without affecting any of the original code.</p>
+<p>Click <strong>Fork</strong> (in the top-right corner of the page) to copy this repository to your GitHub account.</p>
+<h3 id="clone-your-fork">Clone your fork</h3>
+<p>A <em>clone</em> is a downloaded version of a repository. Cloning our fork lets you download a copy of the repository to your computer.</p>
+<p>Use <code>git</code> to clone your fork</p>
+<pre><code>$ git clone https://github.com/YOUR-USERNAME/Talegen.Tenant.Models
+</code></pre>
+<h3 id="install-dependencies">Install dependencies</h3>
+<p>Did you know that the author usually does not write all of the code in a project?</p>
+<p>The beauty of open source is that you can install and use code that other people have written, allowing you to focus on the unique requirements of your project. Third-party code that your project installs is called a <em>dependency</em> because it is required to work.</p>
+<p>This project uses <a href="https://www.nuget.org/">nuget.org</a>, a package repository for .NET projects, to maintain third-party dependencies.</p>
+<p>Package retrieval should be automatic at build time. There is no need for commands to retrieve these dependencies.</p>
+<p><strong>Dependency version control will be handled by Talegen. Do not submit dependency changes without specific required changes.</strong></p>
+<h3 id="run-the-project">Run the project</h3>
+<p>You should build the project with 0 warnings and 0 errors before submitting any changes.</p>
+<h2 id="submit-a-pull-request">Submit a Pull Request</h2>
+<p>Remember how making changes on a <em>fork</em> doesn't affect the original code? Well, in order to fix an issue in the main project, you <em>want</em> to change the original code. A <em>pull request</em> is a GitHub feature that lets you do just that!</p>
+<p>There are three steps to submitting a pull request:</p>
+<ol>
+<li><a href="#save-your-changes-locally">Save your changes locally</a></li>
+<li><a href="#send-your-changes-to-your-fork">Send your changes to your fork</a></li>
+<li><a href="#open-a-pull-request">Open a Pull Request</a></li>
+</ol>
+<p>These instructions are designed to explain the bare minimum steps in a beginner-friendly way. If you find yourself hungry for more details (or get stuck), I applaud and encourage you to continue research on your own. You'll find no lack of amazing articles on this topic.</p>
+<h3 id="save-your-changes-locally">Save your changes locally</h3>
+<p>First, get a list of all the files you have changed.</p>
+<pre><code>$ git status
+</code></pre>
+<p>Next, <em>stage</em> the file you want to save. This will add the file to a new list that is ready to be saved.</p>
+<pre><code>$ git add src/calculator.cs
+</code></pre>
+<p>Next, verify that the file has been staged correctly. Notice that the text color has changed, and your file is now in a list that says &quot;Changes to be committed&quot; instead of &quot;Changes not staged for commit&quot;</p>
+<pre><code>$ git status
+</code></pre>
+<p>Finally, save your staged files.</p>
+<pre><code>$ git commit -m &quot;Implement _check&quot;
+</code></pre>
+<p>You'll often hear this process called <em>committing</em> changes. It's the exact same thing.</p>
+<h3 id="send-your-changes-to-your-fork">Send your changes to your fork</h3>
+<p>With one simple <code>git</code> command, you can send the changes you just committed locally to your <em>fork</em> on GitHub.</p>
+<pre><code>$ git push origin master
+</code></pre>
+<h3 id="open-a-pull-request">Open a Pull Request</h3>
+<ol>
+<li>Find the <a href="https://github.com/danthareja/contribute-to-open-source/compare/">New Pull Request</a> button</li>
+<li>Select the option to <strong>compare across forks</strong></li>
+<li>Select <strong>your username</strong> in the <code>head fork</code> option</li>
+<li>Select <strong>your username</strong> in the <code>base</code> option</li>
+<li>Click <strong>Create Pull Request</strong></li>
+</ol>
+<h2 id="license">License</h2>
+<p>By contributing, you agree that your contributions will be licensed under its Apache 2.0 license.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/CONTRIBUTING.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright (c) Talegen, LLC. All rights reserved.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

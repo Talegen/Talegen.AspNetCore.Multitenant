@@ -1,0 +1,427 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
+  commentId: T:Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
+  id: TenantApiSourceBackchannelExtensions
+  parent: Talegen.AspNetCore.Multitenant.Sources
+  children:
+  - Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  langs:
+  - csharp
+  - vb
+  name: TenantApiSourceBackchannelExtensions
+  nameWithType: TenantApiSourceBackchannelExtensions
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Sources/TenantApiSourceBackchannelExtensions.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: TenantApiSourceBackchannelExtensions
+    path: Sources/TenantApiSourceBackchannelExtensions.cs
+    startLine: 28
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Sources
+  summary: "\nThis class contains extension methods for the Tenant API source backchannel client.\n"
+  example: []
+  syntax:
+    content: public static class TenantApiSourceBackchannelExtensions
+    content.vb: Public Module TenantApiSourceBackchannelExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  commentId: M:Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  id: ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  isExtensionMethod: true
+  parent: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToBackchannelConfig(TenantSettings)
+  nameWithType: TenantApiSourceBackchannelExtensions.ToBackchannelConfig(TenantSettings)
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  type: Method
+  source:
+    remote:
+      path: src/Sources/TenantApiSourceBackchannelExtensions.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: ToBackchannelConfig
+    path: Sources/TenantApiSourceBackchannelExtensions.cs
+    startLine: 39
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Sources
+  summary: "\nConverts a <xref href=\"Talegen.AspNetCore.Multitenant.Configuration.TenantSettings\" data-throw-if-not-resolved=\"false\"></xref> dictionary into a <xref href=\"Talegen.Backchannel.BackchannelConfig\" data-throw-if-not-resolved=\"false\"></xref> object used to setup the backchannel client for resource\nto resource client API communication via a client credentials REST call.\n"
+  example: []
+  syntax:
+    content: public static BackchannelConfig ToBackchannelConfig(this TenantSettings config)
+    parameters:
+    - id: config
+      type: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+      description: The configuration.
+    return:
+      type: Talegen.Backchannel.BackchannelConfig
+      description: "\nReturns a new <xref href=\"Talegen.Backchannel.BackchannelConfig\" data-throw-if-not-resolved=\"false\"></xref> with properties populated from the required values stored in the <xref href=\"Talegen.AspNetCore.Multitenant.Configuration.TenantSettings\" data-throw-if-not-resolved=\"false\"></xref> dictionary.\n"
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToBackchannelConfig(config As TenantSettings) As BackchannelConfig
+  overload: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: AuthorityUri or ClientId or Scopes or Secret or ResourceUri
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Talegen.AspNetCore.Multitenant.Sources
+  commentId: N:Talegen.AspNetCore.Multitenant.Sources
+  name: Talegen.AspNetCore.Multitenant.Sources
+  nameWithType: Talegen.AspNetCore.Multitenant.Sources
+  fullName: Talegen.AspNetCore.Multitenant.Sources
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+  commentId: T:Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+  parent: Talegen.AspNetCore.Multitenant.Configuration
+  name: TenantSettings
+  nameWithType: TenantSettings
+  fullName: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+- uid: Talegen.Backchannel.BackchannelConfig
+  commentId: T:Talegen.Backchannel.BackchannelConfig
+  parent: Talegen.Backchannel
+  isExternal: true
+  name: BackchannelConfig
+  nameWithType: BackchannelConfig
+  fullName: Talegen.Backchannel.BackchannelConfig
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+  name: ToBackchannelConfig
+  nameWithType: TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+- uid: Talegen.AspNetCore.Multitenant.Configuration
+  commentId: N:Talegen.AspNetCore.Multitenant.Configuration
+  name: Talegen.AspNetCore.Multitenant.Configuration
+  nameWithType: Talegen.AspNetCore.Multitenant.Configuration
+  fullName: Talegen.AspNetCore.Multitenant.Configuration
+- uid: Talegen.Backchannel
+  commentId: N:Talegen.Backchannel
+  isExternal: true
+  name: Talegen.Backchannel
+  nameWithType: Talegen.Backchannel
+  fullName: Talegen.Backchannel

@@ -78,19 +78,24 @@ namespace MultiTenantWebApp.Controllers
             this.logger.LogInformation($"Index(\"{tenant}\")");
 
             // but we already have it processed and ready to go here. Convert to a view model for effect.
-            var viewModel = this.Tenant as HomeViewModel;
+            var viewModel = this.Tenant != null ? new HomeViewModel
+            {
+                Id = this.Tenant.Id,
+                Identifier = this.Tenant.Identifier,
+                Properties = this.Tenant.Properties
+            } : new HomeViewModel();
 
             // return to the view.
-            return View(viewModel);
+            return this.View(viewModel);
         }
 
         /// <summary>
-        /// Privacies this instance.
+        /// Test this instance.
         /// </summary>
         /// <returns>Returns the action result view.</returns>
-        public IActionResult Privacy()
+        public IActionResult Test()
         {
-            return View();
+            return this.View();
         }
 
         /// <summary>
@@ -100,7 +105,7 @@ namespace MultiTenantWebApp.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return this.View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? this.HttpContext.TraceIdentifier });
         }
     }
 }

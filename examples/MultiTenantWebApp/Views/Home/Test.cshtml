@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "API Test";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <p>
+        This example makes an API call using the selected tenant identifier and returns the results.
+    </p>
+    <div>
+        <select id="tenantId">
+            <option value="tenant1" selected>Tenant1</option>
+            <option value="tenant2">Tenant2</option>
+        </select>
+    </div>
+    <div>
+        <button id="testAPI" onclick="TestApi()">TEST!</button>
+    </div>
+</div>
+<div id="results">API Results</div>
+
+@section Scripts {
+    <script>
+
+        function TestApi() {
+            $("#results").html('');
+            var identifier = $('#tenantId').val();
+            $.ajax({
+                url: '/api/ApiTest',
+                method: 'GET',
+                beforeSend: function (jqXHR, settings) {
+                    console.debug('setting x-tenant to ' + identifier);
+                    jqXHR.setRequestHeader('x-tenant', identifier);
+                },
+                complete: function (data) {
+                    console.log(typeof data); // string
+                    console.log(data); // HTML content of the jQuery.ajax page
+                    if (data && data.responseText) {
+                        $("#results").html(data.responseText);
+                    }
+                }
+            });
+        }
+    </script>
+}

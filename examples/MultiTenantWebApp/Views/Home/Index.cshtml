@@ -5,6 +5,16 @@
 }
 
 <div class="text-center">
+    <h2>Instructions</h2>
+    <p>
+        This example uses the Tenant identifier from the route. To begin, try entering the address <a href="~/tenant1">/tenant1</a>
+        into the address bar. Then try entering <a href="~/tenant2">/tenant2</a> to see a different tenant model displayed.
+    </p>
+    <p>
+        This tenant information is available to you at the point the controller is being processed allowing you to pull all sorts of tenant information from the object.
+        Typically, a database connection is stored within the tenant properties to allow for a tenant specific database to be used for the request.
+    </p>
+    <hr />
     <h1 class="display-4">@name</h1>
     <address>
         @Model?.Address

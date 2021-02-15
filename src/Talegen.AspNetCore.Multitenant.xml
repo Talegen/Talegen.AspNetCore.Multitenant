@@ -24,38 +24,6 @@
             </summary>
             <seealso cref="T:Talegen.Backchannel.BackchannelConfig" />
         </member>
-        <member name="T:Talegen.AspNetCore.Multitenant.Internal.MultiTenantMiddleware`1">
-            <summary>
-            This class implements the multi-tenant middleware processor for retrieving and storing the tenant information into the current request context.
-            </summary>
-            <typeparam name="TTenant">The type of the tenant.</typeparam>
-        </member>
-        <member name="F:Talegen.AspNetCore.Multitenant.Internal.MultiTenantMiddleware`1.logger">
-            <summary>
-            The logger
-            </summary>
-        </member>
-        <member name="F:Talegen.AspNetCore.Multitenant.Internal.MultiTenantMiddleware`1.nextRequest">
-            <summary>
-            Contains the next request
-            </summary>
-        </member>
-        <member name="M:Talegen.AspNetCore.Multitenant.Internal.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.Internal.MultiTenantMiddleware`1" /> class.
-            </summary>
-            <param name="next">The next request delegate.</param>
-            <param name="logger">Contains an optional logger instance.</param>
-        </member>
-        <member name="M:Talegen.AspNetCore.Multitenant.Internal.MultiTenantMiddleware`1.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
-            <summary>
-            Invokes the specified context request to retrieve and apply the tenant context.
-            </summary>
-            <param name="context">The HTTP context.</param>
-            <remarks>
-            For every request, the HttpContext is modified here to get the tenant context. The Tenant context property is then updated with tenant lookup results.
-            </remarks>
-        </member>
         <member name="T:Talegen.AspNetCore.Multitenant.ITenant">
             <summary>
             This interface represents the minimum implementation of a tenant information model.
@@ -172,6 +140,38 @@
             <param name="innerException">
             The exception that is the cause of the current exception, or a null reference ( <see langword="Nothing" /> in Visual Basic) if no inner exception is specified.
             </param>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1">
+            <summary>
+            This class implements the multi-tenant middleware processor for retrieving and storing the tenant information into the current request context.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.nextRequest">
+            <summary>
+            Contains the next request
+            </summary>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1" /> class.
+            </summary>
+            <param name="next">The next request delegate.</param>
+            <param name="logger">Contains an optional logger instance.</param>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Invokes the specified context request to retrieve and apply the tenant context.
+            </summary>
+            <param name="context">The HTTP context.</param>
+            <remarks>
+            For every request, the HttpContext is modified here to get the tenant context. The Tenant context property is then updated with tenant lookup results.
+            </remarks>
         </member>
         <member name="T:Talegen.AspNetCore.Multitenant.Properties.Resources">
             <summary>

@@ -11,8 +11,8 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.AspNetCore.Multitenant</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Tenant</PackageTags>
-    <PackageReleaseNotes>Converted TenantApiServerService to an Interface for implementation. Injection was not working with inherited base class.</PackageReleaseNotes>
-    <Version>1.0.3.0</Version>
+    <PackageReleaseNotes>Fixed missing middleware internals issue.</PackageReleaseNotes>
+    <Version>1.0.4.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <ApplicationIcon>assets\logo.ico</ApplicationIcon>
     <PackageIcon>logo.png</PackageIcon>
@@ -55,6 +55,10 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Internal\" />
   </ItemGroup>
 
 </Project>

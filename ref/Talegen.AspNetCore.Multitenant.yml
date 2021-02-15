@@ -12,6 +12,7 @@ items:
   - Talegen.AspNetCore.Multitenant.ITenantSource`1
   - Talegen.AspNetCore.Multitenant.ITenantStore`1
   - Talegen.AspNetCore.Multitenant.MultiTenantException
+  - Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
   - Talegen.AspNetCore.Multitenant.SimpleTenant
   - Talegen.AspNetCore.Multitenant.TenantBuilder`1
   - Talegen.AspNetCore.Multitenant.TenantContext`1
@@ -195,6 +196,42 @@ references:
   name: MultiTenantException
   nameWithType: MultiTenantException
   fullName: Talegen.AspNetCore.Multitenant.MultiTenantException
+- uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+  commentId: T:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+  name: MultiTenantMiddleware<TTenant>
+  nameWithType: MultiTenantMiddleware<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware<TTenant>
+  nameWithType.vb: MultiTenantMiddleware(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware(Of TTenant)
+  name.vb: MultiTenantMiddleware(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+    name: MultiTenantMiddleware
+    nameWithType: MultiTenantMiddleware
+    fullName: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+    name: MultiTenantMiddleware
+    nameWithType: MultiTenantMiddleware
+    fullName: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Talegen.AspNetCore.Multitenant.SimpleTenant
   commentId: T:Talegen.AspNetCore.Multitenant.SimpleTenant
   name: SimpleTenant

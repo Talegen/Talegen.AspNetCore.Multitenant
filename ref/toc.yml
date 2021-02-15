@@ -22,6 +22,9 @@
     name.vb: ITenantStore(Of TTenant)
   - uid: Talegen.AspNetCore.Multitenant.MultiTenantException
     name: MultiTenantException
+  - uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+    name: MultiTenantMiddleware<TTenant>
+    name.vb: MultiTenantMiddleware(Of TTenant)
   - uid: Talegen.AspNetCore.Multitenant.SimpleTenant
     name: SimpleTenant
   - uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1

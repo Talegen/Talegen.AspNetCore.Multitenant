@@ -14,7 +14,7 @@
  *
 */
 
-namespace Talegen.AspNetCore.Multitenant.Internal
+namespace Talegen.AspNetCore.Multitenant
 {
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Http;
@@ -25,7 +25,7 @@ namespace Talegen.AspNetCore.Multitenant.Internal
     /// This class implements the multi-tenant middleware processor for retrieving and storing the tenant information into the current request context.
     /// </summary>
     /// <typeparam name="TTenant">The type of the tenant.</typeparam>
-    internal class MultiTenantMiddleware<TTenant> where TTenant : class, ITenant, new()
+    public class MultiTenantMiddleware<TTenant> where TTenant : class, ITenant, new()
     {
         /// <summary>
         /// The logger

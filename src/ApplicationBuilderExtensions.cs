@@ -18,7 +18,6 @@ namespace Talegen.AspNetCore.Multitenant
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.Extensions.Logging;
-    using Talegen.AspNetCore.Multitenant.Internal;
 
     /// <summary>
     /// This class contains application builder extensions for implementing multi-tenant context loader in the startup of the application.

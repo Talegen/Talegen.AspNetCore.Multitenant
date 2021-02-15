@@ -1,34 +1,40 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions
-  commentId: T:Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions
-  id: ApplicationBuilderExtensions
+- uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+  commentId: T:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+  id: MultiTenantMiddleware`1
   parent: Talegen.AspNetCore.Multitenant
   children:
-  - Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy``1(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Logging.ILogger)
+  - Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger)
+  - Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.Invoke(Microsoft.AspNetCore.Http.HttpContext)
   langs:
   - csharp
   - vb
-  name: ApplicationBuilderExtensions
-  nameWithType: ApplicationBuilderExtensions
-  fullName: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions
+  name: MultiTenantMiddleware<TTenant>
+  nameWithType: MultiTenantMiddleware<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware<TTenant>
   type: Class
   source:
     remote:
-      path: src/ApplicationBuilderExtensions.cs
+      path: src/MultiTenantMiddleware.cs
       branch: main
       repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
-    id: ApplicationBuilderExtensions
-    path: ApplicationBuilderExtensions.cs
-    startLine: 24
+    id: MultiTenantMiddleware
+    path: MultiTenantMiddleware.cs
+    startLine: 27
   assemblies:
   - Talegen.AspNetCore.Multitenant
   namespace: Talegen.AspNetCore.Multitenant
-  summary: "\nThis class contains application builder extensions for implementing multi-tenant context loader in the startup of the application.\n"
+  summary: "\nThis class implements the multi-tenant middleware processor for retrieving and storing the tenant information into the current request context.\n"
   example: []
   syntax:
-    content: public static class ApplicationBuilderExtensions
-    content.vb: Public Module ApplicationBuilderExtensions
+    content: >-
+      public class MultiTenantMiddleware<TTenant>
+          where TTenant : class, ITenant, new()
+    typeParameters:
+    - id: TTenant
+      description: The type of the tenant.
+    content.vb: Public Class MultiTenantMiddleware(Of TTenant As {Class, ITenant, New})
   inheritance:
   - System.Object
   inheritedMembers:
@@ -39,69 +45,97 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  nameWithType.vb: MultiTenantMiddleware(Of TTenant)
   modifiers.csharp:
   - public
-  - static
   - class
   modifiers.vb:
   - Public
-  - Module
-- uid: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy``1(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Logging.ILogger)
-  commentId: M:Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy``1(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Logging.ILogger)
-  id: UseMultiTenancy``1(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Logging.ILogger)
-  isExtensionMethod: true
-  parent: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions
+  - Class
+  fullName.vb: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware(Of TTenant)
+  name.vb: MultiTenantMiddleware(Of TTenant)
+- uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger)
+  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger)'
+  parent: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
   langs:
   - csharp
   - vb
-  name: UseMultiTenancy<TTenant>(IApplicationBuilder, ILogger)
-  nameWithType: ApplicationBuilderExtensions.UseMultiTenancy<TTenant>(IApplicationBuilder, ILogger)
-  fullName: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy<TTenant>(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.Extensions.Logging.ILogger)
-  type: Method
+  name: MultiTenantMiddleware(RequestDelegate, ILogger)
+  nameWithType: MultiTenantMiddleware<TTenant>.MultiTenantMiddleware(RequestDelegate, ILogger)
+  fullName: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware<TTenant>.MultiTenantMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger)
+  type: Constructor
   source:
     remote:
-      path: src/ApplicationBuilderExtensions.cs
+      path: src/MultiTenantMiddleware.cs
       branch: main
       repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
-    id: UseMultiTenancy
-    path: ApplicationBuilderExtensions.cs
-    startLine: 33
+    id: .ctor
+    path: MultiTenantMiddleware.cs
+    startLine: 44
   assemblies:
   - Talegen.AspNetCore.Multitenant
   namespace: Talegen.AspNetCore.Multitenant
-  summary: "\nUses the multi tenancy middleware class.\n"
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.AspNetCore.Multitenant.MultiTenantMiddleware%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
   example: []
   syntax:
-    content: >-
-      public static IApplicationBuilder UseMultiTenancy<TTenant>(this IApplicationBuilder builder, ILogger logger = null)
-          where TTenant : class, ITenant, new()
+    content: public MultiTenantMiddleware(RequestDelegate next, ILogger logger = null)
     parameters:
-    - id: builder
-      type: Microsoft.AspNetCore.Builder.IApplicationBuilder
-      description: The builder.
+    - id: next
+      type: Microsoft.AspNetCore.Http.RequestDelegate
+      description: The next request delegate.
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger
-      description: Contains a logger instance.
-    typeParameters:
-    - id: TTenant
-      description: The type of the tenant.
-    return:
-      type: Microsoft.AspNetCore.Builder.IApplicationBuilder
-      description: Returns the application builder.
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function UseMultiTenancy(Of TTenant As {Class, ITenant, New})(builder As IApplicationBuilder, logger As ILogger = Nothing) As IApplicationBuilder
-  overload: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy*
-  nameWithType.vb: ApplicationBuilderExtensions.UseMultiTenancy(Of TTenant)(IApplicationBuilder, ILogger)
+      description: Contains an optional logger instance.
+    content.vb: Public Sub New(next As RequestDelegate, logger As ILogger = Nothing)
+  overload: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor*
+  nameWithType.vb: MultiTenantMiddleware(Of TTenant).MultiTenantMiddleware(RequestDelegate, ILogger)
   modifiers.csharp:
   - public
-  - static
   modifiers.vb:
   - Public
-  - Shared
-  fullName.vb: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy(Of TTenant)(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.Extensions.Logging.ILogger)
-  name.vb: UseMultiTenancy(Of TTenant)(IApplicationBuilder, ILogger)
+  fullName.vb: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware(Of TTenant).MultiTenantMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger)
+- uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.Invoke(Microsoft.AspNetCore.Http.HttpContext)
+  commentId: M:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.Invoke(Microsoft.AspNetCore.Http.HttpContext)
+  id: Invoke(Microsoft.AspNetCore.Http.HttpContext)
+  parent: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+  langs:
+  - csharp
+  - vb
+  name: Invoke(HttpContext)
+  nameWithType: MultiTenantMiddleware<TTenant>.Invoke(HttpContext)
+  fullName: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware<TTenant>.Invoke(Microsoft.AspNetCore.Http.HttpContext)
+  type: Method
+  source:
+    remote:
+      path: src/MultiTenantMiddleware.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: Invoke
+    path: MultiTenantMiddleware.cs
+    startLine: 57
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nInvokes the specified context request to retrieve and apply the tenant context.\n"
+  remarks: "\nFor every request, the HttpContext is modified here to get the tenant context. The Tenant context property is then updated with tenant lookup results.\n"
+  example: []
+  syntax:
+    content: public Task Invoke(HttpContext context)
+    parameters:
+    - id: context
+      type: Microsoft.AspNetCore.Http.HttpContext
+      description: The HTTP context.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function Invoke(context As HttpContext) As Task
+  overload: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.Invoke*
+  nameWithType.vb: MultiTenantMiddleware(Of TTenant).Invoke(HttpContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware(Of TTenant).Invoke(Microsoft.AspNetCore.Http.HttpContext)
 references:
 - uid: Talegen.AspNetCore.Multitenant
   commentId: N:Talegen.AspNetCore.Multitenant
@@ -400,18 +434,56 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy*
-  commentId: Overload:Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy
-  name: UseMultiTenancy
-  nameWithType: ApplicationBuilderExtensions.UseMultiTenancy
-  fullName: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy
-- uid: Microsoft.AspNetCore.Builder.IApplicationBuilder
-  commentId: T:Microsoft.AspNetCore.Builder.IApplicationBuilder
-  parent: Microsoft.AspNetCore.Builder
+- uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+  commentId: T:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+  name: MultiTenantMiddleware<TTenant>
+  nameWithType: MultiTenantMiddleware<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware<TTenant>
+  nameWithType.vb: MultiTenantMiddleware(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware(Of TTenant)
+  name.vb: MultiTenantMiddleware(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+    name: MultiTenantMiddleware
+    nameWithType: MultiTenantMiddleware
+    fullName: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+    name: MultiTenantMiddleware
+    nameWithType: MultiTenantMiddleware
+    fullName: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.#ctor
+  name: MultiTenantMiddleware
+  nameWithType: MultiTenantMiddleware<TTenant>.MultiTenantMiddleware
+  fullName: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware<TTenant>.MultiTenantMiddleware
+  nameWithType.vb: MultiTenantMiddleware(Of TTenant).MultiTenantMiddleware
+  fullName.vb: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware(Of TTenant).MultiTenantMiddleware
+- uid: Microsoft.AspNetCore.Http.RequestDelegate
+  commentId: T:Microsoft.AspNetCore.Http.RequestDelegate
+  parent: Microsoft.AspNetCore.Http
   isExternal: true
-  name: IApplicationBuilder
-  nameWithType: IApplicationBuilder
-  fullName: Microsoft.AspNetCore.Builder.IApplicationBuilder
+  name: RequestDelegate
+  nameWithType: RequestDelegate
+  fullName: Microsoft.AspNetCore.Http.RequestDelegate
 - uid: Microsoft.Extensions.Logging.ILogger
   commentId: T:Microsoft.Extensions.Logging.ILogger
   parent: Microsoft.Extensions.Logging
@@ -419,15 +491,42 @@ references:
   name: ILogger
   nameWithType: ILogger
   fullName: Microsoft.Extensions.Logging.ILogger
-- uid: Microsoft.AspNetCore.Builder
-  commentId: N:Microsoft.AspNetCore.Builder
+- uid: Microsoft.AspNetCore.Http
+  commentId: N:Microsoft.AspNetCore.Http
   isExternal: true
-  name: Microsoft.AspNetCore.Builder
-  nameWithType: Microsoft.AspNetCore.Builder
-  fullName: Microsoft.AspNetCore.Builder
+  name: Microsoft.AspNetCore.Http
+  nameWithType: Microsoft.AspNetCore.Http
+  fullName: Microsoft.AspNetCore.Http
 - uid: Microsoft.Extensions.Logging
   commentId: N:Microsoft.Extensions.Logging
   isExternal: true
   name: Microsoft.Extensions.Logging
   nameWithType: Microsoft.Extensions.Logging
   fullName: Microsoft.Extensions.Logging
+- uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.Invoke*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1.Invoke
+  name: Invoke
+  nameWithType: MultiTenantMiddleware<TTenant>.Invoke
+  fullName: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware<TTenant>.Invoke
+  nameWithType.vb: MultiTenantMiddleware(Of TTenant).Invoke
+  fullName.vb: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware(Of TTenant).Invoke
+- uid: Microsoft.AspNetCore.Http.HttpContext
+  commentId: T:Microsoft.AspNetCore.Http.HttpContext
+  parent: Microsoft.AspNetCore.Http
+  isExternal: true
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: Microsoft.AspNetCore.Http.HttpContext
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

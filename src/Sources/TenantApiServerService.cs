@@ -25,7 +25,7 @@ namespace Talegen.AspNetCore.Multitenant.Sources
     using Talegen.Backchannel;
 
     /// <summary>
-    /// This class impliments the tenant license server service usedto interact with the license server for tenant information purposes.
+    /// This class implements the tenant license server service used to interact with the license server for tenant information purposes.
     /// </summary>
     /// <typeparam name="TTenant">The type of the tenant.</typeparam>
     public class TenantApiServerService<TTenant>
@@ -35,7 +35,7 @@ namespace Talegen.AspNetCore.Multitenant.Sources
         /// Initializes a new instance of the <see cref="TenantApiServerService{TTenant}" /> class.
         /// </summary>
         /// <param name="settings">The settings.</param>
-        /// <exception cref="ArgumentNullException">settings</exception>
+        /// <exception cref="ArgumentNullException">Exception is thrown if settings is not specified.</exception>
         public TenantApiServerService(BackchannelConfig settings)
         {
             this.Client = new BackchannelClient(settings ?? throw new ArgumentNullException(nameof(settings)));
@@ -45,7 +45,7 @@ namespace Talegen.AspNetCore.Multitenant.Sources
         /// Initializes a new instance of the <see cref="TenantApiServerService{TTenant}" /> class.
         /// </summary>
         /// <param name="settings">The settings.</param>
-        /// <exception cref="ArgumentNullException">settings</exception>
+        /// <exception cref="ArgumentNullException">Exception is thrown if settings is not specified.</exception>
         public TenantApiServerService(TenantSettings settings)
         {
             this.Client = new BackchannelClient(settings.ToBackchannelConfig() ?? throw new ArgumentNullException(nameof(settings)));
@@ -60,6 +60,8 @@ namespace Talegen.AspNetCore.Multitenant.Sources
         /// <summary>
         /// Finds the tenant from license server.
         /// </summary>
+        /// <param name="tenantIdentifier">Contains the tenant identifier to find.</param>
+        /// <param name="cancellationToken">Contains an optional cancellation token.</param>
         /// <returns>Returns the Publisher Tenant record found on the license server.</returns>
         public virtual Task<TTenant> FindTenantFromApiServerAsync(string tenantIdentifier, CancellationToken cancellationToken = default)
         {
@@ -69,7 +71,7 @@ namespace Talegen.AspNetCore.Multitenant.Sources
         /// <summary>
         /// Finds all tenants from license server asynchronous.
         /// </summary>
-        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <param name="cancellationToken">Contains an optional cancellation token.</param>
         /// <returns>Returns a list of tenant objects.</returns>
         public virtual Task<List<TTenant>> FindAllTenantsFromApiServerAsync(CancellationToken cancellationToken = default)
         {

@@ -14,7 +14,7 @@
  *
 */
 
-namespace Talegen.AspNetCore.Multitenant
+namespace Talegen.AspNetCore.Multitenant.Stores
 {
     using System;
     using System.Collections.Generic;
@@ -58,7 +58,7 @@ namespace Talegen.AspNetCore.Multitenant
         }
 
         /// <summary>
-        /// Returns alls the tenants from the cache storage.
+        /// Returns all of the tenants from the cache storage.
         /// </summary>
         /// <param name="cancellationToken">Contains an optional cancellation token.</param>
         /// <returns>Returns a list of all tenants found in the cache storage.</returns>
@@ -82,8 +82,8 @@ namespace Talegen.AspNetCore.Multitenant
         /// <param name="tenantInfo">Contains the tenant information to add.</param>
         /// <param name="cancellationToken">Contains an optional cancellation token.</param>
         /// <returns>Returns a value indicating whether the record was added.</returns>
-        /// <exception cref="ArgumentNullException">tenantInfo</exception>
-        /// <exception cref="NullReferenceException"></exception>
+        /// <exception cref="ArgumentNullException">Thrown if tenantInfo is not specified.</exception>
+        /// <exception cref="NullReferenceException">Thrown if tenant identifier is not specified.</exception>
         public async Task<bool> TryAddAsync(TTenant tenantInfo, CancellationToken cancellationToken = default)
         {
             if (tenantInfo == null)

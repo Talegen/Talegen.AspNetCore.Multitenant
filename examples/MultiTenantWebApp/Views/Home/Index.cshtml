@@ -1,0 +1,12 @@
+﻿@model HomeViewModel
+@{
+    string name = Model != null && !string.IsNullOrEmpty(Model.Name) ? Model.Name : "No Tenant Specified";
+    ViewData["Title"] = name;
+}
+
+<div class="text-center">
+    <h1 class="display-4">@name</h1>
+    <address>
+        @Model?.Address
+    </address>
+</div>

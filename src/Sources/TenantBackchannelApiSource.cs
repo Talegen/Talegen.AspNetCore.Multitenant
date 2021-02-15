@@ -25,16 +25,16 @@ namespace Talegen.AspNetCore.Multitenant.Sources
     /// a Resource to Resource backchannel client.
     /// </summary>
     /// <typeparam name="TTenant">The type of the tenant.</typeparam>
+    /// <typeparam name="TService">The type of the service class used for interaction.</typeparam>
     /// <seealso cref="Talegen.AspNetCore.Multitenant.ITenantSource{TTenant}" />
     public class TenantBackchannelApiSource<TTenant, TService> : ITenantSource<TTenant>
         where TTenant : class, ITenant, new()
         where TService : TenantApiServerService<TTenant>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TenantBackchannelApiSource{TTenant}" /> class.
+        /// Initializes a new instance of the <see cref="TenantBackchannelApiSource{TTenant, TService}" /> class.
         /// </summary>
-        /// <param name="tenantSettings">Contains the tenant settings.</param>
-        /// <param name="errorManager">Contains an instance of an <see cref="IErrorManager" /> implementation.</param>
+        /// <param name="service">The service to use for API interaction.</param>
         public TenantBackchannelApiSource(TService service)
         {
             this.Service = service;

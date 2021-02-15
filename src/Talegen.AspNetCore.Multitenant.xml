@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Talegen.AspNetCore.Multitenant</name>
+    </assembly>
+    <members>
+        <member name="T:Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions">
+            <summary>
+            This class contains application builder extensions for implementing multi-tenant context loader in the startup of the application.
+            </summary>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy``1(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Uses the multi tenancy middleware class.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+            <param name="builder">The builder.</param>
+            <param name="logger">Contains a logger instance.</param>
+            <returns>Returns the application builder.</returns>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Configuration.TenantSettings">
+            <summary>
+            This class implements the backchannel client configuration settings necessary for communicating with a resource to resource tenant source request.
+            </summary>
+            <seealso cref="T:Talegen.Backchannel.BackchannelConfig" />
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Internal.MultiTenantMiddleware`1">
+            <summary>
+            This class implements the multi-tenant middleware processor for retrieving and storing the tenant information into the current request context.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.Internal.MultiTenantMiddleware`1.logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.Internal.MultiTenantMiddleware`1.nextRequest">
+            <summary>
+            Contains the next request
+            </summary>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Internal.MultiTenantMiddleware`1.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.Internal.MultiTenantMiddleware`1" /> class.
+            </summary>
+            <param name="next">The next request delegate.</param>
+            <param name="logger">Contains an optional logger instance.</param>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Internal.MultiTenantMiddleware`1.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Invokes the specified context request to retrieve and apply the tenant context.
+            </summary>
+            <param name="context">The HTTP context.</param>
+            <remarks>
+            For every request, the HttpContext is modified here to get the tenant context. The Tenant context property is then updated with tenant lookup results.
+            </remarks>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.ITenant">
+            <summary>
+            This interface represents the minimum implementation of a tenant information model.
+            </summary>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.ITenant.Id">
+            <summary>
+            Gets or sets the durable tenant identifier that will never change.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.ITenant.Identifier">
+            <summary>
+            Gets or sets the tenant identifier name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.ITenant.Properties">
+            <summary>
+            Gets the properties.
+            </summary>
+            <value>The properties.</value>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.ITenantContext`1">
+            <summary>
+            This interface defines the minimum tenant context implementation.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.ITenantContext`1.Tenant">
+            <summary>
+            Gets or sets the tenant.
+            </summary>
+            <value>The tenant.</value>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.ITenantContextAccessor`1">
+            <summary>
+            This interface defines the minimum implementation of a tenant context accessor.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.ITenantContextAccessor`1.TenantContext">
+            <summary>
+            Gets or sets the tenant context.
+            </summary>
+            <value>The tenant context.</value>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.ITenantResolverStrategy">
+            <summary>
+            This interface defines a minimum implementation for a tenant resolver strategy class.
+            </summary>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Gets the tenant identifier from the request.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>Returns the tenant identifier if found.</returns>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.ITenantSource`1">
+            <summary>
+            This interface defines the minimum implementation of an external tenant source store.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant model.</typeparam>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            This method implements the tenant search logic for an external tenant source.
+            </summary>
+            <param name="tenantIdentifier">The tenant identifier to find.</param>
+            <param name="cancellationToken">Contains an optional cancellation token.</param>
+            <returns>Returns the <see cref="T:Talegen.AspNetCore.Multitenant.ITenant" /> object if found.</returns>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.ITenantStore`1">
+            <summary>
+            This interface defines the minimum implementation of a tenant store.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.ITenantStore`1.AllTenantsAsync(System.Threading.CancellationToken)">
+            <summary>
+            Returns alls the tenants from the cache storage.
+            </summary>
+            <param name="cancellationToken">Contains an optional cancellation token.</param>
+            <returns>Returns a list of all tenants found in the cache storage.</returns>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.ITenantStore`1.GetByIdentifierAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Tries the get the tenant record by the tenant identifier asynchronously.
+            </summary>
+            <param name="identifier">The tenant identifier to find.</param>
+            <param name="cancellationToken">Contains an optional cancellation token.</param>
+            <returns>Returns The tenant record if found.</returns>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.ITenantStore`1.TryAddAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+            Tries to add a new Tenant to the cache storage.
+            </summary>
+            <param name="tenantInfo">The tenant information to add.</param>
+            <param name="cancellationToken">Contains an optional cancellation token.</param>
+            <returns>Returns a value indicating whether the record was added.</returns>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.MultiTenantException">
+            <summary>
+            This class implements a custom exception for multi-tenant interactions.
+            </summary>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.MultiTenantException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.MultiTenantException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference ( <see langword="Nothing" /> in Visual Basic) if no inner exception is specified.
+            </param>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.Properties.Resources.ApplicationName">
+            <summary>
+              Looks up a localized string similar to Talegen.AspNetCore.Multitenant.
+            </summary>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.Properties.Resources.ErrorApiNotImplementedText">
+            <summary>
+              Looks up a localized string similar to Use override to implement this method for your specific tenant source API..
+            </summary>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.Properties.Resources.ErrorInvalidConfigText">
+            <summary>
+              Looks up a localized string similar to A parameter named {0} must be specified with a valid value..
+            </summary>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.Properties.Resources.ErrorNoCacheValueText">
+            <summary>
+              Looks up a localized string similar to {0} must have a value..
+            </summary>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.SimpleTenant">
+            <summary>
+            Implements a simple basic Tenant information model to get off the ground.
+            </summary>
+            <seealso cref="T:Talegen.AspNetCore.Multitenant.ITenant" />
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.SimpleTenant.Id">
+            <summary>
+            Gets or sets the durable tenant identifier that will never change.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.SimpleTenant.Identifier">
+            <summary>
+            Gets or sets the tenant identifier name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.SimpleTenant.Properties">
+            <summary>
+            Gets any additional tenant properties.
+            </summary>
+            <value>The properties.</value>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1">
+            <summary>
+            This class impliments the tenant license server service usedto interact with the license server for tenant information purposes.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor(Talegen.Backchannel.BackchannelConfig)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1" /> class.
+            </summary>
+            <param name="settings">The settings.</param>
+            <exception cref="T:System.ArgumentNullException">settings</exception>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.#ctor(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1" /> class.
+            </summary>
+            <param name="settings">The settings.</param>
+            <exception cref="T:System.ArgumentNullException">settings</exception>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.Client">
+            <summary>
+            Gets the client.
+            </summary>
+            <value>The client.</value>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindTenantFromApiServerAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Finds the tenant from license server.
+            </summary>
+            <returns>Returns the Publisher Tenant record found on the license server.</returns>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Sources.TenantApiServerService`1.FindAllTenantsFromApiServerAsync(System.Threading.CancellationToken)">
+            <summary>
+            Finds all tenants from license server asynchronous.
+            </summary>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>Returns a list of tenant objects.</returns>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions">
+            <summary>
+            This class contains extension methods for the Tenant API source backchannel client.
+            </summary>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)">
+            <summary>
+            Converts a <see cref="T:Talegen.AspNetCore.Multitenant.Configuration.TenantSettings" /> dictionary into a <see cref="T:Talegen.Backchannel.BackchannelConfig" /> object used to setup the backchannel client for resource
+            to resource client API communication via a client credentials REST call.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>
+            Returns a new <see cref="T:Talegen.Backchannel.BackchannelConfig" /> with properties populated from the required values stored in the <see cref="T:Talegen.AspNetCore.Multitenant.Configuration.TenantSettings" /> dictionary.
+            </returns>
+            <exception cref="T:System.ArgumentException">AuthorityUri or ClientId or Scopes or Secret or ResourceUri</exception>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2">
+            <summary>
+            This class implements the <see cref="T:Talegen.AspNetCore.Multitenant.ITenantSource`1" /> interface to search and retrieve tenant application information from an a REST API using
+            a Resource to Resource backchannel client.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+            <typeparam name="TService">The type of the service class used for interaction.</typeparam>
+            <seealso cref="T:Talegen.AspNetCore.Multitenant.ITenantSource`1" />
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.#ctor(`1)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2" /> class.
+            </summary>
+            <param name="service">The service to use for API interaction.</param>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.Service">
+            <summary>
+            Gets the service.
+            </summary>
+            <value>The service.</value>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.FindTenantAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            This method implements the tenant search logic for an external tenant source.
+            </summary>
+            <param name="tenantIdentifier">The tenant identifier to find.</param>
+            <param name="cancellationToken">Contains an optional cancellation token.</param>
+            <returns>Returns the <see cref="T:Talegen.AspNetCore.Multitenant.ITenant" /> object if found.</returns>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource`1">
+            <summary>
+            This class implements the <see cref="T:Talegen.AspNetCore.Multitenant.ITenantSource`1" /> interface to search and retrieve tenant application information from an
+            <see cref="T:Vasont.AspnetCore.RedisClient.IAdvancedDistributedCache" /> implementation (Redis).
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+            <seealso cref="T:Talegen.AspNetCore.Multitenant.ITenantSource`1" />
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource`1.CacheKeyTemplate">
+            <summary>
+            Contains the cache key template.
+            </summary>
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource`1.cache">
+            <summary>
+            Contains an instance of the distributed cache to use.
+            </summary>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource`1.#ctor(Vasont.AspnetCore.RedisClient.IAdvancedDistributedCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource`1" /> class.
+            </summary>
+            <param name="cache">The cache store to utilize.</param>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource`1.FindTenantAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            This method implements the tenant search logic for an external tenant source.
+            </summary>
+            <param name="tenantIdentifier">The tenant identifier to find.</param>
+            <param name="cancellationToken">Contains an optional cancellation token.</param>
+            <returns>Returns the <see cref="T:Talegen.AspNetCore.Multitenant.ITenant" /> object if found.</returns>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1">
+            <summary>
+            Implements a tenant store utilizing <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> storage.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant model stored.</typeparam>
+            <seealso cref="T:Talegen.AspNetCore.Multitenant.ITenantStore`1" />
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1.CacheKeyTemplate">
+            <summary>
+            Contains the cache key template.
+            </summary>
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1.cache">
+            <summary>
+            Contains an instance of the distributed cache to use.
+            </summary>
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1.applicationName">
+            <summary>
+            Contains the application name.
+            </summary>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1" /> class.
+            </summary>
+            <param name="cache">Contains an instance of the <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> cache object.</param>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1.AllTenantsAsync(System.Threading.CancellationToken)">
+            <summary>
+            This method is used to return all tenants.
+            </summary>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>Normally, returns a list of all tenants available.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1.TryAddAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+            Tries to add a new Tenant to the cache storage.
+            </summary>
+            <param name="tenantInfo">The tenant information to add.</param>
+            <param name="cancellationToken">Contains an optional cancellation token.</param>
+            <returns>Returns a value indicating whether the record was added.</returns>
+            <exception cref="T:System.ArgumentNullException">tenantInfo</exception>
+            <exception cref="T:System.NullReferenceException"></exception>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1.GetByIdentifierAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Tries the get the tenant record by the tenant identifier asynchronously.
+            </summary>
+            <param name="identifier">The tenant identifier to find.</param>
+            <param name="cancellationToken">Contains an optional cancellation token.</param>
+            <returns>Returns The tenant record if found.</returns>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1">
+            <summary>
+            Implements a tenant store utilizing <see cref="T:Vasont.AspnetCore.RedisClient.IAdvancedDistributedCache" /> storage.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant model stored.</typeparam>
+            <seealso cref="T:Talegen.AspNetCore.Multitenant.ITenantStore`1" />
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.CacheKeyTemplate">
+            <summary>
+            Contains the cache key template.
+            </summary>
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.cache">
+            <summary>
+            Contains an instance of the distributed cache to use.
+            </summary>
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.applicationName">
+            <summary>
+            Contains the application name.
+            </summary>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.#ctor(Vasont.AspnetCore.RedisClient.IAdvancedDistributedCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1" /> class.
+            </summary>
+            <param name="cache">The cache.</param>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.AllTenantsAsync(System.Threading.CancellationToken)">
+            <summary>
+            Returns alls the tenants from the cache storage.
+            </summary>
+            <param name="cancellationToken">Contains an optional cancellation token.</param>
+            <returns>Returns a list of all tenants found in the cache storage.</returns>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.TryAddAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+            Tries to add a new Tenant record to the cache store.
+            </summary>
+            <param name="tenantInfo">Contains the tenant information to add.</param>
+            <param name="cancellationToken">Contains an optional cancellation token.</param>
+            <returns>Returns a value indicating whether the record was added.</returns>
+            <exception cref="T:System.ArgumentNullException">tenantInfo</exception>
+            <exception cref="T:System.NullReferenceException"></exception>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.GetByIdentifierAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Tries the get the tenant record by the tenant identifier asynchronously.
+            </summary>
+            <param name="identifier">The tenant identifier to find.</param>
+            <param name="cancellationToken">Contains an optional cancellation token.</param>
+            <returns>Returns The tenant record if found.</returns>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Strategies.TenantHeaderResolverStrategy">
+            <summary>
+            This class implements a header resolver strategory for retrieving the tenant id from a request header.
+            </summary>
+            <seealso cref="T:Talegen.AspNetCore.Multitenant.ITenantResolverStrategy" />
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Strategies.TenantHeaderResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Gets the tenant identifier from the request.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>Returns the tenant identifier if found.</returns>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy">
+            <summary>
+            This class implements a header resolver strategory for retrieving the tenant id from a request header.
+            </summary>
+            <seealso cref="T:Talegen.AspNetCore.Multitenant.ITenantResolverStrategy" />
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Gets the tenant identifier from the request.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>Returns the tenant identifier if found.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Strategies.TenantRouteResolverStrategy">
+            <summary>
+            This class implements a header resolver strategory for retrieving the tenant id from a request header.
+            </summary>
+            <seealso cref="T:Talegen.AspNetCore.Multitenant.ITenantResolverStrategy" />
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.Strategies.TenantRouteResolverStrategy.GetTenantIdentifierAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Gets the tenant identifier from the request.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>Returns the tenant identifier if found.</returns>
+            <remarks>This assumes a route contains the route value "tenant" in the configuration. For example "{tenant}/{controller=Home}/{action=Index}/{id?}"</remarks>
+            <exception cref="T:Talegen.AspNetCore.Multitenant.MultiTenantException">new ArgumentException($""{ nameof(context) }, type must be of type HttpContext, nameof(context)</exception>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.TenantBuilder`1">
+            <summary>
+            This class implements the tenant builder logic for tenant and store strategy.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.TenantBuilder`1.services">
+            <summary>
+            Contains an instance of the services collection.
+            </summary>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.TenantBuilder`1.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.TenantBuilder`1" /> class.
+            </summary>
+            <param name="services">The services collection.</param>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithResolutionStrategy``1(Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Implements the specific tenant resolution strategy.
+            </summary>
+            <typeparam name="TStrategy">The type of the strategy.</typeparam>
+            <param name="lifetime">The lifetime.</param>
+            <returns>Returns the tenant builder.</returns>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStore``1(Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Implements the specific tenant store store method.
+            </summary>
+            <typeparam name="TStore">The type of the store.</typeparam>
+            <param name="lifetime">The lifetime.</param>
+            <returns>Returns the tenant builder.</returns>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithSource``1(Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Implements the specific tenant source for retrieval of non-cached tenant requests.
+            </summary>
+            <typeparam name="TSource">The type of the source.</typeparam>
+            <param name="lifetime">The lifetime.</param>
+            <returns>Returns the tenant builder.</returns>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.TenantContext`1">
+            <summary>
+            This class implements the base tenant context.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+            <seealso cref="T:Talegen.AspNetCore.Multitenant.ITenantContext`1" />
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.TenantContext`1.Tenant">
+            <summary>
+            Gets or sets the tenant.
+            </summary>
+            <value>The tenant.</value>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.TenantContextAccessor`1">
+            <summary>
+            This class implements a tenant context accessor for the multi-tenant application.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+            <seealso cref="T:Talegen.AspNetCore.Multitenant.ITenantContextAccessor`1" />
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.TenantContextAccessor`1.AsyncLocalContext">
+            <summary>
+            Gets the asynchronous local context
+            </summary>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.TenantContextAccessor`1.TenantContext">
+            <summary>
+            Gets or sets the tenant context.
+            </summary>
+            <value>The tenant context.</value>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.TenantDefaults">
+            <summary>
+            This class contains static constants for use by the tenant library.
+            </summary>
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.TenantDefaults.TenantHeaderName">
+            <summary>
+            The tenant header name.
+            </summary>
+        </member>
+        <member name="F:Talegen.AspNetCore.Multitenant.TenantDefaults.TenantClaimType">
+            <summary>
+            The tenant claim type.
+            </summary>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions">
+            <summary>
+            This class contains extension methods for the HTTP context.
+            </summary>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions.GetTenantContext``1(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Ges the tenant context from the current Http context.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions">
+            <summary>
+            This class contains service collection extensions for creating a tenant resolver.
+            </summary>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions.AddMultiTenancy``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds the multi tenancy.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant.</typeparam>
+            <param name="services">The services.</param>
+            <returns>Returns the tenant builder.</returns>
+        </member>
+    </members>
+</doc>

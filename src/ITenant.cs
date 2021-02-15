@@ -37,7 +37,7 @@ namespace Talegen.AspNetCore.Multitenant
         string Identifier { get; set; }
 
         /// <summary>
-        /// Gets the properties.
+        /// Gets or sets the properties.
         /// </summary>
         /// <value>The properties.</value>
         Dictionary<string, string> Properties { get; set; }

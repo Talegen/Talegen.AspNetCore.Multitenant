@@ -27,7 +27,7 @@ namespace Talegen.AspNetCore.Multitenant
     public interface ITenantStore<TTenant> where TTenant : class, ITenant, new()
     {
         /// <summary>
-        /// Returns alls the tenants from the cache storage.
+        /// Returns all of the tenants from the cache storage.
         /// </summary>
         /// <param name="cancellationToken">Contains an optional cancellation token.</param>
         /// <returns>Returns a list of all tenants found in the cache storage.</returns>

@@ -61,7 +61,7 @@ namespace Talegen.AspNetCore.Multitenant.Stores
         /// </summary>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>Normally, returns a list of all tenants available.</returns>
-        /// <exception cref="NotImplementedException"></exception>
+        /// <exception cref="NotImplementedException">This method is not implemented in this store.</exception>
         public Task<List<TTenant>> AllTenantsAsync(CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
@@ -73,8 +73,8 @@ namespace Talegen.AspNetCore.Multitenant.Stores
         /// <param name="tenantInfo">The tenant information to add.</param>
         /// <param name="cancellationToken">Contains an optional cancellation token.</param>
         /// <returns>Returns a value indicating whether the record was added.</returns>
-        /// <exception cref="ArgumentNullException">tenantInfo</exception>
-        /// <exception cref="NullReferenceException"></exception>
+        /// <exception cref="ArgumentNullException">Thrown if tenantInfo is not specified.</exception>
+        /// <exception cref="NullReferenceException">Thrown if tenant identifier is not specified.</exception>
         public async Task<bool> TryAddAsync(TTenant tenantInfo, CancellationToken cancellationToken = default)
         {
             if (tenantInfo == null)

@@ -26,11 +26,6 @@ namespace Talegen.AspNetCore.Multitenant
     public class TenantContextAccessor<TTenant> : ITenantContextAccessor<TTenant> where TTenant : class, ITenant
     {
         /// <summary>
-        /// Gets the asynchronous local context
-        /// </summary>
-        internal static AsyncLocal<ITenantContext<TTenant>> AsyncLocalContext = new AsyncLocal<ITenantContext<TTenant>>();
-
-        /// <summary>
         /// Gets or sets the tenant context.
         /// </summary>
         /// <value>The tenant context.</value>
@@ -39,5 +34,10 @@ namespace Talegen.AspNetCore.Multitenant
             get => AsyncLocalContext.Value;
             set => AsyncLocalContext.Value = value;
         }
+
+        /// <summary>
+        /// Gets the asynchronous local context
+        /// </summary>
+        internal static AsyncLocal<ITenantContext<TTenant>> AsyncLocalContext { get; } = new AsyncLocal<ITenantContext<TTenant>>();
     }
 }

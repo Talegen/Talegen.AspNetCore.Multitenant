@@ -25,11 +25,11 @@ namespace Talegen.AspNetCore.Multitenant
     public static class TenantHttpContextExtensions
     {
         /// <summary>
-        /// Ges the tenant context from the current Http context.
+        /// Gets the tenant context from the current Http context.
         /// </summary>
         /// <typeparam name="TTenant">The type of the tenant.</typeparam>
         /// <param name="context">The context.</param>
-        /// <returns></returns>
+        /// <returns>Returns the tenant context if found.</returns>
         public static ITenantContext<TTenant> GetTenantContext<TTenant>(this HttpContext context) where TTenant : class, ITenant, new()
         {
             return context?.RequestServices.GetRequiredService<ITenantContextAccessor<TTenant>>()?.TenantContext;

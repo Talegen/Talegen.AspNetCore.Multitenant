@@ -17,6 +17,7 @@
 namespace Talegen.AspNetCore.Multitenant
 {
     using Microsoft.AspNetCore.Builder;
+    using Microsoft.Extensions.Logging;
     using Talegen.AspNetCore.Multitenant.Internal;
 
     /// <summary>
@@ -29,9 +30,10 @@ namespace Talegen.AspNetCore.Multitenant
         /// </summary>
         /// <typeparam name="TTenant">The type of the tenant.</typeparam>
         /// <param name="builder">The builder.</param>
+        /// <param name="logger">Contains a logger instance.</param>
         /// <returns>Returns the application builder.</returns>
-        public static IApplicationBuilder UseMultiTenancy<TTenant>(this IApplicationBuilder builder)
+        public static IApplicationBuilder UseMultiTenancy<TTenant>(this IApplicationBuilder builder, ILogger logger = null)
             where TTenant : class, ITenant, new()
-            => builder.UseMiddleware<MultiTenantMiddleware<TTenant>>();
+            => builder.UseMiddleware<MultiTenantMiddleware<TTenant>>(logger);
     }
 }

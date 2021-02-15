@@ -19,6 +19,7 @@ namespace Talegen.AspNetCore.Multitenant.Internal
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Http;
     using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Logging;
 
     /// <summary>
     /// This class implements the multi-tenant middleware processor for retrieving and storing the tenant information into the current request context.
@@ -26,6 +27,11 @@ namespace Talegen.AspNetCore.Multitenant.Internal
     /// <typeparam name="TTenant">The type of the tenant.</typeparam>
     internal class MultiTenantMiddleware<TTenant> where TTenant : class, ITenant, new()
     {
+        /// <summary>
+        /// The logger
+        /// </summary>
+        private readonly ILogger logger;
+
         /// <summary>
         /// Contains the next request
         /// </summary>
@@ -35,9 +41,11 @@ namespace Talegen.AspNetCore.Multitenant.Internal
         /// Initializes a new instance of the <see cref="MultiTenantMiddleware{TTenant}" /> class.
         /// </summary>
         /// <param name="next">The next request delegate.</param>
-        public MultiTenantMiddleware(RequestDelegate next)
+        /// <param name="logger">Contains an optional logger instance.</param>
+        public MultiTenantMiddleware(RequestDelegate next, ILogger logger = null)
         {
             this.nextRequest = next;
+            this.logger = logger;
         }
 
         /// <summary>
@@ -57,10 +65,19 @@ namespace Talegen.AspNetCore.Multitenant.Internal
                 string identifier = await strategy.GetTenantIdentifierAsync(context);
                 ITenantStore<TTenant> store = context.RequestServices.GetRequiredService<ITenantStore<TTenant>>();
 
+                if (this.logger != null)
+                {
+                    this.logger.LogDebug("Tenant Identifier: \"{0}\"", identifier);
+                    this.logger.LogDebug("Tenant Strategy [{0}]", strategy.GetType());
+                    this.logger.LogDebug("Tenant Store [{0}]", store.GetType());
+                }
+
                 // if a tenant identifier was found in the route...
                 if (!string.IsNullOrWhiteSpace(identifier))
                 {
                     var tenantFound = await store.GetByIdentifierAsync(identifier);
+
+                    this.logger?.LogDebug("Tenant {0}", tenantFound != null ? "Found" : "Not found");
 
                     // tenant wasn't found... let's go ask an external source...
                     if (tenantFound == null)
@@ -68,8 +85,12 @@ namespace Talegen.AspNetCore.Multitenant.Internal
                         // get a tenant source...
                         ITenantSource<TTenant> source = context.RequestServices.GetRequiredService<ITenantSource<TTenant>>();
 
+                        this.logger?.LogDebug($"Tenant Source [\"{source.GetType()}\"]");
+
                         // if a source was registered, ask it for the tenant.
                         tenantFound = await source?.FindTenantAsync(identifier, context.RequestAborted);
+
+                        this.logger?.LogDebug("Tenant \"{0}\" in Source {1}", identifier, tenantFound != null ? "Found" : "Not found");
 
                         // if a tenant was found from the external source...
                         if (tenantFound != null)

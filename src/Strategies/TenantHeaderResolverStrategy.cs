@@ -22,7 +22,7 @@ namespace Talegen.AspNetCore.Multitenant.Strategies
     using Microsoft.Extensions.Primitives;
 
     /// <summary>
-    /// This class implements a header resolver strategory for retrieving the tenant id from a request header.
+    /// This class implements a header resolver strategy for retrieving the tenant id from a request header.
     /// </summary>
     /// <seealso cref="Talegen.AspNetCore.Multitenant.ITenantResolverStrategy" />
     public class TenantHeaderResolverStrategy : ITenantResolverStrategy

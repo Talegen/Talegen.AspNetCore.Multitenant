@@ -38,7 +38,7 @@ namespace Talegen.AspNetCore.Multitenant
         public string Identifier { get; set; }
 
         /// <summary>
-        /// Gets any additional tenant properties.
+        /// Gets or sets any additional tenant properties.
         /// </summary>
         /// <value>The properties.</value>
         public Dictionary<string, string> Properties { get; set; } = new Dictionary<string, string>();

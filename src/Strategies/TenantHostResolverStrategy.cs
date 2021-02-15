@@ -21,7 +21,7 @@ namespace Talegen.AspNetCore.Multitenant.Strategies
     using Microsoft.AspNetCore.Http;
 
     /// <summary>
-    /// This class implements a header resolver strategory for retrieving the tenant id from a request header.
+    /// This class implements a header resolver strategy for retrieving the tenant id from a request header.
     /// </summary>
     /// <seealso cref="Talegen.AspNetCore.Multitenant.ITenantResolverStrategy" />
     public class TenantHostResolverStrategy : ITenantResolverStrategy
@@ -31,7 +31,6 @@ namespace Talegen.AspNetCore.Multitenant.Strategies
         /// </summary>
         /// <param name="context">The context.</param>
         /// <returns>Returns the tenant identifier if found.</returns>
-        /// <exception cref="NotImplementedException"></exception>
         public async Task<string> GetTenantIdentifierAsync(HttpContext context)
         {
             string result;

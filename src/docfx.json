@@ -11,21 +11,26 @@
       ],
       "dest": "../ref",
       "disableGitFeatures": false,
-      "disableDefaultFilter": false
+      "disableDefaultFilter": false,
+	  "properties": {
+        "TargetFramework": "netstandard2.0"
+      }
     }
   ],
   "build": {
     "content": [
       {
         "files": [
-          "api/**.yml",
-          "api/index.md"
-        ]
+          "ref/**.yml",
+          "ref/index.md"
+        ],
+		"src": "../"
       },
       {
         "files": [
           "articles/**.md",
           "articles/**/toc.yml",
+          "articles/toc.yml",
           "toc.yml",
           "*.md"
         ],

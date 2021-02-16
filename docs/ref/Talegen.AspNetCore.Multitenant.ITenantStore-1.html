@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ITenantStore&lt;TTenant&gt;
+   | Talegen ASP.net Core Multitenancy Middleware library </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ITenantStore&lt;TTenant&gt;
+   | Talegen ASP.net Core Multitenancy Middleware library ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Talegen.AspNetCore.Multitenant.ITenantStore`1">
+  
+  
+  <h1 id="Talegen_AspNetCore_Multitenant_ITenantStore_1" data-uid="Talegen.AspNetCore.Multitenant.ITenantStore`1" class="text-break">Interface ITenantStore&lt;TTenant&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>This interface defines the minimum implementation of a tenant store.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Talegen.AspNetCore.Multitenant.html">Talegen.AspNetCore.Multitenant</a></h6>
+  <h6><strong>Assembly</strong>: Talegen.AspNetCore.Multitenant.dll</h6>
+  <h5 id="Talegen_AspNetCore_Multitenant_ITenantStore_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITenantStore&lt;TTenant&gt;
+    where TTenant : class, ITenant, new()</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TTenant</span></td>
+        <td><p>The type of the tenant.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_ITenantStore_1_AllTenantsAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.ITenantStore%601.AllTenantsAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/ITenantStore.cs/#L34">View Source</a>
+  </span>
+  <a id="Talegen_AspNetCore_Multitenant_ITenantStore_1_AllTenantsAsync_" data-uid="Talegen.AspNetCore.Multitenant.ITenantStore`1.AllTenantsAsync*"></a>
+  <h4 id="Talegen_AspNetCore_Multitenant_ITenantStore_1_AllTenantsAsync_System_Threading_CancellationToken_" data-uid="Talegen.AspNetCore.Multitenant.ITenantStore`1.AllTenantsAsync(System.Threading.CancellationToken)">AllTenantsAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Returns all of the tenants from the cache storage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;List&lt;TTenant&gt;&gt; AllTenantsAsync(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Contains an optional cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.List</span>&lt;TTenant&gt;&gt;</td>
+        <td><p>Returns a list of all tenants found in the cache storage.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_ITenantStore_1_GetByIdentifierAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.ITenantStore%601.GetByIdentifierAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/ITenantStore.cs/#L42">View Source</a>
+  </span>
+  <a id="Talegen_AspNetCore_Multitenant_ITenantStore_1_GetByIdentifierAsync_" data-uid="Talegen.AspNetCore.Multitenant.ITenantStore`1.GetByIdentifierAsync*"></a>
+  <h4 id="Talegen_AspNetCore_Multitenant_ITenantStore_1_GetByIdentifierAsync_System_String_System_Threading_CancellationToken_" data-uid="Talegen.AspNetCore.Multitenant.ITenantStore`1.GetByIdentifierAsync(System.String,System.Threading.CancellationToken)">GetByIdentifierAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Tries the get the tenant record by the tenant identifier asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;TTenant&gt; GetByIdentifierAsync(string identifier, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">identifier</span></td>
+        <td><p>The tenant identifier to find.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Contains an optional cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;TTenant&gt;</td>
+        <td><p>Returns The tenant record if found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_ITenantStore_1_TryAddAsync__0_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.ITenantStore%601.TryAddAsync(%600%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/ITenantStore.cs/#L50">View Source</a>
+  </span>
+  <a id="Talegen_AspNetCore_Multitenant_ITenantStore_1_TryAddAsync_" data-uid="Talegen.AspNetCore.Multitenant.ITenantStore`1.TryAddAsync*"></a>
+  <h4 id="Talegen_AspNetCore_Multitenant_ITenantStore_1_TryAddAsync__0_System_Threading_CancellationToken_" data-uid="Talegen.AspNetCore.Multitenant.ITenantStore`1.TryAddAsync(`0,System.Threading.CancellationToken)">TryAddAsync(TTenant, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Tries to add a new Tenant to the cache storage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;bool&gt; TryAddAsync(TTenant tenantInfo, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TTenant</span></td>
+        <td><span class="parametername">tenantInfo</span></td>
+        <td><p>The tenant information to add.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Contains an optional cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>Returns a value indicating whether the record was added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_ITenantStore_1.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.ITenantStore%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/ITenantStore.cs/#L27" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright (c) Talegen, LLC. All rights reserved.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

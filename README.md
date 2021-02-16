@@ -6,6 +6,10 @@ This repository ([Talegen.AspNetCore.Multitenant](https://github.com/Talegen/Tal
 
 The purpose of this library is to provide a Multi-tenant middleware library for ASP.net Core applications, allowing for a multi-approach strategy for determining a tenant from an API request. 
 
+## Documentation
+
+Documentation can be found on the GitHub pages at [Talegen ASP.net Core Multitenancy Middleware library](https://talegen.github.io/Talegen.AspNetCore.Multitenant/)
+
 ## Contributing
 
 There are many ways in which you can participate in the project, for example:

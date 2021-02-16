@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "CONTRIBUTING.html",
-          "hash": "SuYTzQYtmyORg2Nh8wn1IQ=="
+          "hash": "ebQyEazrxJfELD59T3hIfw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "OsFw3jKHsNvqcBqkBRHvMQ=="
+          "hash": "vXQdEW10Ubeomwcxy9sHvg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -55,31 +55,445 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "WyVTqSEQGI5Ek1bV2Eg+fw=="
+          "hash": "udnL7KALkCxeAlE/XtwSCg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.html",
+          "hash": "CcHJRbgDkuxG6Oyv91P08A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Configuration.TenantSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Configuration.TenantSettings.html",
+          "hash": "kxRU1E7Zs+q7TadW/X1bzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Configuration.html",
+          "hash": "AzUjrK4AUHJxfnqMD9nWpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.ITenant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.ITenant.html",
+          "hash": "+uVesjRddORuBsswObkNZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.ITenantContext-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.ITenantContext-1.html",
+          "hash": "Vh7dODgtuRJlBE3+ufOlNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.ITenantContextAccessor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.ITenantContextAccessor-1.html",
+          "hash": "X/vYbzoLN+MFwQLVESGDsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.html",
+          "hash": "IdN0dNqjZV9alGtz1oy2pQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.ITenantSource-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.ITenantSource-1.html",
+          "hash": "BVTKaIqpbU0WmY3NE6Pw/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.ITenantStore-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.ITenantStore-1.html",
+          "hash": "0gRIo9FUlrCT/LEyLn3fQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.MultiTenantException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.MultiTenantException.html",
+          "hash": "VgwhF0poGmWD49CROIWOAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.MultiTenantMiddleware-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.MultiTenantMiddleware-1.html",
+          "hash": "ADzfkBqaAl07MPcKBri6oA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.SimpleTenant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.SimpleTenant.html",
+          "hash": "GF7aaWOnG5x+RxWsr9o/kA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService-1.html",
+          "hash": "dzATxHIi9MxgxjNf0Jw6+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.html",
+          "hash": "+yvGu7aXoISfub9LlVH37g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource-2.html",
+          "hash": "oKXfqyynU/O74FVcdTFqNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource-1.html",
+          "hash": "R0AmzVOk02A0ipIzJMUXVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Sources.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Sources.html",
+          "hash": "hYUGeEgyNc8onGt1BAAW1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore-1.html",
+          "hash": "2/j1HdGeTW3om2Fiem1oQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore-1.html",
+          "hash": "TpSAd0XSY21c0BrJvCT7uw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Stores.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Stores.html",
+          "hash": "kZP+BDfczwyV6oSCtEYkDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Strategies.TenantHeaderResolverStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Strategies.TenantHeaderResolverStrategy.html",
+          "hash": "5aKqCM/hsMcv5oW3HfOWiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy.html",
+          "hash": "t180nPZGwxVDKT6LMfD5MQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Strategies.TenantRouteResolverStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Strategies.TenantRouteResolverStrategy.html",
+          "hash": "AZM7kPsHBT9ef6boMpt/UA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.Strategies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.Strategies.html",
+          "hash": "xZCgl0anmE9kquHhac8g1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.TenantBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.TenantBuilder-1.html",
+          "hash": "HfV7LScfzyZrn9zF0RgUsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.TenantContext-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.TenantContext-1.html",
+          "hash": "fz9aYLETv7Xd/skV212URw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.TenantContextAccessor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.TenantContextAccessor-1.html",
+          "hash": "wWYQ2v4AcNb+uwEbDFXpPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.TenantDefaults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.TenantDefaults.html",
+          "hash": "p40Gki40vjjutXr39JrKhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions.html",
+          "hash": "DlL5GOp6GS3Tfak1PRgHZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions.html",
+          "hash": "RZpM7TAc5ATZ1TjAO7n0eQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../ref/Talegen.AspNetCore.Multitenant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.AspNetCore.Multitenant.html",
+          "hash": "cWU/iNR8ATITL1Fw+exqfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../ref/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/toc.html",
+          "hash": "mNk6daop+9HkoDwGHSuvjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "../toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "jj8Sqzv+LiycqIoB+Xifig=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     }
   ],
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 3
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 31,
+          "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -88,8 +502,8 @@
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

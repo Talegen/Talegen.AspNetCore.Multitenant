@@ -65,7 +65,7 @@ In the example provided, the `AddMultiTenancy<TTenant>` call returns a `TenantBu
 
 ## More Information
 
-Check out the [Source Documentation Reference](https://talegen.github.io/Talegen.AspNetCore.Multitenant/sdk/Talegen.AspNetCore.Multitenant.html)
+Check out the [Source Documentation Reference](https://talegen.github.io/Talegen.AspNetCore.Multitenant/ref/Talegen.AspNetCore.Multitenant.html)
 
 Check out the [example projects in GitHub](https://github.com/Talegen/Talegen.AspNetCore.Multitenant/tree/main/examples/).
 

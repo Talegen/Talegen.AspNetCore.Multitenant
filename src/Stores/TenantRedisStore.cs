@@ -35,7 +35,7 @@ namespace Talegen.AspNetCore.Multitenant.Stores
         /// <summary>
         /// Contains the cache key template.
         /// </summary>
-        private const string CacheKeyTemplate = "Tenants:{0}:";
+        private const string CacheKeyTemplate = "Tenants:{0}:{1}";
 
         /// <summary>
         /// Contains an instance of the distributed cache to use.
@@ -65,8 +65,8 @@ namespace Talegen.AspNetCore.Multitenant.Stores
         public async Task<List<TTenant>> AllTenantsAsync(CancellationToken cancellationToken = default)
         {
             List<TTenant> tenants = new List<TTenant>();
-            string tenantKey = string.Format(CacheKeyTemplate, this.applicationName) + "*";
-            var keys = await this.cache.FindKeysAsync(tenantKey, cancellationToken);
+            string allTenantsPattern = string.Format(CacheKeyTemplate, this.applicationName, "*");
+            var keys = await this.cache.FindKeysAsync(allTenantsPattern, cancellationToken);
 
             foreach (string key in keys)
             {
@@ -110,7 +110,7 @@ namespace Talegen.AspNetCore.Multitenant.Stores
         /// <returns>Returns The tenant record if found.</returns>
         public async Task<TTenant> GetByIdentifierAsync(string identifier, CancellationToken cancellationToken = default)
         {
-            string tenantKey = string.Format(CacheKeyTemplate, this.applicationName) + identifier;
+            string tenantKey = string.Format(CacheKeyTemplate, this.applicationName, identifier);
             return await this.cache.GetJsonAsync<TTenant>(tenantKey, cancellationToken);
         }
     }

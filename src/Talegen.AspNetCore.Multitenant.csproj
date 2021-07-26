@@ -11,8 +11,8 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.AspNetCore.Multitenant</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Tenant</PackageTags>
-    <PackageReleaseNotes>Fixed missing middleware internals issue. Updates to support a suspected missing constructor.</PackageReleaseNotes>
-    <Version>1.0.5.0</Version>
+    <PackageReleaseNotes>Fixed bug key string formatting for Redis store</PackageReleaseNotes>
+    <Version>1.0.6.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <ApplicationIcon>assets\logo.ico</ApplicationIcon>
     <PackageIcon>logo.png</PackageIcon>

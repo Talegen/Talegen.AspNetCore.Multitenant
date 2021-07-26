@@ -24,6 +24,17 @@
             </summary>
             <seealso cref="T:Talegen.Backchannel.BackchannelConfig" />
         </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.IStorageSettings">
+            <summary>
+            This interface defines the minimum implementation of a storage settings class.
+            </summary>
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.IStorageSettings.ApplicationName">
+            <summary>
+            Gets or sets the name of the application.
+            </summary>
+            <value>The name of the application.</value>
+        </member>
         <member name="T:Talegen.AspNetCore.Multitenant.ITenant">
             <summary>
             This interface represents the minimum implementation of a tenant information model.
@@ -343,6 +354,30 @@
             <param name="cancellationToken">Contains an optional cancellation token.</param>
             <returns>Returns the <see cref="T:Talegen.AspNetCore.Multitenant.ITenant" /> object if found.</returns>
         </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Stores.MemoryStoreSettings">
+            <summary>
+            This class implements the storage settings interface for memory storage.
+            </summary>
+            <seealso cref="T:Talegen.AspNetCore.Multitenant.IStorageSettings" />
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.Stores.MemoryStoreSettings.ApplicationName">
+            <summary>
+            Gets or sets the name of the application.
+            </summary>
+            <value>The name of the application.</value>
+        </member>
+        <member name="T:Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings">
+            <summary>
+            This class implements the storage settings interface for Redis storage.
+            </summary>
+            <seealso cref="T:Talegen.AspNetCore.Multitenant.IStorageSettings" />
+        </member>
+        <member name="P:Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings.ApplicationName">
+            <summary>
+            Gets or sets the name of the application.
+            </summary>
+            <value>The name of the application.</value>
+        </member>
         <member name="T:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1">
             <summary>
             Implements a tenant store utilizing <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> storage.
@@ -365,11 +400,12 @@
             Contains the application name.
             </summary>
         </member>
-        <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+        <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache,Talegen.AspNetCore.Multitenant.IStorageSettings)">
             <summary>
             Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1" /> class.
             </summary>
             <param name="cache">Contains an instance of the <see cref="T:Microsoft.Extensions.Caching.Memory.IMemoryCache" /> cache object.</param>
+            <param name="settings">Contains an optional storage settings object.</param>
         </member>
         <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1.AllTenantsAsync(System.Threading.CancellationToken)">
             <summary>
@@ -419,11 +455,12 @@
             Contains the application name.
             </summary>
         </member>
-        <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.#ctor(Vasont.AspnetCore.RedisClient.IAdvancedDistributedCache)">
+        <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.#ctor(Vasont.AspnetCore.RedisClient.IAdvancedDistributedCache,Talegen.AspNetCore.Multitenant.IStorageSettings)">
             <summary>
             Initializes a new instance of the <see cref="T:Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1" /> class.
             </summary>
             <param name="cache">The cache.</param>
+            <param name="settings">Contains an optional storage settings object.</param>
         </member>
         <member name="M:Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.AllTenantsAsync(System.Threading.CancellationToken)">
             <summary>
@@ -516,11 +553,21 @@
             <param name="lifetime">The lifetime.</param>
             <returns>Returns the tenant builder.</returns>
         </member>
-        <member name="M:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStore``1(Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+        <member name="M:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStorageSettings``1(``0,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Implements the specific tenant storage settings for a given type.
+            </summary>
+            <typeparam name="TStorageType">The type of the storage type to implement.</typeparam>
+            <param name="settings">The settings.</param>
+            <param name="lifetime">The lifetime.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStore``1(Talegen.AspNetCore.Multitenant.IStorageSettings,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
             <summary>
             Implements the specific tenant store store method.
             </summary>
             <typeparam name="TStore">The type of the store.</typeparam>
+            <param name="storageSettings">Contains an optional storage settings.</param>
             <param name="lifetime">The lifetime.</param>
             <returns>Returns the tenant builder.</returns>
         </member>

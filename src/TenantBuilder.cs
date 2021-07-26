@@ -51,13 +51,33 @@ namespace Talegen.AspNetCore.Multitenant
         }
 
         /// <summary>
+        /// Implements the specific tenant storage settings for a given type.
+        /// </summary>
+        /// <typeparam name="TStorageType">The type of the storage type to implement.</typeparam>
+        /// <param name="settings">The settings.</param>
+        /// <param name="lifetime">The lifetime.</param>
+        /// <returns>Returns the tenant builder.</returns>
+        public TenantBuilder<TTenant> WithStorageSettings<TStorageType>(TStorageType settings, ServiceLifetime lifetime = ServiceLifetime.Singleton)
+        {
+            this.services.Add(ServiceDescriptor.Describe(typeof(TStorageType), (provider) => { return settings; }, lifetime));
+            return this;
+        }
+
+        /// <summary>
         /// Implements the specific tenant store store method.
         /// </summary>
         /// <typeparam name="TStore">The type of the store.</typeparam>
+        /// <param name="storageSettings">Contains an optional storage settings.</param>
         /// <param name="lifetime">The lifetime.</param>
         /// <returns>Returns the tenant builder.</returns>
-        public TenantBuilder<TTenant> WithStore<TStore>(ServiceLifetime lifetime = ServiceLifetime.Transient) where TStore : class, ITenantStore<TTenant>
+        public TenantBuilder<TTenant> WithStore<TStore>(IStorageSettings storageSettings = null, ServiceLifetime lifetime = ServiceLifetime.Transient) where TStore : class, ITenantStore<TTenant>
         {
+            // if storage settings are declared, use them here.
+            if (storageSettings != null)
+            {
+                this.services.AddSingleton(storageSettings);
+            }
+
             this.services.Add(ServiceDescriptor.Describe(typeof(ITenantStore<TTenant>), typeof(TStore), lifetime));
             return this;
         }

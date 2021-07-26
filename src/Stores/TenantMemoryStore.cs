@@ -50,10 +50,11 @@ namespace Talegen.AspNetCore.Multitenant.Stores
         /// Initializes a new instance of the <see cref="TenantMemoryStore{TTenant}" /> class.
         /// </summary>
         /// <param name="cache">Contains an instance of the <see cref="IMemoryCache" /> cache object.</param>
-        public TenantMemoryStore(IMemoryCache cache)
+        /// <param name="settings">Contains an optional storage settings object.</param>
+        public TenantMemoryStore(IMemoryCache cache, IStorageSettings settings = null)
         {
             this.cache = cache;
-            this.applicationName = Resources.ApplicationName;
+            this.applicationName = settings != null && !string.IsNullOrWhiteSpace(settings.ApplicationName) ? settings.ApplicationName : Resources.ApplicationName;
         }
 
         /// <summary>

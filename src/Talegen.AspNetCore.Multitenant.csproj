@@ -11,8 +11,8 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.AspNetCore.Multitenant</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Tenant</PackageTags>
-    <PackageReleaseNotes>Fixed bug key string formatting for Redis store</PackageReleaseNotes>
-    <Version>1.0.6.0</Version>
+    <PackageReleaseNotes>Added a new way to inject parameters into the tenant storage services via DI. Allowing the developer to change the application name used in cache key naming.</PackageReleaseNotes>
+    <Version>1.0.7.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <ApplicationIcon>assets\logo.ico</ApplicationIcon>
     <PackageIcon>logo.png</PackageIcon>

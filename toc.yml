@@ -1,7 +1,7 @@
 
 - name: Overview
   href: /
-  homepage: /index.md
+  homepage: index.html
 - name: Documentation
   href: ref/
-  homepage: ref/Talegen.AspNetCore.Multitenant.yml
+  homepage: ref/Talegen.AspNetCore.Multitenant.html

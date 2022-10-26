@@ -1,0 +1,169 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+  id: ITenantResolverStrategy
+  parent: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync(HttpContext)
+  langs:
+  - csharp
+  - vb
+  name: ITenantResolverStrategy
+  nameWithType: ITenantResolverStrategy
+  fullName: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+  type: Interface
+  source:
+    remote:
+      path: src/ITenantResolverStrategy.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: ITenantResolverStrategy
+    path: ITenantResolverStrategy.cs
+    startLine: 24
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThis interface defines a minimum implementation for a tenant resolver strategy class.\n"
+  example: []
+  syntax:
+    content: public interface ITenantResolverStrategy
+    content.vb: Public Interface ITenantResolverStrategy
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync(HttpContext)
+  commentId: M:Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync(HttpContext)
+  id: GetTenantIdentifierAsync(HttpContext)
+  parent: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+  langs:
+  - csharp
+  - vb
+  name: GetTenantIdentifierAsync(HttpContext)
+  nameWithType: ITenantResolverStrategy.GetTenantIdentifierAsync(HttpContext)
+  fullName: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync(HttpContext)
+  type: Method
+  source:
+    remote:
+      path: src/ITenantResolverStrategy.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: GetTenantIdentifierAsync
+    path: ITenantResolverStrategy.cs
+    startLine: 31
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nGets the tenant identifier from the request.\n"
+  example: []
+  syntax:
+    content: Task<string> GetTenantIdentifierAsync(HttpContext context)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: The context.
+    return:
+      type: Task{System.String}
+      description: Returns the tenant identifier if found.
+    content.vb: Function GetTenantIdentifierAsync(context As HttpContext) As Task(Of String)
+  overload: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync*
+references:
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync
+  name: GetTenantIdentifierAsync
+  nameWithType: ITenantResolverStrategy.GetTenantIdentifierAsync
+  fullName: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy.GetTenantIdentifierAsync
+- uid: HttpContext
+  isExternal: true
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: HttpContext
+- uid: Task{System.String}
+  commentId: '!:Task{System.String}'
+  definition: Task`1
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: Task<System.String>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: Task(Of System.String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

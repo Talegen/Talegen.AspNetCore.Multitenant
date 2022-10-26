@@ -1,0 +1,87 @@
+### YamlMime:TableOfContent
+- uid: Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  items:
+  - uid: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions
+    name: ApplicationBuilderExtensions
+  - uid: Talegen.AspNetCore.Multitenant.IStorageSettings
+    name: IStorageSettings
+  - uid: Talegen.AspNetCore.Multitenant.ITenant
+    name: ITenant
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+    name: ITenantContext<TTenant>
+    name.vb: ITenantContext(Of TTenant)
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContextAccessor`1
+    name: ITenantContextAccessor<TTenant>
+    name.vb: ITenantContextAccessor(Of TTenant)
+  - uid: Talegen.AspNetCore.Multitenant.ITenantResolverStrategy
+    name: ITenantResolverStrategy
+  - uid: Talegen.AspNetCore.Multitenant.ITenantSource`1
+    name: ITenantSource<TTenant>
+    name.vb: ITenantSource(Of TTenant)
+  - uid: Talegen.AspNetCore.Multitenant.ITenantStore`1
+    name: ITenantStore<TTenant>
+    name.vb: ITenantStore(Of TTenant)
+  - uid: Talegen.AspNetCore.Multitenant.MultiTenantException
+    name: MultiTenantException
+  - uid: Talegen.AspNetCore.Multitenant.MultiTenantMiddleware`1
+    name: MultiTenantMiddleware<TTenant>
+    name.vb: MultiTenantMiddleware(Of TTenant)
+  - uid: Talegen.AspNetCore.Multitenant.SimpleTenant
+    name: SimpleTenant
+  - uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+    name: TenantBuilder<TTenant>
+    name.vb: TenantBuilder(Of TTenant)
+  - uid: Talegen.AspNetCore.Multitenant.TenantContext`1
+    name: TenantContext<TTenant>
+    name.vb: TenantContext(Of TTenant)
+  - uid: Talegen.AspNetCore.Multitenant.TenantContextAccessor`1
+    name: TenantContextAccessor<TTenant>
+    name.vb: TenantContextAccessor(Of TTenant)
+  - uid: Talegen.AspNetCore.Multitenant.TenantDefaults
+    name: TenantDefaults
+  - uid: Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions
+    name: TenantHttpContextExtensions
+  - uid: Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions
+    name: TenantServiceCollectionExtensions
+- uid: Talegen.AspNetCore.Multitenant.Configuration
+  name: Talegen.AspNetCore.Multitenant.Configuration
+  items:
+  - uid: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+    name: TenantSettings
+- uid: Talegen.AspNetCore.Multitenant.Sources
+  name: Talegen.AspNetCore.Multitenant.Sources
+  items:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.ITenantApiServerService`1
+    name: ITenantApiServerService<TTenant>
+    name.vb: ITenantApiServerService(Of TTenant)
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
+    name: TenantApiSourceBackchannelExtensions
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+    name: TenantBackchannelApiSource<TTenant, TService>
+    name.vb: TenantBackchannelApiSource(Of TTenant, TService)
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantRedisSource`1
+    name: TenantRedisSource<TTenant>
+    name.vb: TenantRedisSource(Of TTenant)
+- uid: Talegen.AspNetCore.Multitenant.Stores
+  name: Talegen.AspNetCore.Multitenant.Stores
+  items:
+  - uid: Talegen.AspNetCore.Multitenant.Stores.MemoryStoreSettings
+    name: MemoryStoreSettings
+  - uid: Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings
+    name: RedisStoreSettings
+  - uid: Talegen.AspNetCore.Multitenant.Stores.TenantMemoryStore`1
+    name: TenantMemoryStore<TTenant>
+    name.vb: TenantMemoryStore(Of TTenant)
+  - uid: Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1
+    name: TenantRedisStore<TTenant>
+    name.vb: TenantRedisStore(Of TTenant)
+- uid: Talegen.AspNetCore.Multitenant.Strategies
+  name: Talegen.AspNetCore.Multitenant.Strategies
+  items:
+  - uid: Talegen.AspNetCore.Multitenant.Strategies.TenantHeaderResolverStrategy
+    name: TenantHeaderResolverStrategy
+  - uid: Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy
+    name: TenantHostResolverStrategy
+  - uid: Talegen.AspNetCore.Multitenant.Strategies.TenantRouteResolverStrategy
+    name: TenantRouteResolverStrategy

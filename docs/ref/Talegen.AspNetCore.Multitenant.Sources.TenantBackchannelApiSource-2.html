@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TenantBackchannelApiSource&lt;TTenant, TService&gt;
    | Talegen ASP.net Core Multitenancy Middleware library ">
-    <meta name="generator" content="docfx 2.56.6.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,39 +82,15 @@ a Resource to Resource backchannel client.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TenantBackchannelApiSource&lt;TTenant, TService&gt;</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Talegen.AspNetCore.Multitenant.ITenantSource-1.html">ITenantSource</a>&lt;TTenant&gt;</div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Talegen.AspNetCore.Multitenant.Sources.html">Talegen.AspNetCore.Multitenant.Sources</a></h6>
   <h6><strong>Assembly</strong>: Talegen.AspNetCore.Multitenant.dll</h6>
   <h5 id="Talegen_AspNetCore_Multitenant_Sources_TenantBackchannelApiSource_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TenantBackchannelApiSource&lt;TTenant, TService&gt; : ITenantSource&lt;TTenant&gt; where TTenant : class, ITenant, new()
+    <pre><code class="lang-csharp hljs">public class TenantBackchannelApiSource&lt;TTenant, TService&gt; : object, ITenantSource&lt;TTenant&gt; where TTenant : class, ITenant, new()
     where TService : ITenantApiServerService&lt;TTenant&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -145,7 +121,7 @@ a Resource to Resource backchannel client.</p>
     <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Sources_TenantBackchannelApiSource_2__ctor__1_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource%602.%23ctor(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/Sources/TenantBackchannelApiSource.cs/#L38">View Source</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/Sources/TenantBackchannelApiSource.cs/#L38">View Source</a>
   </span>
   <a id="Talegen_AspNetCore_Multitenant_Sources_TenantBackchannelApiSource_2__ctor_" data-uid="Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.#ctor*"></a>
   <h4 id="Talegen_AspNetCore_Multitenant_Sources_TenantBackchannelApiSource_2__ctor__1_" data-uid="Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.#ctor(`1)">TenantBackchannelApiSource(TService)</h4>
@@ -181,7 +157,7 @@ a Resource to Resource backchannel client.</p>
     <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Sources_TenantBackchannelApiSource_2_Service.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource%602.Service%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/Sources/TenantBackchannelApiSource.cs/#L47">View Source</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/Sources/TenantBackchannelApiSource.cs/#L47">View Source</a>
   </span>
   <a id="Talegen_AspNetCore_Multitenant_Sources_TenantBackchannelApiSource_2_Service_" data-uid="Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.Service*"></a>
   <h4 id="Talegen_AspNetCore_Multitenant_Sources_TenantBackchannelApiSource_2_Service" data-uid="Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.Service">Service</h4>
@@ -212,19 +188,19 @@ a Resource to Resource backchannel client.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Sources_TenantBackchannelApiSource_2_FindTenantAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource%602.FindTenantAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Sources_TenantBackchannelApiSource_2_FindTenantAsync_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource%602.FindTenantAsync(System.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/Sources/TenantBackchannelApiSource.cs/#L55">View Source</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/Sources/TenantBackchannelApiSource.cs/#L55">View Source</a>
   </span>
   <a id="Talegen_AspNetCore_Multitenant_Sources_TenantBackchannelApiSource_2_FindTenantAsync_" data-uid="Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.FindTenantAsync*"></a>
-  <h4 id="Talegen_AspNetCore_Multitenant_Sources_TenantBackchannelApiSource_2_FindTenantAsync_System_String_System_Threading_CancellationToken_" data-uid="Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.FindTenantAsync(System.String,System.Threading.CancellationToken)">FindTenantAsync(String, CancellationToken)</h4>
+  <h4 id="Talegen_AspNetCore_Multitenant_Sources_TenantBackchannelApiSource_2_FindTenantAsync_System_String_CancellationToken_" data-uid="Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.FindTenantAsync(System.String,CancellationToken)">FindTenantAsync(String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>This method implements the tenant search logic for an external tenant source.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;TTenant&gt; FindTenantAsync(string tenantIdentifier, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;TTenant&gt; FindTenantAsync(string tenantIdentifier, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -243,7 +219,7 @@ a Resource to Resource backchannel client.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>Contains an optional cancellation token.</p>
 </td>
@@ -260,7 +236,7 @@ a Resource to Resource backchannel client.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;TTenant&gt;</td>
+        <td><span class="xref">Task</span>&lt;TTenant&gt;</td>
         <td><p>Returns the <a class="xref" href="Talegen.AspNetCore.Multitenant.ITenant.html">ITenant</a> object if found.</p>
 </td>
       </tr>
@@ -285,7 +261,7 @@ a Resource to Resource backchannel client.</p>
                     <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Sources_TenantBackchannelApiSource_2.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/Sources/TenantBackchannelApiSource.cs/#L30" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/Sources/TenantBackchannelApiSource.cs/#L30" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

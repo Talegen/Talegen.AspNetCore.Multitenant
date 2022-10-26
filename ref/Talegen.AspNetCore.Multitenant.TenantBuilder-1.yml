@@ -1,0 +1,386 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  id: TenantBuilder`1
+  parent: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.TenantBuilder`1.#ctor(IServiceCollection)
+  - Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithResolutionStrategy``1(ServiceLifetime)
+  - Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithSource``1(ServiceLifetime)
+  - Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStorageSettings``1(``0,ServiceLifetime)
+  - Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStore``1(Talegen.AspNetCore.Multitenant.IStorageSettings,ServiceLifetime)
+  langs:
+  - csharp
+  - vb
+  name: TenantBuilder<TTenant>
+  nameWithType: TenantBuilder<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>
+  type: Class
+  source:
+    remote:
+      path: src/TenantBuilder.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: TenantBuilder
+    path: TenantBuilder.cs
+    startLine: 24
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThis class implements the tenant builder logic for tenant and store strategy.\n"
+  example: []
+  syntax:
+    content: 'public class TenantBuilder<TTenant> : object where TTenant : class, ITenant, new()'
+    typeParameters:
+    - id: TTenant
+      description: The type of the tenant.
+    content.vb: >-
+      Public Class TenantBuilder(Of TTenant As {Class, ITenant, New})
+          Inherits Object
+  inheritance:
+  - System.Object
+  nameWithType.vb: TenantBuilder(Of TTenant)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant)
+  name.vb: TenantBuilder(Of TTenant)
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1.#ctor(IServiceCollection)
+  commentId: M:Talegen.AspNetCore.Multitenant.TenantBuilder`1.#ctor(IServiceCollection)
+  id: '#ctor(IServiceCollection)'
+  parent: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: TenantBuilder(IServiceCollection)
+  nameWithType: TenantBuilder<TTenant>.TenantBuilder(IServiceCollection)
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>.TenantBuilder(IServiceCollection)
+  type: Constructor
+  source:
+    remote:
+      path: src/TenantBuilder.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: .ctor
+    path: TenantBuilder.cs
+    startLine: 35
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.AspNetCore.Multitenant.TenantBuilder%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public TenantBuilder(IServiceCollection services)
+    parameters:
+    - id: services
+      type: IServiceCollection
+      description: The services collection.
+    content.vb: Public Sub New(services As IServiceCollection)
+  overload: Talegen.AspNetCore.Multitenant.TenantBuilder`1.#ctor*
+  nameWithType.vb: TenantBuilder(Of TTenant).TenantBuilder(IServiceCollection)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant).TenantBuilder(IServiceCollection)
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithResolutionStrategy``1(ServiceLifetime)
+  commentId: M:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithResolutionStrategy``1(ServiceLifetime)
+  id: WithResolutionStrategy``1(ServiceLifetime)
+  parent: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: WithResolutionStrategy<TStrategy>(ServiceLifetime)
+  nameWithType: TenantBuilder<TTenant>.WithResolutionStrategy<TStrategy>(ServiceLifetime)
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>.WithResolutionStrategy<TStrategy>(ServiceLifetime)
+  type: Method
+  source:
+    remote:
+      path: src/TenantBuilder.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: WithResolutionStrategy
+    path: TenantBuilder.cs
+    startLine: 46
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nImplements the specific tenant resolution strategy.\n"
+  example: []
+  syntax:
+    content: >-
+      public TenantBuilder<TTenant> WithResolutionStrategy<TStrategy>(ServiceLifetime lifetime = null)
+          where TStrategy : class, ITenantResolverStrategy
+    parameters:
+    - id: lifetime
+      type: ServiceLifetime
+      description: The lifetime.
+    typeParameters:
+    - id: TStrategy
+      description: The type of the strategy.
+    return:
+      type: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+      description: Returns the tenant builder.
+    content.vb: Public Function WithResolutionStrategy(Of TStrategy As {Class, ITenantResolverStrategy})(lifetime As ServiceLifetime = Nothing) As TenantBuilder(Of TTenant)
+  overload: Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithResolutionStrategy*
+  nameWithType.vb: TenantBuilder(Of TTenant).WithResolutionStrategy(Of TStrategy)(ServiceLifetime)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant).WithResolutionStrategy(Of TStrategy)(ServiceLifetime)
+  name.vb: WithResolutionStrategy(Of TStrategy)(ServiceLifetime)
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStorageSettings``1(``0,ServiceLifetime)
+  commentId: M:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStorageSettings``1(``0,ServiceLifetime)
+  id: WithStorageSettings``1(``0,ServiceLifetime)
+  parent: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: WithStorageSettings<TStorageType>(TStorageType, ServiceLifetime)
+  nameWithType: TenantBuilder<TTenant>.WithStorageSettings<TStorageType>(TStorageType, ServiceLifetime)
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>.WithStorageSettings<TStorageType>(TStorageType, ServiceLifetime)
+  type: Method
+  source:
+    remote:
+      path: src/TenantBuilder.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: WithStorageSettings
+    path: TenantBuilder.cs
+    startLine: 59
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nImplements the specific tenant storage settings for a given type.\n"
+  example: []
+  syntax:
+    content: public TenantBuilder<TTenant> WithStorageSettings<TStorageType>(TStorageType settings, ServiceLifetime lifetime = null)
+    parameters:
+    - id: settings
+      type: '{TStorageType}'
+      description: The settings.
+    - id: lifetime
+      type: ServiceLifetime
+      description: The lifetime.
+    typeParameters:
+    - id: TStorageType
+      description: The type of the storage type to implement.
+    return:
+      type: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+      description: Returns the tenant builder.
+    content.vb: Public Function WithStorageSettings(Of TStorageType)(settings As TStorageType, lifetime As ServiceLifetime = Nothing) As TenantBuilder(Of TTenant)
+  overload: Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStorageSettings*
+  nameWithType.vb: TenantBuilder(Of TTenant).WithStorageSettings(Of TStorageType)(TStorageType, ServiceLifetime)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant).WithStorageSettings(Of TStorageType)(TStorageType, ServiceLifetime)
+  name.vb: WithStorageSettings(Of TStorageType)(TStorageType, ServiceLifetime)
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStore``1(Talegen.AspNetCore.Multitenant.IStorageSettings,ServiceLifetime)
+  commentId: M:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStore``1(Talegen.AspNetCore.Multitenant.IStorageSettings,ServiceLifetime)
+  id: WithStore``1(Talegen.AspNetCore.Multitenant.IStorageSettings,ServiceLifetime)
+  parent: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: WithStore<TStore>(IStorageSettings, ServiceLifetime)
+  nameWithType: TenantBuilder<TTenant>.WithStore<TStore>(IStorageSettings, ServiceLifetime)
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>.WithStore<TStore>(Talegen.AspNetCore.Multitenant.IStorageSettings, ServiceLifetime)
+  type: Method
+  source:
+    remote:
+      path: src/TenantBuilder.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: WithStore
+    path: TenantBuilder.cs
+    startLine: 72
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nImplements the specific tenant store store method.\n"
+  example: []
+  syntax:
+    content: >-
+      public TenantBuilder<TTenant> WithStore<TStore>(IStorageSettings storageSettings = null, ServiceLifetime lifetime = null)
+          where TStore : class, ITenantStore<TTenant>
+    parameters:
+    - id: storageSettings
+      type: Talegen.AspNetCore.Multitenant.IStorageSettings
+      description: Contains an optional storage settings.
+    - id: lifetime
+      type: ServiceLifetime
+      description: The lifetime.
+    typeParameters:
+    - id: TStore
+      description: The type of the store.
+    return:
+      type: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+      description: Returns the tenant builder.
+    content.vb: Public Function WithStore(Of TStore As {Class, ITenantStore(Of TTenant)})(storageSettings As IStorageSettings = Nothing, lifetime As ServiceLifetime = Nothing) As TenantBuilder(Of TTenant)
+  overload: Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStore*
+  nameWithType.vb: TenantBuilder(Of TTenant).WithStore(Of TStore)(IStorageSettings, ServiceLifetime)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant).WithStore(Of TStore)(Talegen.AspNetCore.Multitenant.IStorageSettings, ServiceLifetime)
+  name.vb: WithStore(Of TStore)(IStorageSettings, ServiceLifetime)
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithSource``1(ServiceLifetime)
+  commentId: M:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithSource``1(ServiceLifetime)
+  id: WithSource``1(ServiceLifetime)
+  parent: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: WithSource<TSource>(ServiceLifetime)
+  nameWithType: TenantBuilder<TTenant>.WithSource<TSource>(ServiceLifetime)
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>.WithSource<TSource>(ServiceLifetime)
+  type: Method
+  source:
+    remote:
+      path: src/TenantBuilder.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: WithSource
+    path: TenantBuilder.cs
+    startLine: 90
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nImplements the specific tenant source for retrieval of non-cached tenant requests.\n"
+  example: []
+  syntax:
+    content: >-
+      public TenantBuilder<TTenant> WithSource<TSource>(ServiceLifetime lifetime = null)
+          where TSource : class, ITenantSource<TTenant>
+    parameters:
+    - id: lifetime
+      type: ServiceLifetime
+      description: The lifetime.
+    typeParameters:
+    - id: TSource
+      description: The type of the source.
+    return:
+      type: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+      description: Returns the tenant builder.
+    content.vb: Public Function WithSource(Of TSource As {Class, ITenantSource(Of TTenant)})(lifetime As ServiceLifetime = Nothing) As TenantBuilder(Of TTenant)
+  overload: Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithSource*
+  nameWithType.vb: TenantBuilder(Of TTenant).WithSource(Of TSource)(ServiceLifetime)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant).WithSource(Of TSource)(ServiceLifetime)
+  name.vb: WithSource(Of TSource)(ServiceLifetime)
+references:
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  parent: Talegen.AspNetCore.Multitenant
+  name: TenantBuilder<TTenant>
+  nameWithType: TenantBuilder<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>
+  nameWithType.vb: TenantBuilder(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant)
+  name.vb: TenantBuilder(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+    name: TenantBuilder
+    nameWithType: TenantBuilder
+    fullName: Talegen.AspNetCore.Multitenant.TenantBuilder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+    name: TenantBuilder
+    nameWithType: TenantBuilder
+    fullName: Talegen.AspNetCore.Multitenant.TenantBuilder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1.#ctor*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.TenantBuilder`1.#ctor
+  name: TenantBuilder
+  nameWithType: TenantBuilder<TTenant>.TenantBuilder
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>.TenantBuilder
+  nameWithType.vb: TenantBuilder(Of TTenant).TenantBuilder
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant).TenantBuilder
+- uid: IServiceCollection
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: IServiceCollection
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithResolutionStrategy*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithResolutionStrategy
+  name: WithResolutionStrategy
+  nameWithType: TenantBuilder<TTenant>.WithResolutionStrategy
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>.WithResolutionStrategy
+  nameWithType.vb: TenantBuilder(Of TTenant).WithResolutionStrategy
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant).WithResolutionStrategy
+- uid: ServiceLifetime
+  isExternal: true
+  name: ServiceLifetime
+  nameWithType: ServiceLifetime
+  fullName: ServiceLifetime
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStorageSettings*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStorageSettings
+  name: WithStorageSettings
+  nameWithType: TenantBuilder<TTenant>.WithStorageSettings
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>.WithStorageSettings
+  nameWithType.vb: TenantBuilder(Of TTenant).WithStorageSettings
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant).WithStorageSettings
+- uid: '{TStorageType}'
+  commentId: '!:TStorageType'
+  definition: TStorageType
+  name: TStorageType
+  nameWithType: TStorageType
+  fullName: TStorageType
+- uid: TStorageType
+  commentId: '!:TStorageType'
+  name: TStorageType
+  nameWithType: TStorageType
+  fullName: TStorageType
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStore*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStore
+  name: WithStore
+  nameWithType: TenantBuilder<TTenant>.WithStore
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>.WithStore
+  nameWithType.vb: TenantBuilder(Of TTenant).WithStore
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant).WithStore
+- uid: Talegen.AspNetCore.Multitenant.IStorageSettings
+  commentId: T:Talegen.AspNetCore.Multitenant.IStorageSettings
+  parent: Talegen.AspNetCore.Multitenant
+  name: IStorageSettings
+  nameWithType: IStorageSettings
+  fullName: Talegen.AspNetCore.Multitenant.IStorageSettings
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithSource*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithSource
+  name: WithSource
+  nameWithType: TenantBuilder<TTenant>.WithSource
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>.WithSource
+  nameWithType.vb: TenantBuilder(Of TTenant).WithSource
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant).WithSource

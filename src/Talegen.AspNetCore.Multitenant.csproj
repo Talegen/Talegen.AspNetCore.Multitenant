@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Talegen, LLC</Authors>
     <Description>Multi-Tenant Support Strategy Library for ASP.net Core</Description>
@@ -11,11 +11,14 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.AspNetCore.Multitenant</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Tenant</PackageTags>
-    <PackageReleaseNotes>Added a new way to inject parameters into the tenant storage services via DI. Allowing the developer to change the application name used in cache key naming.</PackageReleaseNotes>
-    <Version>1.0.7.0</Version>
+    <PackageReleaseNotes>Updated packages.</PackageReleaseNotes>
+    <Version>1.0.8.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <ApplicationIcon>assets\logo.ico</ApplicationIcon>
     <PackageIcon>logo.png</PackageIcon>
+    <EnforceCodeStyleInBuild>False</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -23,15 +26,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="docfx.console" Version="2.56.6">
+    <PackageReference Include="docfx.console" Version="2.59.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
-    <PackageReference Include="Talegen.Backchannel" Version="1.0.0.2" />
-    <PackageReference Include="Talegen.Common.Core" Version="1.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+    <PackageReference Include="Talegen.Backchannel" Version="1.0.6" />
+    <PackageReference Include="Talegen.Common.Core" Version="1.0.7" />
     <PackageReference Include="Vasont.AspnetCore.RedisClient" Version="1.0.3" />
   </ItemGroup>
 

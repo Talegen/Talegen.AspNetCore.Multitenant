@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantContext`1
+  id: ITenantContext`1
+  parent: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.ITenantContext`1.Tenant
+  langs:
+  - csharp
+  - vb
+  name: ITenantContext<TTenant>
+  nameWithType: ITenantContext<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.ITenantContext<TTenant>
+  type: Interface
+  source:
+    remote:
+      path: src/ITenantContext.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: ITenantContext
+    path: ITenantContext.cs
+    startLine: 22
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThis interface defines the minimum tenant context implementation.\n"
+  example: []
+  syntax:
+    content: >-
+      public interface ITenantContext<TTenant>
+          where TTenant : class, ITenant
+    typeParameters:
+    - id: TTenant
+      description: The type of the tenant.
+    content.vb: Public Interface ITenantContext(Of TTenant As {Class, ITenant})
+  nameWithType.vb: ITenantContext(Of TTenant)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantContext(Of TTenant)
+  name.vb: ITenantContext(Of TTenant)
+- uid: Talegen.AspNetCore.Multitenant.ITenantContext`1.Tenant
+  commentId: P:Talegen.AspNetCore.Multitenant.ITenantContext`1.Tenant
+  id: Tenant
+  parent: Talegen.AspNetCore.Multitenant.ITenantContext`1
+  langs:
+  - csharp
+  - vb
+  name: Tenant
+  nameWithType: ITenantContext<TTenant>.Tenant
+  fullName: Talegen.AspNetCore.Multitenant.ITenantContext<TTenant>.Tenant
+  type: Property
+  source:
+    remote:
+      path: src/ITenantContext.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: Tenant
+    path: ITenantContext.cs
+    startLine: 28
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nGets or sets the tenant.\n"
+  example: []
+  syntax:
+    content: TTenant Tenant { get; set; }
+    parameters: []
+    return:
+      type: '{TTenant}'
+      description: The tenant.
+    content.vb: Property Tenant As TTenant
+  overload: Talegen.AspNetCore.Multitenant.ITenantContext`1.Tenant*
+  nameWithType.vb: ITenantContext(Of TTenant).Tenant
+  modifiers.csharp:
+  - get
+  - set
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantContext(Of TTenant).Tenant
+references:
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: Talegen.AspNetCore.Multitenant.ITenantContext`1.Tenant*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.ITenantContext`1.Tenant
+  name: Tenant
+  nameWithType: ITenantContext<TTenant>.Tenant
+  fullName: Talegen.AspNetCore.Multitenant.ITenantContext<TTenant>.Tenant
+  nameWithType.vb: ITenantContext(Of TTenant).Tenant
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantContext(Of TTenant).Tenant
+- uid: '{TTenant}'
+  commentId: '!:TTenant'
+  definition: TTenant
+  name: TTenant
+  nameWithType: TTenant
+  fullName: TTenant
+- uid: TTenant
+  name: TTenant
+  nameWithType: TTenant
+  fullName: TTenant

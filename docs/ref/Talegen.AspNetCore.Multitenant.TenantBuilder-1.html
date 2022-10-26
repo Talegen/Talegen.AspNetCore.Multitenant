@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TenantBuilder&lt;TTenant&gt;
    | Talegen ASP.net Core Multitenancy Middleware library ">
-    <meta name="generator" content="docfx 2.56.6.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,36 +81,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TenantBuilder&lt;TTenant&gt;</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Talegen.AspNetCore.Multitenant.html">Talegen.AspNetCore.Multitenant</a></h6>
   <h6><strong>Assembly</strong>: Talegen.AspNetCore.Multitenant.dll</h6>
   <h5 id="Talegen_AspNetCore_Multitenant_TenantBuilder_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TenantBuilder&lt;TTenant&gt;
-    where TTenant : class, ITenant, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public class TenantBuilder&lt;TTenant&gt; : object where TTenant : class, ITenant, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,13 +107,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_TenantBuilder_1__ctor_Microsoft_Extensions_DependencyInjection_IServiceCollection_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.TenantBuilder%601.%23ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_TenantBuilder_1__ctor_IServiceCollection_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.TenantBuilder%601.%23ctor(IServiceCollection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/TenantBuilder.cs/#L36">View Source</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/TenantBuilder.cs/#L36">View Source</a>
   </span>
   <a id="Talegen_AspNetCore_Multitenant_TenantBuilder_1__ctor_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.#ctor*"></a>
-  <h4 id="Talegen_AspNetCore_Multitenant_TenantBuilder_1__ctor_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">TenantBuilder(IServiceCollection)</h4>
+  <h4 id="Talegen_AspNetCore_Multitenant_TenantBuilder_1__ctor_IServiceCollection_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.#ctor(IServiceCollection)">TenantBuilder(IServiceCollection)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Talegen.AspNetCore.Multitenant.TenantBuilder-1.html">TenantBuilder&lt;TTenant&gt;</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -157,7 +132,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="xref">IServiceCollection</span></td>
         <td><span class="parametername">services</span></td>
         <td><p>The services collection.</p>
 </td>
@@ -168,19 +143,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithResolutionStrategy__1_Microsoft_Extensions_DependencyInjection_ServiceLifetime_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.TenantBuilder%601.WithResolutionStrategy%60%601(Microsoft.Extensions.DependencyInjection.ServiceLifetime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithResolutionStrategy__1_ServiceLifetime_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.TenantBuilder%601.WithResolutionStrategy%60%601(ServiceLifetime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/TenantBuilder.cs/#L47">View Source</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/TenantBuilder.cs/#L47">View Source</a>
   </span>
   <a id="Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithResolutionStrategy_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithResolutionStrategy*"></a>
-  <h4 id="Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithResolutionStrategy__1_Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithResolutionStrategy``1(Microsoft.Extensions.DependencyInjection.ServiceLifetime)">WithResolutionStrategy&lt;TStrategy&gt;(ServiceLifetime)</h4>
+  <h4 id="Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithResolutionStrategy__1_ServiceLifetime_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithResolutionStrategy``1(ServiceLifetime)">WithResolutionStrategy&lt;TStrategy&gt;(ServiceLifetime)</h4>
   <div class="markdown level1 summary"><p>Implements the specific tenant resolution strategy.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TenantBuilder&lt;TTenant&gt; WithResolutionStrategy&lt;TStrategy&gt;(ServiceLifetime lifetime = ServiceLifetime.Transient)
+    <pre><code class="lang-csharp hljs">public TenantBuilder&lt;TTenant&gt; WithResolutionStrategy&lt;TStrategy&gt;(ServiceLifetime lifetime = null)
     where TStrategy : class, ITenantResolverStrategy</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -194,7 +169,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.ServiceLifetime</span></td>
+        <td><span class="xref">ServiceLifetime</span></td>
         <td><span class="parametername">lifetime</span></td>
         <td><p>The lifetime.</p>
 </td>
@@ -235,19 +210,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithSource__1_Microsoft_Extensions_DependencyInjection_ServiceLifetime_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.TenantBuilder%601.WithSource%60%601(Microsoft.Extensions.DependencyInjection.ServiceLifetime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithSource__1_ServiceLifetime_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.TenantBuilder%601.WithSource%60%601(ServiceLifetime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/TenantBuilder.cs/#L71">View Source</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/TenantBuilder.cs/#L91">View Source</a>
   </span>
   <a id="Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithSource_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithSource*"></a>
-  <h4 id="Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithSource__1_Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithSource``1(Microsoft.Extensions.DependencyInjection.ServiceLifetime)">WithSource&lt;TSource&gt;(ServiceLifetime)</h4>
+  <h4 id="Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithSource__1_ServiceLifetime_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithSource``1(ServiceLifetime)">WithSource&lt;TSource&gt;(ServiceLifetime)</h4>
   <div class="markdown level1 summary"><p>Implements the specific tenant source for retrieval of non-cached tenant requests.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TenantBuilder&lt;TTenant&gt; WithSource&lt;TSource&gt;(ServiceLifetime lifetime = ServiceLifetime.Transient)
+    <pre><code class="lang-csharp hljs">public TenantBuilder&lt;TTenant&gt; WithSource&lt;TSource&gt;(ServiceLifetime lifetime = null)
     where TSource : class, ITenantSource&lt;TTenant&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -261,7 +236,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.ServiceLifetime</span></td>
+        <td><span class="xref">ServiceLifetime</span></td>
         <td><span class="parametername">lifetime</span></td>
         <td><p>The lifetime.</p>
 </td>
@@ -302,19 +277,91 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithStore__1_Microsoft_Extensions_DependencyInjection_ServiceLifetime_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.TenantBuilder%601.WithStore%60%601(Microsoft.Extensions.DependencyInjection.ServiceLifetime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithStorageSettings__1___0_ServiceLifetime_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.TenantBuilder%601.WithStorageSettings%60%601(%60%600%2CServiceLifetime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/TenantBuilder.cs/#L59">View Source</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/TenantBuilder.cs/#L60">View Source</a>
+  </span>
+  <a id="Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithStorageSettings_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStorageSettings*"></a>
+  <h4 id="Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithStorageSettings__1___0_ServiceLifetime_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStorageSettings``1(``0,ServiceLifetime)">WithStorageSettings&lt;TStorageType&gt;(TStorageType, ServiceLifetime)</h4>
+  <div class="markdown level1 summary"><p>Implements the specific tenant storage settings for a given type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TenantBuilder&lt;TTenant&gt; WithStorageSettings&lt;TStorageType&gt;(TStorageType settings, ServiceLifetime lifetime = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TStorageType</span></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>The settings.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ServiceLifetime</span></td>
+        <td><span class="parametername">lifetime</span></td>
+        <td><p>The lifetime.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Talegen.AspNetCore.Multitenant.TenantBuilder-1.html">TenantBuilder</a>&lt;TTenant&gt;</td>
+        <td><p>Returns the tenant builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TStorageType</span></td>
+        <td><p>The type of the storage type to implement.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithStore__1_Talegen_AspNetCore_Multitenant_IStorageSettings_ServiceLifetime_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.TenantBuilder%601.WithStore%60%601(Talegen.AspNetCore.Multitenant.IStorageSettings%2CServiceLifetime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/TenantBuilder.cs/#L73">View Source</a>
   </span>
   <a id="Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithStore_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStore*"></a>
-  <h4 id="Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithStore__1_Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStore``1(Microsoft.Extensions.DependencyInjection.ServiceLifetime)">WithStore&lt;TStore&gt;(ServiceLifetime)</h4>
+  <h4 id="Talegen_AspNetCore_Multitenant_TenantBuilder_1_WithStore__1_Talegen_AspNetCore_Multitenant_IStorageSettings_ServiceLifetime_" data-uid="Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStore``1(Talegen.AspNetCore.Multitenant.IStorageSettings,ServiceLifetime)">WithStore&lt;TStore&gt;(IStorageSettings, ServiceLifetime)</h4>
   <div class="markdown level1 summary"><p>Implements the specific tenant store store method.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TenantBuilder&lt;TTenant&gt; WithStore&lt;TStore&gt;(ServiceLifetime lifetime = ServiceLifetime.Transient)
+    <pre><code class="lang-csharp hljs">public TenantBuilder&lt;TTenant&gt; WithStore&lt;TStore&gt;(IStorageSettings storageSettings = null, ServiceLifetime lifetime = null)
     where TStore : class, ITenantStore&lt;TTenant&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -328,7 +375,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.ServiceLifetime</span></td>
+        <td><a class="xref" href="Talegen.AspNetCore.Multitenant.IStorageSettings.html">IStorageSettings</a></td>
+        <td><span class="parametername">storageSettings</span></td>
+        <td><p>Contains an optional storage settings.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ServiceLifetime</span></td>
         <td><span class="parametername">lifetime</span></td>
         <td><p>The lifetime.</p>
 </td>
@@ -378,7 +431,7 @@
                     <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_TenantBuilder_1.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.TenantBuilder%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/TenantBuilder.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/TenantBuilder.cs/#L25" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

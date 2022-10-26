@@ -1,0 +1,123 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+  commentId: T:Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+  id: TenantSettings
+  parent: Talegen.AspNetCore.Multitenant.Configuration
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: TenantSettings
+  nameWithType: TenantSettings
+  fullName: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+  type: Class
+  source:
+    remote:
+      path: src/Configuration/TenantSettings.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: TenantSettings
+    path: Configuration/TenantSettings.cs
+    startLine: 24
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Configuration
+  summary: "\nThis class implements the backchannel client configuration settings necessary for communicating with a resource to resource tenant source request.\n"
+  example: []
+  syntax:
+    content: 'public class TenantSettings : Dictionary<string, string>'
+    content.vb: >-
+      Public Class TenantSettings
+          Inherits Dictionary(Of String, String)
+  inheritance:
+  - System.Object
+  extensionMethods:
+  - Talegen.AspNetCore.Multitenant.Configuration.TenantSettings.Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: Talegen.AspNetCore.Multitenant.Configuration
+  commentId: N:Talegen.AspNetCore.Multitenant.Configuration
+  name: Talegen.AspNetCore.Multitenant.Configuration
+  nameWithType: Talegen.AspNetCore.Multitenant.Configuration
+  fullName: Talegen.AspNetCore.Multitenant.Configuration
+- uid: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings.Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+  commentId: M:Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  parent: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
+  definition: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  name: ToBackchannelConfig()
+  nameWithType: TenantApiSourceBackchannelExtensions.ToBackchannelConfig()
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig()
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+    name: ToBackchannelConfig
+    nameWithType: TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+    name: ToBackchannelConfig
+    nameWithType: TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  commentId: M:Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  name: ToBackchannelConfig(TenantSettings)
+  nameWithType: TenantApiSourceBackchannelExtensions.ToBackchannelConfig(TenantSettings)
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+    name: ToBackchannelConfig
+    nameWithType: TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+    name: TenantSettings
+    nameWithType: TenantSettings
+    fullName: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)
+    name: ToBackchannelConfig
+    nameWithType: TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+    name: TenantSettings
+    nameWithType: TenantSettings
+    fullName: Talegen.AspNetCore.Multitenant.Configuration.TenantSettings
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
+  commentId: T:Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
+  parent: Talegen.AspNetCore.Multitenant.Sources
+  name: TenantApiSourceBackchannelExtensions
+  nameWithType: TenantApiSourceBackchannelExtensions
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions
+- uid: Talegen.AspNetCore.Multitenant.Sources
+  commentId: N:Talegen.AspNetCore.Multitenant.Sources
+  name: Talegen.AspNetCore.Multitenant.Sources
+  nameWithType: Talegen.AspNetCore.Multitenant.Sources
+  fullName: Talegen.AspNetCore.Multitenant.Sources

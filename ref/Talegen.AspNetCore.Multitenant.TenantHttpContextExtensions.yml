@@ -1,0 +1,185 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions
+  id: TenantHttpContextExtensions
+  parent: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions.GetTenantContext``1(HttpContext)
+  langs:
+  - csharp
+  - vb
+  name: TenantHttpContextExtensions
+  nameWithType: TenantHttpContextExtensions
+  fullName: Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions
+  type: Class
+  source:
+    remote:
+      path: src/TenantHttpContextExtensions.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: TenantHttpContextExtensions
+    path: TenantHttpContextExtensions.cs
+    startLine: 24
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThis class contains extension methods for the HTTP context.\n"
+  example: []
+  syntax:
+    content: 'public static class TenantHttpContextExtensions : object'
+    content.vb: >-
+      Public Module TenantHttpContextExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions.GetTenantContext``1(HttpContext)
+  commentId: M:Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions.GetTenantContext``1(HttpContext)
+  id: GetTenantContext``1(HttpContext)
+  isExtensionMethod: true
+  parent: Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetTenantContext<TTenant>(HttpContext)
+  nameWithType: TenantHttpContextExtensions.GetTenantContext<TTenant>(HttpContext)
+  fullName: Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions.GetTenantContext<TTenant>(HttpContext)
+  type: Method
+  source:
+    remote:
+      path: src/TenantHttpContextExtensions.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: GetTenantContext
+    path: TenantHttpContextExtensions.cs
+    startLine: 32
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nGets the tenant context from the current Http context.\n"
+  example: []
+  syntax:
+    content: >-
+      public static ITenantContext<TTenant> GetTenantContext<TTenant>(this HttpContext context)
+          where TTenant : class, ITenant, new()
+    parameters:
+    - id: context
+      type: HttpContext
+      description: The context.
+    typeParameters:
+    - id: TTenant
+      description: The type of the tenant.
+    return:
+      type: Talegen.AspNetCore.Multitenant.ITenantContext{{TTenant}}
+      description: Returns the tenant context if found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetTenantContext(Of TTenant As {Class, ITenant, New})(context As HttpContext) As ITenantContext(Of TTenant)
+  overload: Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions.GetTenantContext*
+  nameWithType.vb: TenantHttpContextExtensions.GetTenantContext(Of TTenant)(HttpContext)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions.GetTenantContext(Of TTenant)(HttpContext)
+  name.vb: GetTenantContext(Of TTenant)(HttpContext)
+references:
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions.GetTenantContext*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions.GetTenantContext
+  name: GetTenantContext
+  nameWithType: TenantHttpContextExtensions.GetTenantContext
+  fullName: Talegen.AspNetCore.Multitenant.TenantHttpContextExtensions.GetTenantContext
+- uid: HttpContext
+  isExternal: true
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: HttpContext
+- uid: Talegen.AspNetCore.Multitenant.ITenantContext{{TTenant}}
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantContext{`0}
+  parent: Talegen.AspNetCore.Multitenant
+  definition: Talegen.AspNetCore.Multitenant.ITenantContext`1
+  name: ITenantContext<TTenant>
+  nameWithType: ITenantContext<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.ITenantContext<TTenant>
+  nameWithType.vb: ITenantContext(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantContext(Of TTenant)
+  name.vb: ITenantContext(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+    name: ITenantContext
+    nameWithType: ITenantContext
+    fullName: Talegen.AspNetCore.Multitenant.ITenantContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+    name: ITenantContext
+    nameWithType: ITenantContext
+    fullName: Talegen.AspNetCore.Multitenant.ITenantContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantContext`1
+  name: ITenantContext<TTenant>
+  nameWithType: ITenantContext<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.ITenantContext<TTenant>
+  nameWithType.vb: ITenantContext(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantContext(Of TTenant)
+  name.vb: ITenantContext(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+    name: ITenantContext
+    nameWithType: ITenantContext
+    fullName: Talegen.AspNetCore.Multitenant.ITenantContext
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantContext`1
+    name: ITenantContext
+    nameWithType: ITenantContext
+    fullName: Talegen.AspNetCore.Multitenant.ITenantContext
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )

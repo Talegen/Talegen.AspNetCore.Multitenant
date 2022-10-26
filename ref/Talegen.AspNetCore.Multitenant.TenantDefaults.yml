@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.TenantDefaults
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantDefaults
+  id: TenantDefaults
+  parent: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.TenantDefaults.TenantClaimType
+  - Talegen.AspNetCore.Multitenant.TenantDefaults.TenantHeaderName
+  langs:
+  - csharp
+  - vb
+  name: TenantDefaults
+  nameWithType: TenantDefaults
+  fullName: Talegen.AspNetCore.Multitenant.TenantDefaults
+  type: Class
+  source:
+    remote:
+      path: src/TenantDefaults.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: TenantDefaults
+    path: TenantDefaults.cs
+    startLine: 21
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThis class contains static constants for use by the tenant library.\n"
+  example: []
+  syntax:
+    content: 'public static class TenantDefaults : object'
+    content.vb: >-
+      Public Module TenantDefaults
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Talegen.AspNetCore.Multitenant.TenantDefaults.TenantHeaderName
+  commentId: F:Talegen.AspNetCore.Multitenant.TenantDefaults.TenantHeaderName
+  id: TenantHeaderName
+  parent: Talegen.AspNetCore.Multitenant.TenantDefaults
+  langs:
+  - csharp
+  - vb
+  name: TenantHeaderName
+  nameWithType: TenantDefaults.TenantHeaderName
+  fullName: Talegen.AspNetCore.Multitenant.TenantDefaults.TenantHeaderName
+  type: Field
+  source:
+    remote:
+      path: src/TenantDefaults.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: TenantHeaderName
+    path: TenantDefaults.cs
+    startLine: 26
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThe tenant header name.\n"
+  example: []
+  syntax:
+    content: public const string TenantHeaderName = null
+    return:
+      type: System.String
+    content.vb: Public Const TenantHeaderName As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Talegen.AspNetCore.Multitenant.TenantDefaults.TenantClaimType
+  commentId: F:Talegen.AspNetCore.Multitenant.TenantDefaults.TenantClaimType
+  id: TenantClaimType
+  parent: Talegen.AspNetCore.Multitenant.TenantDefaults
+  langs:
+  - csharp
+  - vb
+  name: TenantClaimType
+  nameWithType: TenantDefaults.TenantClaimType
+  fullName: Talegen.AspNetCore.Multitenant.TenantDefaults.TenantClaimType
+  type: Field
+  source:
+    remote:
+      path: src/TenantDefaults.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: TenantClaimType
+    path: TenantDefaults.cs
+    startLine: 31
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThe tenant claim type.\n"
+  example: []
+  syntax:
+    content: public const string TenantClaimType = null
+    return:
+      type: System.String
+    content.vb: Public Const TenantClaimType As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

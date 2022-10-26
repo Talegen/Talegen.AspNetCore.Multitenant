@@ -1,0 +1,333 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.SimpleTenant
+  commentId: T:Talegen.AspNetCore.Multitenant.SimpleTenant
+  id: SimpleTenant
+  parent: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.SimpleTenant.Id
+  - Talegen.AspNetCore.Multitenant.SimpleTenant.Identifier
+  - Talegen.AspNetCore.Multitenant.SimpleTenant.Properties
+  langs:
+  - csharp
+  - vb
+  name: SimpleTenant
+  nameWithType: SimpleTenant
+  fullName: Talegen.AspNetCore.Multitenant.SimpleTenant
+  type: Class
+  source:
+    remote:
+      path: src/SimpleTenant.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: SimpleTenant
+    path: SimpleTenant.cs
+    startLine: 25
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nImplements a simple basic Tenant information model to get off the ground.\n"
+  example: []
+  syntax:
+    content: 'public class SimpleTenant : object, ITenant'
+    content.vb: >-
+      Public Class SimpleTenant
+          Inherits Object
+          Implements ITenant
+  seealso:
+  - linkId: Talegen.AspNetCore.Multitenant.ITenant
+    commentId: T:Talegen.AspNetCore.Multitenant.ITenant
+  inheritance:
+  - System.Object
+  implements:
+  - Talegen.AspNetCore.Multitenant.ITenant
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Talegen.AspNetCore.Multitenant.SimpleTenant.Id
+  commentId: P:Talegen.AspNetCore.Multitenant.SimpleTenant.Id
+  id: Id
+  parent: Talegen.AspNetCore.Multitenant.SimpleTenant
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: SimpleTenant.Id
+  fullName: Talegen.AspNetCore.Multitenant.SimpleTenant.Id
+  type: Property
+  source:
+    remote:
+      path: src/SimpleTenant.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: Id
+    path: SimpleTenant.cs
+    startLine: 31
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nGets or sets the durable tenant identifier that will never change.\n"
+  example: []
+  syntax:
+    content: public Guid Id { get; set; }
+    parameters: []
+    return:
+      type: Guid
+      description: The identifier.
+    content.vb: Public Property Id As Guid
+  overload: Talegen.AspNetCore.Multitenant.SimpleTenant.Id*
+  implements:
+  - Talegen.AspNetCore.Multitenant.ITenant.Id
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Talegen.AspNetCore.Multitenant.SimpleTenant.Identifier
+  commentId: P:Talegen.AspNetCore.Multitenant.SimpleTenant.Identifier
+  id: Identifier
+  parent: Talegen.AspNetCore.Multitenant.SimpleTenant
+  langs:
+  - csharp
+  - vb
+  name: Identifier
+  nameWithType: SimpleTenant.Identifier
+  fullName: Talegen.AspNetCore.Multitenant.SimpleTenant.Identifier
+  type: Property
+  source:
+    remote:
+      path: src/SimpleTenant.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: Identifier
+    path: SimpleTenant.cs
+    startLine: 37
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nGets or sets the tenant identifier name.\n"
+  example: []
+  syntax:
+    content: public string Identifier { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The name.
+    content.vb: Public Property Identifier As String
+  overload: Talegen.AspNetCore.Multitenant.SimpleTenant.Identifier*
+  implements:
+  - Talegen.AspNetCore.Multitenant.ITenant.Identifier
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Talegen.AspNetCore.Multitenant.SimpleTenant.Properties
+  commentId: P:Talegen.AspNetCore.Multitenant.SimpleTenant.Properties
+  id: Properties
+  parent: Talegen.AspNetCore.Multitenant.SimpleTenant
+  langs:
+  - csharp
+  - vb
+  name: Properties
+  nameWithType: SimpleTenant.Properties
+  fullName: Talegen.AspNetCore.Multitenant.SimpleTenant.Properties
+  type: Property
+  source:
+    remote:
+      path: src/SimpleTenant.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: Properties
+    path: SimpleTenant.cs
+    startLine: 43
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nGets or sets any additional tenant properties.\n"
+  example: []
+  syntax:
+    content: public Dictionary<string, string> Properties { get; set; }
+    parameters: []
+    return:
+      type: Dictionary{System.String,System.String}
+      description: The properties.
+    content.vb: Public Property Properties As Dictionary(Of String, String)
+  overload: Talegen.AspNetCore.Multitenant.SimpleTenant.Properties*
+  implements:
+  - Talegen.AspNetCore.Multitenant.ITenant.Properties
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Talegen.AspNetCore.Multitenant.ITenant
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenant
+  parent: Talegen.AspNetCore.Multitenant
+  name: ITenant
+  nameWithType: ITenant
+  fullName: Talegen.AspNetCore.Multitenant.ITenant
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: Talegen.AspNetCore.Multitenant.SimpleTenant.Id*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.SimpleTenant.Id
+  name: Id
+  nameWithType: SimpleTenant.Id
+  fullName: Talegen.AspNetCore.Multitenant.SimpleTenant.Id
+- uid: Talegen.AspNetCore.Multitenant.ITenant.Id
+  commentId: P:Talegen.AspNetCore.Multitenant.ITenant.Id
+  parent: Talegen.AspNetCore.Multitenant.ITenant
+  name: Id
+  nameWithType: ITenant.Id
+  fullName: Talegen.AspNetCore.Multitenant.ITenant.Id
+- uid: Guid
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: Guid
+- uid: Talegen.AspNetCore.Multitenant.SimpleTenant.Identifier*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.SimpleTenant.Identifier
+  name: Identifier
+  nameWithType: SimpleTenant.Identifier
+  fullName: Talegen.AspNetCore.Multitenant.SimpleTenant.Identifier
+- uid: Talegen.AspNetCore.Multitenant.ITenant.Identifier
+  commentId: P:Talegen.AspNetCore.Multitenant.ITenant.Identifier
+  parent: Talegen.AspNetCore.Multitenant.ITenant
+  name: Identifier
+  nameWithType: ITenant.Identifier
+  fullName: Talegen.AspNetCore.Multitenant.ITenant.Identifier
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Talegen.AspNetCore.Multitenant.SimpleTenant.Properties*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.SimpleTenant.Properties
+  name: Properties
+  nameWithType: SimpleTenant.Properties
+  fullName: Talegen.AspNetCore.Multitenant.SimpleTenant.Properties
+- uid: Talegen.AspNetCore.Multitenant.ITenant.Properties
+  commentId: P:Talegen.AspNetCore.Multitenant.ITenant.Properties
+  parent: Talegen.AspNetCore.Multitenant.ITenant
+  name: Properties
+  nameWithType: ITenant.Properties
+  fullName: Talegen.AspNetCore.Multitenant.ITenant.Properties
+- uid: Dictionary{System.String,System.String}
+  commentId: '!:Dictionary{System.String,System.String}'
+  definition: Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

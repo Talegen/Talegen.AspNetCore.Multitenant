@@ -560,7 +560,7 @@
             <typeparam name="TStorageType">The type of the storage type to implement.</typeparam>
             <param name="settings">The settings.</param>
             <param name="lifetime">The lifetime.</param>
-            <returns></returns>
+            <returns>Returns the tenant builder.</returns>
         </member>
         <member name="M:Talegen.AspNetCore.Multitenant.TenantBuilder`1.WithStore``1(Talegen.AspNetCore.Multitenant.IStorageSettings,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
             <summary>

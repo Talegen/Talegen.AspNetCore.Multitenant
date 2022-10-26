@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings
+  commentId: T:Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings
+  id: RedisStoreSettings
+  parent: Talegen.AspNetCore.Multitenant.Stores
+  children:
+  - Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings.ApplicationName
+  langs:
+  - csharp
+  - vb
+  name: RedisStoreSettings
+  nameWithType: RedisStoreSettings
+  fullName: Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings
+  type: Class
+  source:
+    remote:
+      path: src/Stores/RedisStoreSettings.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: RedisStoreSettings
+    path: Stores/RedisStoreSettings.cs
+    startLine: 6
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Stores
+  summary: "\nThis class implements the storage settings interface for Redis storage.\n"
+  example: []
+  syntax:
+    content: 'public class RedisStoreSettings : object, IStorageSettings'
+    content.vb: >-
+      Public Class RedisStoreSettings
+          Inherits Object
+          Implements IStorageSettings
+  seealso:
+  - linkId: Talegen.AspNetCore.Multitenant.IStorageSettings
+    commentId: T:Talegen.AspNetCore.Multitenant.IStorageSettings
+  inheritance:
+  - System.Object
+  implements:
+  - Talegen.AspNetCore.Multitenant.IStorageSettings
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings.ApplicationName
+  commentId: P:Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings.ApplicationName
+  id: ApplicationName
+  parent: Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings
+  langs:
+  - csharp
+  - vb
+  name: ApplicationName
+  nameWithType: RedisStoreSettings.ApplicationName
+  fullName: Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings.ApplicationName
+  type: Property
+  source:
+    remote:
+      path: src/Stores/RedisStoreSettings.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: ApplicationName
+    path: Stores/RedisStoreSettings.cs
+    startLine: 12
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Stores
+  summary: "\nGets or sets the name of the application.\n"
+  example: []
+  syntax:
+    content: public string ApplicationName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The name of the application.
+    content.vb: Public Property ApplicationName As String
+  overload: Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings.ApplicationName*
+  implements:
+  - Talegen.AspNetCore.Multitenant.IStorageSettings.ApplicationName
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Talegen.AspNetCore.Multitenant.IStorageSettings
+  commentId: T:Talegen.AspNetCore.Multitenant.IStorageSettings
+  parent: Talegen.AspNetCore.Multitenant
+  name: IStorageSettings
+  nameWithType: IStorageSettings
+  fullName: Talegen.AspNetCore.Multitenant.IStorageSettings
+- uid: Talegen.AspNetCore.Multitenant.Stores
+  commentId: N:Talegen.AspNetCore.Multitenant.Stores
+  name: Talegen.AspNetCore.Multitenant.Stores
+  nameWithType: Talegen.AspNetCore.Multitenant.Stores
+  fullName: Talegen.AspNetCore.Multitenant.Stores
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings.ApplicationName*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings.ApplicationName
+  name: ApplicationName
+  nameWithType: RedisStoreSettings.ApplicationName
+  fullName: Talegen.AspNetCore.Multitenant.Stores.RedisStoreSettings.ApplicationName
+- uid: Talegen.AspNetCore.Multitenant.IStorageSettings.ApplicationName
+  commentId: P:Talegen.AspNetCore.Multitenant.IStorageSettings.ApplicationName
+  parent: Talegen.AspNetCore.Multitenant.IStorageSettings
+  name: ApplicationName
+  nameWithType: IStorageSettings.ApplicationName
+  fullName: Talegen.AspNetCore.Multitenant.IStorageSettings.ApplicationName
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

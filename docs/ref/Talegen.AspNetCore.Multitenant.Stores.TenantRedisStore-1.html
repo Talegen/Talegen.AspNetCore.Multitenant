@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TenantRedisStore&lt;TTenant&gt;
    | Talegen ASP.net Core Multitenancy Middleware library ">
-    <meta name="generator" content="docfx 2.56.6.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,7 @@
   
   <h1 id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1" data-uid="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1" class="text-break">Class TenantRedisStore&lt;TTenant&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Implements a tenant store utilizing <span class="xref">Vasont.AspnetCore.RedisClient.IAdvancedDistributedCache</span> storage.</p>
+  <div class="markdown level0 summary"><p>Implements a tenant store utilizing <see cref="!:IAdvancedDistributedCache"></see> storage.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -81,39 +81,15 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TenantRedisStore&lt;TTenant&gt;</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Talegen.AspNetCore.Multitenant.ITenantStore-1.html">ITenantStore</a>&lt;TTenant&gt;</div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Talegen.AspNetCore.Multitenant.Stores.html">Talegen.AspNetCore.Multitenant.Stores</a></h6>
   <h6><strong>Assembly</strong>: Talegen.AspNetCore.Multitenant.dll</h6>
   <h5 id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TenantRedisStore&lt;TTenant&gt; : ITenantStore&lt;TTenant&gt; where TTenant : class, ITenant, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public class TenantRedisStore&lt;TTenant&gt; : object, ITenantStore&lt;TTenant&gt; where TTenant : class, ITenant, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,19 +111,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1__ctor_Vasont_AspnetCore_RedisClient_IAdvancedDistributedCache_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore%601.%23ctor(Vasont.AspnetCore.RedisClient.IAdvancedDistributedCache)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1__ctor_IAdvancedDistributedCache_Talegen_AspNetCore_Multitenant_IStorageSettings_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore%601.%23ctor(IAdvancedDistributedCache%2CTalegen.AspNetCore.Multitenant.IStorageSettings)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/Stores/TenantRedisStore.cs/#L54">View Source</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/Stores/TenantRedisStore.cs/#L55">View Source</a>
   </span>
   <a id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1__ctor_" data-uid="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.#ctor*"></a>
-  <h4 id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1__ctor_Vasont_AspnetCore_RedisClient_IAdvancedDistributedCache_" data-uid="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.#ctor(Vasont.AspnetCore.RedisClient.IAdvancedDistributedCache)">TenantRedisStore(IAdvancedDistributedCache)</h4>
+  <h4 id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1__ctor_IAdvancedDistributedCache_Talegen_AspNetCore_Multitenant_IStorageSettings_" data-uid="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.#ctor(IAdvancedDistributedCache,Talegen.AspNetCore.Multitenant.IStorageSettings)">TenantRedisStore(IAdvancedDistributedCache, IStorageSettings)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore-1.html">TenantRedisStore&lt;TTenant&gt;</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TenantRedisStore(IAdvancedDistributedCache cache)</code></pre>
+    <pre><code class="lang-csharp hljs">public TenantRedisStore(IAdvancedDistributedCache cache, IStorageSettings settings = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -160,9 +136,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vasont.AspnetCore.RedisClient.IAdvancedDistributedCache</span></td>
+        <td><span class="xref">IAdvancedDistributedCache</span></td>
         <td><span class="parametername">cache</span></td>
         <td><p>The cache.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Talegen.AspNetCore.Multitenant.IStorageSettings.html">IStorageSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td><p>Contains an optional storage settings object.</p>
 </td>
       </tr>
     </tbody>
@@ -171,19 +153,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_AllTenantsAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore%601.AllTenantsAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_AllTenantsAsync_CancellationToken_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore%601.AllTenantsAsync(CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/Stores/TenantRedisStore.cs/#L65">View Source</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/Stores/TenantRedisStore.cs/#L66">View Source</a>
   </span>
   <a id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_AllTenantsAsync_" data-uid="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.AllTenantsAsync*"></a>
-  <h4 id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_AllTenantsAsync_System_Threading_CancellationToken_" data-uid="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.AllTenantsAsync(System.Threading.CancellationToken)">AllTenantsAsync(CancellationToken)</h4>
+  <h4 id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_AllTenantsAsync_CancellationToken_" data-uid="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.AllTenantsAsync(CancellationToken)">AllTenantsAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Returns all of the tenants from the cache storage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;TTenant&gt;&gt; AllTenantsAsync(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;List&lt;TTenant&gt;&gt; AllTenantsAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,7 +178,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>Contains an optional cancellation token.</p>
 </td>
@@ -213,7 +195,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.List</span>&lt;TTenant&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">List</span>&lt;TTenant&gt;&gt;</td>
         <td><p>Returns a list of all tenants found in the cache storage.</p>
 </td>
       </tr>
@@ -221,19 +203,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_GetByIdentifierAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore%601.GetByIdentifierAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_GetByIdentifierAsync_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore%601.GetByIdentifierAsync(System.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/Stores/TenantRedisStore.cs/#L111">View Source</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/Stores/TenantRedisStore.cs/#L112">View Source</a>
   </span>
   <a id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_GetByIdentifierAsync_" data-uid="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.GetByIdentifierAsync*"></a>
-  <h4 id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_GetByIdentifierAsync_System_String_System_Threading_CancellationToken_" data-uid="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.GetByIdentifierAsync(System.String,System.Threading.CancellationToken)">GetByIdentifierAsync(String, CancellationToken)</h4>
+  <h4 id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_GetByIdentifierAsync_System_String_CancellationToken_" data-uid="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.GetByIdentifierAsync(System.String,CancellationToken)">GetByIdentifierAsync(String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Tries the get the tenant record by the tenant identifier asynchronously.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;TTenant&gt; GetByIdentifierAsync(string identifier, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;TTenant&gt; GetByIdentifierAsync(string identifier, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -252,7 +234,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>Contains an optional cancellation token.</p>
 </td>
@@ -269,7 +251,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;TTenant&gt;</td>
+        <td><span class="xref">Task</span>&lt;TTenant&gt;</td>
         <td><p>Returns The tenant record if found.</p>
 </td>
       </tr>
@@ -277,19 +259,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_TryAddAsync__0_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore%601.TryAddAsync(%600%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_TryAddAsync__0_CancellationToken_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore%601.TryAddAsync(%600%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/Stores/TenantRedisStore.cs/#L87">View Source</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/Stores/TenantRedisStore.cs/#L88">View Source</a>
   </span>
   <a id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_TryAddAsync_" data-uid="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.TryAddAsync*"></a>
-  <h4 id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_TryAddAsync__0_System_Threading_CancellationToken_" data-uid="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.TryAddAsync(`0,System.Threading.CancellationToken)">TryAddAsync(TTenant, CancellationToken)</h4>
+  <h4 id="Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1_TryAddAsync__0_CancellationToken_" data-uid="Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore`1.TryAddAsync(`0,CancellationToken)">TryAddAsync(TTenant, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Tries to add a new Tenant record to the cache store.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; TryAddAsync(TTenant tenantInfo, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;bool&gt; TryAddAsync(TTenant tenantInfo, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,7 +290,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>Contains an optional cancellation token.</p>
 </td>
@@ -325,29 +307,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>Returns a value indicating whether the record was added.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentNullException</span></td>
-        <td><p>Thrown if tenantInfo is not specified.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.NullReferenceException</span></td>
-        <td><p>Thrown if tenant identifier is not specified.</p>
 </td>
       </tr>
     </tbody>
@@ -371,7 +332,7 @@
                     <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Stores_TenantRedisStore_1.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Stores.TenantRedisStore%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/Stores/TenantRedisStore.cs/#L32" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/Stores/TenantRedisStore.cs/#L32" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

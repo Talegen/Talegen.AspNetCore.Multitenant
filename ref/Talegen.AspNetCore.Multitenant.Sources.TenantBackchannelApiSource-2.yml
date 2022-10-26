@@ -1,0 +1,554 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+  commentId: T:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+  id: TenantBackchannelApiSource`2
+  parent: Talegen.AspNetCore.Multitenant.Sources
+  children:
+  - Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.#ctor(`1)
+  - Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.FindTenantAsync(System.String,CancellationToken)
+  - Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.Service
+  langs:
+  - csharp
+  - vb
+  name: TenantBackchannelApiSource<TTenant, TService>
+  nameWithType: TenantBackchannelApiSource<TTenant, TService>
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource<TTenant, TService>
+  type: Class
+  source:
+    remote:
+      path: src/Sources/TenantBackchannelApiSource.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: TenantBackchannelApiSource
+    path: Sources/TenantBackchannelApiSource.cs
+    startLine: 29
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Sources
+  summary: "\nThis class implements the <xref href=\"Talegen.AspNetCore.Multitenant.ITenantSource%601\" data-throw-if-not-resolved=\"false\"></xref> interface to search and retrieve tenant application information from an a REST API using\na Resource to Resource backchannel client.\n"
+  example: []
+  syntax:
+    content: >-
+      public class TenantBackchannelApiSource<TTenant, TService> : object, ITenantSource<TTenant> where TTenant : class, ITenant, new()
+          where TService : ITenantApiServerService<TTenant>
+    typeParameters:
+    - id: TTenant
+      description: The type of the tenant.
+    - id: TService
+      description: The type of the service class used for interaction.
+    content.vb: >-
+      Public Class TenantBackchannelApiSource(Of TTenant As {Class, ITenant, New}, TService As ITenantApiServerService(Of TTenant))
+          Inherits Object
+          Implements ITenantSource(Of TTenant)
+  seealso:
+  - linkId: Talegen.AspNetCore.Multitenant.ITenantSource`1
+    commentId: T:Talegen.AspNetCore.Multitenant.ITenantSource`1
+  inheritance:
+  - System.Object
+  implements:
+  - Talegen.AspNetCore.Multitenant.ITenantSource{{TTenant}}
+  nameWithType.vb: TenantBackchannelApiSource(Of TTenant, TService)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource(Of TTenant, TService)
+  name.vb: TenantBackchannelApiSource(Of TTenant, TService)
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.#ctor(`1)
+  commentId: M:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.#ctor(`1)
+  id: '#ctor(`1)'
+  parent: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+  langs:
+  - csharp
+  - vb
+  name: TenantBackchannelApiSource(TService)
+  nameWithType: TenantBackchannelApiSource<TTenant, TService>.TenantBackchannelApiSource(TService)
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource<TTenant, TService>.TenantBackchannelApiSource(TService)
+  type: Constructor
+  source:
+    remote:
+      path: src/Sources/TenantBackchannelApiSource.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: .ctor
+    path: Sources/TenantBackchannelApiSource.cs
+    startLine: 37
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Sources
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource%602\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public TenantBackchannelApiSource(TService service)
+    parameters:
+    - id: service
+      type: '{TService}'
+      description: The service to use for API interaction.
+    content.vb: Public Sub New(service As TService)
+  overload: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.#ctor*
+  nameWithType.vb: TenantBackchannelApiSource(Of TTenant, TService).TenantBackchannelApiSource(TService)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource(Of TTenant, TService).TenantBackchannelApiSource(TService)
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.Service
+  commentId: P:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.Service
+  id: Service
+  parent: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+  langs:
+  - csharp
+  - vb
+  name: Service
+  nameWithType: TenantBackchannelApiSource<TTenant, TService>.Service
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource<TTenant, TService>.Service
+  type: Property
+  source:
+    remote:
+      path: src/Sources/TenantBackchannelApiSource.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: Service
+    path: Sources/TenantBackchannelApiSource.cs
+    startLine: 46
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Sources
+  summary: "\nGets the service.\n"
+  example: []
+  syntax:
+    content: public TService Service { get; }
+    parameters: []
+    return:
+      type: '{TService}'
+      description: The service.
+    content.vb: Public ReadOnly Property Service As TService
+  overload: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.Service*
+  nameWithType.vb: TenantBackchannelApiSource(Of TTenant, TService).Service
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource(Of TTenant, TService).Service
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.FindTenantAsync(System.String,CancellationToken)
+  commentId: M:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.FindTenantAsync(System.String,CancellationToken)
+  id: FindTenantAsync(System.String,CancellationToken)
+  parent: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+  langs:
+  - csharp
+  - vb
+  name: FindTenantAsync(String, CancellationToken)
+  nameWithType: TenantBackchannelApiSource<TTenant, TService>.FindTenantAsync(String, CancellationToken)
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource<TTenant, TService>.FindTenantAsync(System.String, CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/Sources/TenantBackchannelApiSource.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: FindTenantAsync
+    path: Sources/TenantBackchannelApiSource.cs
+    startLine: 54
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant.Sources
+  summary: "\nThis method implements the tenant search logic for an external tenant source.\n"
+  example: []
+  syntax:
+    content: public async Task<TTenant> FindTenantAsync(string tenantIdentifier, CancellationToken cancellationToken = null)
+    parameters:
+    - id: tenantIdentifier
+      type: System.String
+      description: The tenant identifier to find.
+    - id: cancellationToken
+      type: CancellationToken
+      description: Contains an optional cancellation token.
+    return:
+      type: Task{{TTenant}}
+      description: Returns the <xref href="Talegen.AspNetCore.Multitenant.ITenant" data-throw-if-not-resolved="false"></xref> object if found.
+    content.vb: Public Function FindTenantAsync(tenantIdentifier As String, cancellationToken As CancellationToken = Nothing) As Task(Of TTenant)
+  overload: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.FindTenantAsync*
+  implements:
+  - Talegen.AspNetCore.Multitenant.ITenantSource{{TTenant}}.FindTenantAsync(System.String,CancellationToken)
+  nameWithType.vb: TenantBackchannelApiSource(Of TTenant, TService).FindTenantAsync(String, CancellationToken)
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource(Of TTenant, TService).FindTenantAsync(System.String, CancellationToken)
+references:
+- uid: Talegen.AspNetCore.Multitenant.ITenantSource`1
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantSource`1
+  name: ITenantSource<TTenant>
+  nameWithType: ITenantSource<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.ITenantSource<TTenant>
+  nameWithType.vb: ITenantSource(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantSource(Of TTenant)
+  name.vb: ITenantSource(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantSource`1
+    name: ITenantSource
+    nameWithType: ITenantSource
+    fullName: Talegen.AspNetCore.Multitenant.ITenantSource
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantSource`1
+    name: ITenantSource
+    nameWithType: ITenantSource
+    fullName: Talegen.AspNetCore.Multitenant.ITenantSource
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.Sources
+  commentId: N:Talegen.AspNetCore.Multitenant.Sources
+  name: Talegen.AspNetCore.Multitenant.Sources
+  nameWithType: Talegen.AspNetCore.Multitenant.Sources
+  fullName: Talegen.AspNetCore.Multitenant.Sources
+- uid: Talegen.AspNetCore.Multitenant.ITenantSource{{TTenant}}
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantSource{`0}
+  parent: Talegen.AspNetCore.Multitenant
+  definition: Talegen.AspNetCore.Multitenant.ITenantSource`1
+  name: ITenantSource<TTenant>
+  nameWithType: ITenantSource<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.ITenantSource<TTenant>
+  nameWithType.vb: ITenantSource(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantSource(Of TTenant)
+  name.vb: ITenantSource(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantSource`1
+    name: ITenantSource
+    nameWithType: ITenantSource
+    fullName: Talegen.AspNetCore.Multitenant.ITenantSource
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantSource`1
+    name: ITenantSource
+    nameWithType: ITenantSource
+    fullName: Talegen.AspNetCore.Multitenant.ITenantSource
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+  commentId: T:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+  name: TenantBackchannelApiSource<TTenant, TService>
+  nameWithType: TenantBackchannelApiSource<TTenant, TService>
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource<TTenant, TService>
+  nameWithType.vb: TenantBackchannelApiSource(Of TTenant, TService)
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource(Of TTenant, TService)
+  name.vb: TenantBackchannelApiSource(Of TTenant, TService)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+    name: TenantBackchannelApiSource
+    nameWithType: TenantBackchannelApiSource
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TService
+    nameWithType: TService
+    fullName: TService
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2
+    name: TenantBackchannelApiSource
+    nameWithType: TenantBackchannelApiSource
+    fullName: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TService
+    nameWithType: TService
+    fullName: TService
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.#ctor*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.#ctor
+  name: TenantBackchannelApiSource
+  nameWithType: TenantBackchannelApiSource<TTenant, TService>.TenantBackchannelApiSource
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource<TTenant, TService>.TenantBackchannelApiSource
+  nameWithType.vb: TenantBackchannelApiSource(Of TTenant, TService).TenantBackchannelApiSource
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource(Of TTenant, TService).TenantBackchannelApiSource
+- uid: '{TService}'
+  commentId: '!:TService'
+  definition: TService
+  name: TService
+  nameWithType: TService
+  fullName: TService
+- uid: TService
+  name: TService
+  nameWithType: TService
+  fullName: TService
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.Service*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.Service
+  name: Service
+  nameWithType: TenantBackchannelApiSource<TTenant, TService>.Service
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource<TTenant, TService>.Service
+  nameWithType.vb: TenantBackchannelApiSource(Of TTenant, TService).Service
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource(Of TTenant, TService).Service
+- uid: Talegen.AspNetCore.Multitenant.ITenant
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenant
+  parent: Talegen.AspNetCore.Multitenant
+  name: ITenant
+  nameWithType: ITenant
+  fullName: Talegen.AspNetCore.Multitenant.ITenant
+- uid: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.FindTenantAsync*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource`2.FindTenantAsync
+  name: FindTenantAsync
+  nameWithType: TenantBackchannelApiSource<TTenant, TService>.FindTenantAsync
+  fullName: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource<TTenant, TService>.FindTenantAsync
+  nameWithType.vb: TenantBackchannelApiSource(Of TTenant, TService).FindTenantAsync
+  fullName.vb: Talegen.AspNetCore.Multitenant.Sources.TenantBackchannelApiSource(Of TTenant, TService).FindTenantAsync
+- uid: Talegen.AspNetCore.Multitenant.ITenantSource{{TTenant}}.FindTenantAsync(System.String,CancellationToken)
+  commentId: M:Talegen.AspNetCore.Multitenant.ITenantSource{`0}.FindTenantAsync(System.String,CancellationToken)
+  parent: Talegen.AspNetCore.Multitenant.ITenantSource{{TTenant}}
+  definition: Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync(System.String,CancellationToken)
+  name: FindTenantAsync(String, CancellationToken)
+  nameWithType: ITenantSource<TTenant>.FindTenantAsync(String, CancellationToken)
+  fullName: Talegen.AspNetCore.Multitenant.ITenantSource<TTenant>.FindTenantAsync(System.String, CancellationToken)
+  nameWithType.vb: ITenantSource(Of TTenant).FindTenantAsync(String, CancellationToken)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantSource(Of TTenant).FindTenantAsync(System.String, CancellationToken)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync(System.String,CancellationToken)
+    name: FindTenantAsync
+    nameWithType: ITenantSource<TTenant>.FindTenantAsync
+    fullName: Talegen.AspNetCore.Multitenant.ITenantSource<TTenant>.FindTenantAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync(System.String,CancellationToken)
+    name: FindTenantAsync
+    nameWithType: ITenantSource(Of TTenant).FindTenantAsync
+    fullName: Talegen.AspNetCore.Multitenant.ITenantSource(Of TTenant).FindTenantAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: Task{{TTenant}}
+  commentId: '!:Task{`0}'
+  definition: Task`1
+  name: Task<TTenant>
+  nameWithType: Task<TTenant>
+  fullName: Task<TTenant>
+  nameWithType.vb: Task(Of TTenant)
+  fullName.vb: Task(Of TTenant)
+  name.vb: Task(Of TTenant)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync(System.String,CancellationToken)
+  commentId: M:Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync(System.String,CancellationToken)
+  isExternal: true
+  name: FindTenantAsync(String, CancellationToken)
+  nameWithType: ITenantSource<TTenant>.FindTenantAsync(String, CancellationToken)
+  fullName: Talegen.AspNetCore.Multitenant.ITenantSource<TTenant>.FindTenantAsync(System.String, CancellationToken)
+  nameWithType.vb: ITenantSource(Of TTenant).FindTenantAsync(String, CancellationToken)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantSource(Of TTenant).FindTenantAsync(System.String, CancellationToken)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync(System.String,CancellationToken)
+    name: FindTenantAsync
+    nameWithType: ITenantSource<TTenant>.FindTenantAsync
+    fullName: Talegen.AspNetCore.Multitenant.ITenantSource<TTenant>.FindTenantAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync(System.String,CancellationToken)
+    name: FindTenantAsync
+    nameWithType: ITenantSource(Of TTenant).FindTenantAsync
+    fullName: Talegen.AspNetCore.Multitenant.ITenantSource(Of TTenant).FindTenantAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

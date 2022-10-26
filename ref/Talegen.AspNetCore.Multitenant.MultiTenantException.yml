@@ -1,0 +1,107 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.MultiTenantException
+  commentId: T:Talegen.AspNetCore.Multitenant.MultiTenantException
+  id: MultiTenantException
+  parent: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.MultiTenantException.#ctor(System.String,Exception)
+  langs:
+  - csharp
+  - vb
+  name: MultiTenantException
+  nameWithType: MultiTenantException
+  fullName: Talegen.AspNetCore.Multitenant.MultiTenantException
+  type: Class
+  source:
+    remote:
+      path: src/MultiTenantException.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: MultiTenantException
+    path: MultiTenantException.cs
+    startLine: 24
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThis class implements a custom exception for multi-tenant interactions.\n"
+  example: []
+  syntax:
+    content: 'public class MultiTenantException : Exception'
+    content.vb: >-
+      Public Class MultiTenantException
+          Inherits Exception
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Talegen.AspNetCore.Multitenant.MultiTenantException.#ctor(System.String,Exception)
+  commentId: M:Talegen.AspNetCore.Multitenant.MultiTenantException.#ctor(System.String,Exception)
+  id: '#ctor(System.String,Exception)'
+  parent: Talegen.AspNetCore.Multitenant.MultiTenantException
+  langs:
+  - csharp
+  - vb
+  name: MultiTenantException(String, Exception)
+  nameWithType: MultiTenantException.MultiTenantException(String, Exception)
+  fullName: Talegen.AspNetCore.Multitenant.MultiTenantException.MultiTenantException(System.String, Exception)
+  type: Constructor
+  source:
+    remote:
+      path: src/MultiTenantException.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: .ctor
+    path: MultiTenantException.cs
+    startLine: 33
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.AspNetCore.Multitenant.MultiTenantException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public MultiTenantException(string message, Exception innerException = null)
+    parameters:
+    - id: message
+      type: System.String
+      description: The error message that explains the reason for the exception.
+    - id: innerException
+      type: Exception
+      description: "\nThe exception that is the cause of the current exception, or a null reference ( <xref uid=\"langword_csharp_Nothing\" name=\"Nothing\" href=\"\"></xref> in Visual Basic) if no inner exception is specified.\n"
+    content.vb: Public Sub New(message As String, innerException As Exception = Nothing)
+  overload: Talegen.AspNetCore.Multitenant.MultiTenantException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: Talegen.AspNetCore.Multitenant.MultiTenantException
+  commentId: T:Talegen.AspNetCore.Multitenant.MultiTenantException
+  name: MultiTenantException
+  nameWithType: MultiTenantException
+  fullName: Talegen.AspNetCore.Multitenant.MultiTenantException
+- uid: Talegen.AspNetCore.Multitenant.MultiTenantException.#ctor*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.MultiTenantException.#ctor
+  name: MultiTenantException
+  nameWithType: MultiTenantException.MultiTenantException
+  fullName: Talegen.AspNetCore.Multitenant.MultiTenantException.MultiTenantException
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Exception
+  commentId: '!:Exception'
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: Exception

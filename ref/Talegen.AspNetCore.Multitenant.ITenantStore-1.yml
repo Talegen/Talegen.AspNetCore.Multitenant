@@ -1,0 +1,392 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.ITenantStore`1
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantStore`1
+  id: ITenantStore`1
+  parent: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.ITenantStore`1.AllTenantsAsync(CancellationToken)
+  - Talegen.AspNetCore.Multitenant.ITenantStore`1.GetByIdentifierAsync(System.String,CancellationToken)
+  - Talegen.AspNetCore.Multitenant.ITenantStore`1.TryAddAsync(`0,CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: ITenantStore<TTenant>
+  nameWithType: ITenantStore<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.ITenantStore<TTenant>
+  type: Interface
+  source:
+    remote:
+      path: src/ITenantStore.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: ITenantStore
+    path: ITenantStore.cs
+    startLine: 26
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThis interface defines the minimum implementation of a tenant store.\n"
+  example: []
+  syntax:
+    content: >-
+      public interface ITenantStore<TTenant>
+          where TTenant : class, ITenant, new()
+    typeParameters:
+    - id: TTenant
+      description: The type of the tenant.
+    content.vb: Public Interface ITenantStore(Of TTenant As {Class, ITenant, New})
+  nameWithType.vb: ITenantStore(Of TTenant)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantStore(Of TTenant)
+  name.vb: ITenantStore(Of TTenant)
+- uid: Talegen.AspNetCore.Multitenant.ITenantStore`1.AllTenantsAsync(CancellationToken)
+  commentId: M:Talegen.AspNetCore.Multitenant.ITenantStore`1.AllTenantsAsync(CancellationToken)
+  id: AllTenantsAsync(CancellationToken)
+  parent: Talegen.AspNetCore.Multitenant.ITenantStore`1
+  langs:
+  - csharp
+  - vb
+  name: AllTenantsAsync(CancellationToken)
+  nameWithType: ITenantStore<TTenant>.AllTenantsAsync(CancellationToken)
+  fullName: Talegen.AspNetCore.Multitenant.ITenantStore<TTenant>.AllTenantsAsync(CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/ITenantStore.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: AllTenantsAsync
+    path: ITenantStore.cs
+    startLine: 33
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nReturns all of the tenants from the cache storage.\n"
+  example: []
+  syntax:
+    content: Task<List<TTenant>> AllTenantsAsync(CancellationToken cancellationToken = null)
+    parameters:
+    - id: cancellationToken
+      type: CancellationToken
+      description: Contains an optional cancellation token.
+    return:
+      type: Task{List{{TTenant}}}
+      description: Returns a list of all tenants found in the cache storage.
+    content.vb: Function AllTenantsAsync(cancellationToken As CancellationToken = Nothing) As Task(Of List(Of TTenant))
+  overload: Talegen.AspNetCore.Multitenant.ITenantStore`1.AllTenantsAsync*
+  nameWithType.vb: ITenantStore(Of TTenant).AllTenantsAsync(CancellationToken)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantStore(Of TTenant).AllTenantsAsync(CancellationToken)
+- uid: Talegen.AspNetCore.Multitenant.ITenantStore`1.GetByIdentifierAsync(System.String,CancellationToken)
+  commentId: M:Talegen.AspNetCore.Multitenant.ITenantStore`1.GetByIdentifierAsync(System.String,CancellationToken)
+  id: GetByIdentifierAsync(System.String,CancellationToken)
+  parent: Talegen.AspNetCore.Multitenant.ITenantStore`1
+  langs:
+  - csharp
+  - vb
+  name: GetByIdentifierAsync(String, CancellationToken)
+  nameWithType: ITenantStore<TTenant>.GetByIdentifierAsync(String, CancellationToken)
+  fullName: Talegen.AspNetCore.Multitenant.ITenantStore<TTenant>.GetByIdentifierAsync(System.String, CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/ITenantStore.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: GetByIdentifierAsync
+    path: ITenantStore.cs
+    startLine: 41
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nTries the get the tenant record by the tenant identifier asynchronously.\n"
+  example: []
+  syntax:
+    content: Task<TTenant> GetByIdentifierAsync(string identifier, CancellationToken cancellationToken = null)
+    parameters:
+    - id: identifier
+      type: System.String
+      description: The tenant identifier to find.
+    - id: cancellationToken
+      type: CancellationToken
+      description: Contains an optional cancellation token.
+    return:
+      type: Task{{TTenant}}
+      description: Returns The tenant record if found.
+    content.vb: Function GetByIdentifierAsync(identifier As String, cancellationToken As CancellationToken = Nothing) As Task(Of TTenant)
+  overload: Talegen.AspNetCore.Multitenant.ITenantStore`1.GetByIdentifierAsync*
+  nameWithType.vb: ITenantStore(Of TTenant).GetByIdentifierAsync(String, CancellationToken)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantStore(Of TTenant).GetByIdentifierAsync(System.String, CancellationToken)
+- uid: Talegen.AspNetCore.Multitenant.ITenantStore`1.TryAddAsync(`0,CancellationToken)
+  commentId: M:Talegen.AspNetCore.Multitenant.ITenantStore`1.TryAddAsync(`0,CancellationToken)
+  id: TryAddAsync(`0,CancellationToken)
+  parent: Talegen.AspNetCore.Multitenant.ITenantStore`1
+  langs:
+  - csharp
+  - vb
+  name: TryAddAsync(TTenant, CancellationToken)
+  nameWithType: ITenantStore<TTenant>.TryAddAsync(TTenant, CancellationToken)
+  fullName: Talegen.AspNetCore.Multitenant.ITenantStore<TTenant>.TryAddAsync(TTenant, CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/ITenantStore.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: TryAddAsync
+    path: ITenantStore.cs
+    startLine: 49
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nTries to add a new Tenant to the cache storage.\n"
+  example: []
+  syntax:
+    content: Task<bool> TryAddAsync(TTenant tenantInfo, CancellationToken cancellationToken = null)
+    parameters:
+    - id: tenantInfo
+      type: '{TTenant}'
+      description: The tenant information to add.
+    - id: cancellationToken
+      type: CancellationToken
+      description: Contains an optional cancellation token.
+    return:
+      type: Task{System.Boolean}
+      description: Returns a value indicating whether the record was added.
+    content.vb: Function TryAddAsync(tenantInfo As TTenant, cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)
+  overload: Talegen.AspNetCore.Multitenant.ITenantStore`1.TryAddAsync*
+  nameWithType.vb: ITenantStore(Of TTenant).TryAddAsync(TTenant, CancellationToken)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantStore(Of TTenant).TryAddAsync(TTenant, CancellationToken)
+references:
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: Talegen.AspNetCore.Multitenant.ITenantStore`1.AllTenantsAsync*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.ITenantStore`1.AllTenantsAsync
+  name: AllTenantsAsync
+  nameWithType: ITenantStore<TTenant>.AllTenantsAsync
+  fullName: Talegen.AspNetCore.Multitenant.ITenantStore<TTenant>.AllTenantsAsync
+  nameWithType.vb: ITenantStore(Of TTenant).AllTenantsAsync
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantStore(Of TTenant).AllTenantsAsync
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: Task{List{{TTenant}}}
+  commentId: '!:Task{List{`0}}'
+  definition: Task`1
+  name: Task<List<TTenant>>
+  nameWithType: Task<List<TTenant>>
+  fullName: Task<List<TTenant>>
+  nameWithType.vb: Task(Of List(Of TTenant))
+  fullName.vb: Task(Of List(Of TTenant))
+  name.vb: Task(Of List(Of TTenant))
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.ITenantStore`1.GetByIdentifierAsync*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.ITenantStore`1.GetByIdentifierAsync
+  name: GetByIdentifierAsync
+  nameWithType: ITenantStore<TTenant>.GetByIdentifierAsync
+  fullName: Talegen.AspNetCore.Multitenant.ITenantStore<TTenant>.GetByIdentifierAsync
+  nameWithType.vb: ITenantStore(Of TTenant).GetByIdentifierAsync
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantStore(Of TTenant).GetByIdentifierAsync
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Task{{TTenant}}
+  commentId: '!:Task{`0}'
+  definition: Task`1
+  name: Task<TTenant>
+  nameWithType: Task<TTenant>
+  fullName: Task<TTenant>
+  nameWithType.vb: Task(Of TTenant)
+  fullName.vb: Task(Of TTenant)
+  name.vb: Task(Of TTenant)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.ITenantStore`1.TryAddAsync*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.ITenantStore`1.TryAddAsync
+  name: TryAddAsync
+  nameWithType: ITenantStore<TTenant>.TryAddAsync
+  fullName: Talegen.AspNetCore.Multitenant.ITenantStore<TTenant>.TryAddAsync
+  nameWithType.vb: ITenantStore(Of TTenant).TryAddAsync
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantStore(Of TTenant).TryAddAsync
+- uid: '{TTenant}'
+  commentId: '!:TTenant'
+  definition: TTenant
+  name: TTenant
+  nameWithType: TTenant
+  fullName: TTenant
+- uid: Task{System.Boolean}
+  commentId: '!:Task{System.Boolean}'
+  definition: Task`1
+  name: Task<Boolean>
+  nameWithType: Task<Boolean>
+  fullName: Task<System.Boolean>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: Task(Of System.Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TTenant
+  name: TTenant
+  nameWithType: TTenant
+  fullName: TTenant

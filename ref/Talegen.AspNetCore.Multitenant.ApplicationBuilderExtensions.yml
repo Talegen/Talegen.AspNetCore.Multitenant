@@ -1,0 +1,119 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions
+  commentId: T:Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions
+  id: ApplicationBuilderExtensions
+  parent: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy``1(IApplicationBuilder,ILogger)
+  langs:
+  - csharp
+  - vb
+  name: ApplicationBuilderExtensions
+  nameWithType: ApplicationBuilderExtensions
+  fullName: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions
+  type: Class
+  source:
+    remote:
+      path: src/ApplicationBuilderExtensions.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: ApplicationBuilderExtensions
+    path: ApplicationBuilderExtensions.cs
+    startLine: 24
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThis class contains application builder extensions for implementing multi-tenant context loader in the startup of the application.\n"
+  example: []
+  syntax:
+    content: 'public static class ApplicationBuilderExtensions : object'
+    content.vb: >-
+      Public Module ApplicationBuilderExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy``1(IApplicationBuilder,ILogger)
+  commentId: M:Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy``1(IApplicationBuilder,ILogger)
+  id: UseMultiTenancy``1(IApplicationBuilder,ILogger)
+  isExtensionMethod: true
+  parent: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: UseMultiTenancy<TTenant>(IApplicationBuilder, ILogger)
+  nameWithType: ApplicationBuilderExtensions.UseMultiTenancy<TTenant>(IApplicationBuilder, ILogger)
+  fullName: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy<TTenant>(IApplicationBuilder, ILogger)
+  type: Method
+  source:
+    remote:
+      path: src/ApplicationBuilderExtensions.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: UseMultiTenancy
+    path: ApplicationBuilderExtensions.cs
+    startLine: 33
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nUses the multi tenancy middleware class.\n"
+  example: []
+  syntax:
+    content: >-
+      public static IApplicationBuilder UseMultiTenancy<TTenant>(this IApplicationBuilder builder, ILogger logger = null)
+          where TTenant : class, ITenant, new()
+    parameters:
+    - id: builder
+      type: IApplicationBuilder
+      description: The builder.
+    - id: logger
+      type: ILogger
+      description: Contains a logger instance.
+    typeParameters:
+    - id: TTenant
+      description: The type of the tenant.
+    return:
+      type: IApplicationBuilder
+      description: Returns the application builder.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UseMultiTenancy(Of TTenant As {Class, ITenant, New})(builder As IApplicationBuilder, logger As ILogger = Nothing) As IApplicationBuilder
+  overload: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy*
+  nameWithType.vb: ApplicationBuilderExtensions.UseMultiTenancy(Of TTenant)(IApplicationBuilder, ILogger)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy(Of TTenant)(IApplicationBuilder, ILogger)
+  name.vb: UseMultiTenancy(Of TTenant)(IApplicationBuilder, ILogger)
+references:
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy
+  name: UseMultiTenancy
+  nameWithType: ApplicationBuilderExtensions.UseMultiTenancy
+  fullName: Talegen.AspNetCore.Multitenant.ApplicationBuilderExtensions.UseMultiTenancy
+- uid: IApplicationBuilder
+  isExternal: true
+  name: IApplicationBuilder
+  nameWithType: IApplicationBuilder
+  fullName: IApplicationBuilder
+- uid: ILogger
+  isExternal: true
+  name: ILogger
+  nameWithType: ILogger
+  fullName: ILogger

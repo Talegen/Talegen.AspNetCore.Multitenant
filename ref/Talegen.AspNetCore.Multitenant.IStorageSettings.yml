@@ -1,0 +1,88 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.IStorageSettings
+  commentId: T:Talegen.AspNetCore.Multitenant.IStorageSettings
+  id: IStorageSettings
+  parent: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.IStorageSettings.ApplicationName
+  langs:
+  - csharp
+  - vb
+  name: IStorageSettings
+  nameWithType: IStorageSettings
+  fullName: Talegen.AspNetCore.Multitenant.IStorageSettings
+  type: Interface
+  source:
+    remote:
+      path: src/IStorageSettings.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: IStorageSettings
+    path: IStorageSettings.cs
+    startLine: 5
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThis interface defines the minimum implementation of a storage settings class.\n"
+  example: []
+  syntax:
+    content: public interface IStorageSettings
+    content.vb: Public Interface IStorageSettings
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Talegen.AspNetCore.Multitenant.IStorageSettings.ApplicationName
+  commentId: P:Talegen.AspNetCore.Multitenant.IStorageSettings.ApplicationName
+  id: ApplicationName
+  parent: Talegen.AspNetCore.Multitenant.IStorageSettings
+  langs:
+  - csharp
+  - vb
+  name: ApplicationName
+  nameWithType: IStorageSettings.ApplicationName
+  fullName: Talegen.AspNetCore.Multitenant.IStorageSettings.ApplicationName
+  type: Property
+  source:
+    remote:
+      path: src/IStorageSettings.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: ApplicationName
+    path: IStorageSettings.cs
+    startLine: 11
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nGets or sets the name of the application.\n"
+  example: []
+  syntax:
+    content: string ApplicationName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The name of the application.
+    content.vb: Property ApplicationName As String
+  overload: Talegen.AspNetCore.Multitenant.IStorageSettings.ApplicationName*
+  modifiers.csharp:
+  - get
+  - set
+references:
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: Talegen.AspNetCore.Multitenant.IStorageSettings.ApplicationName*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.IStorageSettings.ApplicationName
+  name: ApplicationName
+  nameWithType: IStorageSettings.ApplicationName
+  fullName: Talegen.AspNetCore.Multitenant.IStorageSettings.ApplicationName
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

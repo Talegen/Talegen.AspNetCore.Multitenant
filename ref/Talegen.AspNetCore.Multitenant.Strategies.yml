@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.Strategies
+  commentId: N:Talegen.AspNetCore.Multitenant.Strategies
+  id: Talegen.AspNetCore.Multitenant.Strategies
+  children:
+  - Talegen.AspNetCore.Multitenant.Strategies.TenantHeaderResolverStrategy
+  - Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy
+  - Talegen.AspNetCore.Multitenant.Strategies.TenantRouteResolverStrategy
+  langs:
+  - csharp
+  - vb
+  name: Talegen.AspNetCore.Multitenant.Strategies
+  nameWithType: Talegen.AspNetCore.Multitenant.Strategies
+  fullName: Talegen.AspNetCore.Multitenant.Strategies
+  type: Namespace
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+references:
+- uid: Talegen.AspNetCore.Multitenant.Strategies.TenantHeaderResolverStrategy
+  commentId: T:Talegen.AspNetCore.Multitenant.Strategies.TenantHeaderResolverStrategy
+  name: TenantHeaderResolverStrategy
+  nameWithType: TenantHeaderResolverStrategy
+  fullName: Talegen.AspNetCore.Multitenant.Strategies.TenantHeaderResolverStrategy
+- uid: Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy
+  commentId: T:Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy
+  name: TenantHostResolverStrategy
+  nameWithType: TenantHostResolverStrategy
+  fullName: Talegen.AspNetCore.Multitenant.Strategies.TenantHostResolverStrategy
+- uid: Talegen.AspNetCore.Multitenant.Strategies.TenantRouteResolverStrategy
+  commentId: T:Talegen.AspNetCore.Multitenant.Strategies.TenantRouteResolverStrategy
+  name: TenantRouteResolverStrategy
+  nameWithType: TenantRouteResolverStrategy
+  fullName: Talegen.AspNetCore.Multitenant.Strategies.TenantRouteResolverStrategy

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TenantApiSourceBackchannelExtensions
    | Talegen ASP.net Core Multitenancy Middleware library ">
-    <meta name="generator" content="docfx 2.56.6.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,35 +81,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TenantApiSourceBackchannelExtensions</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Talegen.AspNetCore.Multitenant.Sources.html">Talegen.AspNetCore.Multitenant.Sources</a></h6>
   <h6><strong>Assembly</strong>: Talegen.AspNetCore.Multitenant.dll</h6>
   <h5 id="Talegen_AspNetCore_Multitenant_Sources_TenantApiSourceBackchannelExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class TenantApiSourceBackchannelExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class TenantApiSourceBackchannelExtensions : object</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -118,11 +94,11 @@
     <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Sources_TenantApiSourceBackchannelExtensions_ToBackchannelConfig_Talegen_AspNetCore_Multitenant_Configuration_TenantSettings_.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/Sources/TenantApiSourceBackchannelExtensions.cs/#L40">View Source</a>
+    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/Sources/TenantApiSourceBackchannelExtensions.cs/#L40">View Source</a>
   </span>
   <a id="Talegen_AspNetCore_Multitenant_Sources_TenantApiSourceBackchannelExtensions_ToBackchannelConfig_" data-uid="Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig*"></a>
   <h4 id="Talegen_AspNetCore_Multitenant_Sources_TenantApiSourceBackchannelExtensions_ToBackchannelConfig_Talegen_AspNetCore_Multitenant_Configuration_TenantSettings_" data-uid="Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions.ToBackchannelConfig(Talegen.AspNetCore.Multitenant.Configuration.TenantSettings)">ToBackchannelConfig(TenantSettings)</h4>
-  <div class="markdown level1 summary"><p>Converts a <a class="xref" href="Talegen.AspNetCore.Multitenant.Configuration.TenantSettings.html">TenantSettings</a> dictionary into a <span class="xref">Talegen.Backchannel.BackchannelConfig</span> object used to setup the backchannel client for resource
+  <div class="markdown level1 summary"><p>Converts a <a class="xref" href="Talegen.AspNetCore.Multitenant.Configuration.TenantSettings.html">TenantSettings</a> dictionary into a <see cref="!:BackchannelConfig"></see> object used to setup the backchannel client for resource
 to resource client API communication via a client credentials REST call.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -158,24 +134,8 @@ to resource client API communication via a client credentials REST call.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Talegen.Backchannel.BackchannelConfig</span></td>
-        <td><p>Returns a new <span class="xref">Talegen.Backchannel.BackchannelConfig</span> with properties populated from the required values stored in the <a class="xref" href="Talegen.AspNetCore.Multitenant.Configuration.TenantSettings.html">TenantSettings</a> dictionary.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentException</span></td>
-        <td><p>AuthorityUri or ClientId or Scopes or Secret or ResourceUri</p>
+        <td><span class="xref">BackchannelConfig</span></td>
+        <td><p>Returns a new <see cref="!:BackchannelConfig"></see> with properties populated from the required values stored in the <a class="xref" href="Talegen.AspNetCore.Multitenant.Configuration.TenantSettings.html">TenantSettings</a> dictionary.</p>
 </td>
       </tr>
     </tbody>
@@ -191,7 +151,7 @@ to resource client API communication via a client credentials REST call.</p>
                     <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/new/main/apiSpec/new?filename=Talegen_AspNetCore_Multitenant_Sources_TenantApiSourceBackchannelExtensions.md&amp;value=---%0Auid%3A%20Talegen.AspNetCore.Multitenant.Sources.TenantApiSourceBackchannelExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/main/src/Sources/TenantApiSourceBackchannelExtensions.cs/#L29" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Talegen/Talegen.AspNetCore.Multitenant/blob/develop/src/Sources/TenantApiSourceBackchannelExtensions.cs/#L29" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

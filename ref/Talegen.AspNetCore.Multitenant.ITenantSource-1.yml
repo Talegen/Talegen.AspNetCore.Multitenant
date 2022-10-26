@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.ITenantSource`1
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenantSource`1
+  id: ITenantSource`1
+  parent: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync(System.String,CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: ITenantSource<TTenant>
+  nameWithType: ITenantSource<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.ITenantSource<TTenant>
+  type: Interface
+  source:
+    remote:
+      path: src/ITenantSource.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: ITenantSource
+    path: ITenantSource.cs
+    startLine: 25
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThis interface defines the minimum implementation of an external tenant source store.\n"
+  example: []
+  syntax:
+    content: >-
+      public interface ITenantSource<TTenant>
+          where TTenant : class, ITenant, new()
+    typeParameters:
+    - id: TTenant
+      description: The type of the tenant model.
+    content.vb: Public Interface ITenantSource(Of TTenant As {Class, ITenant, New})
+  nameWithType.vb: ITenantSource(Of TTenant)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantSource(Of TTenant)
+  name.vb: ITenantSource(Of TTenant)
+- uid: Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync(System.String,CancellationToken)
+  commentId: M:Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync(System.String,CancellationToken)
+  id: FindTenantAsync(System.String,CancellationToken)
+  parent: Talegen.AspNetCore.Multitenant.ITenantSource`1
+  langs:
+  - csharp
+  - vb
+  name: FindTenantAsync(String, CancellationToken)
+  nameWithType: ITenantSource<TTenant>.FindTenantAsync(String, CancellationToken)
+  fullName: Talegen.AspNetCore.Multitenant.ITenantSource<TTenant>.FindTenantAsync(System.String, CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/ITenantSource.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: FindTenantAsync
+    path: ITenantSource.cs
+    startLine: 34
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThis method implements the tenant search logic for an external tenant source.\n"
+  example: []
+  syntax:
+    content: Task<TTenant> FindTenantAsync(string tenantIdentifier, CancellationToken cancellationToken = null)
+    parameters:
+    - id: tenantIdentifier
+      type: System.String
+      description: The tenant identifier to find.
+    - id: cancellationToken
+      type: CancellationToken
+      description: Contains an optional cancellation token.
+    return:
+      type: Task{{TTenant}}
+      description: Returns the <xref href="Talegen.AspNetCore.Multitenant.ITenant" data-throw-if-not-resolved="false"></xref> object if found.
+    content.vb: Function FindTenantAsync(tenantIdentifier As String, cancellationToken As CancellationToken = Nothing) As Task(Of TTenant)
+  overload: Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync*
+  nameWithType.vb: ITenantSource(Of TTenant).FindTenantAsync(String, CancellationToken)
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantSource(Of TTenant).FindTenantAsync(System.String, CancellationToken)
+references:
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: Talegen.AspNetCore.Multitenant.ITenant
+  commentId: T:Talegen.AspNetCore.Multitenant.ITenant
+  parent: Talegen.AspNetCore.Multitenant
+  name: ITenant
+  nameWithType: ITenant
+  fullName: Talegen.AspNetCore.Multitenant.ITenant
+- uid: Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.ITenantSource`1.FindTenantAsync
+  name: FindTenantAsync
+  nameWithType: ITenantSource<TTenant>.FindTenantAsync
+  fullName: Talegen.AspNetCore.Multitenant.ITenantSource<TTenant>.FindTenantAsync
+  nameWithType.vb: ITenantSource(Of TTenant).FindTenantAsync
+  fullName.vb: Talegen.AspNetCore.Multitenant.ITenantSource(Of TTenant).FindTenantAsync
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: Task{{TTenant}}
+  commentId: '!:Task{`0}'
+  definition: Task`1
+  name: Task<TTenant>
+  nameWithType: Task<TTenant>
+  fullName: Task<TTenant>
+  nameWithType.vb: Task(Of TTenant)
+  fullName.vb: Task(Of TTenant)
+  name.vb: Task(Of TTenant)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions
+  id: TenantServiceCollectionExtensions
+  parent: Talegen.AspNetCore.Multitenant
+  children:
+  - Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions.AddMultiTenancy``1(IServiceCollection)
+  langs:
+  - csharp
+  - vb
+  name: TenantServiceCollectionExtensions
+  nameWithType: TenantServiceCollectionExtensions
+  fullName: Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions
+  type: Class
+  source:
+    remote:
+      path: src/TenantServiceCollectionExtensions.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: TenantServiceCollectionExtensions
+    path: TenantServiceCollectionExtensions.cs
+    startLine: 23
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nThis class contains service collection extensions for creating a tenant resolver.\n"
+  example: []
+  syntax:
+    content: 'public static class TenantServiceCollectionExtensions : object'
+    content.vb: >-
+      Public Module TenantServiceCollectionExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions.AddMultiTenancy``1(IServiceCollection)
+  commentId: M:Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions.AddMultiTenancy``1(IServiceCollection)
+  id: AddMultiTenancy``1(IServiceCollection)
+  isExtensionMethod: true
+  parent: Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddMultiTenancy<TTenant>(IServiceCollection)
+  nameWithType: TenantServiceCollectionExtensions.AddMultiTenancy<TTenant>(IServiceCollection)
+  fullName: Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions.AddMultiTenancy<TTenant>(IServiceCollection)
+  type: Method
+  source:
+    remote:
+      path: src/TenantServiceCollectionExtensions.cs
+      branch: develop
+      repo: https://github.com/Talegen/Talegen.AspNetCore.Multitenant
+    id: AddMultiTenancy
+    path: TenantServiceCollectionExtensions.cs
+    startLine: 31
+  assemblies:
+  - Talegen.AspNetCore.Multitenant
+  namespace: Talegen.AspNetCore.Multitenant
+  summary: "\nAdds the multi tenancy.\n"
+  example: []
+  syntax:
+    content: >-
+      public static TenantBuilder<TTenant> AddMultiTenancy<TTenant>(this IServiceCollection services)
+          where TTenant : class, ITenant, new()
+    parameters:
+    - id: services
+      type: IServiceCollection
+      description: The services.
+    typeParameters:
+    - id: TTenant
+      description: The type of the tenant.
+    return:
+      type: Talegen.AspNetCore.Multitenant.TenantBuilder{{TTenant}}
+      description: Returns the tenant builder.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddMultiTenancy(Of TTenant As {Class, ITenant, New})(services As IServiceCollection) As TenantBuilder(Of TTenant)
+  overload: Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions.AddMultiTenancy*
+  nameWithType.vb: TenantServiceCollectionExtensions.AddMultiTenancy(Of TTenant)(IServiceCollection)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions.AddMultiTenancy(Of TTenant)(IServiceCollection)
+  name.vb: AddMultiTenancy(Of TTenant)(IServiceCollection)
+references:
+- uid: Talegen.AspNetCore.Multitenant
+  commentId: N:Talegen.AspNetCore.Multitenant
+  name: Talegen.AspNetCore.Multitenant
+  nameWithType: Talegen.AspNetCore.Multitenant
+  fullName: Talegen.AspNetCore.Multitenant
+- uid: Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions.AddMultiTenancy*
+  commentId: Overload:Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions.AddMultiTenancy
+  name: AddMultiTenancy
+  nameWithType: TenantServiceCollectionExtensions.AddMultiTenancy
+  fullName: Talegen.AspNetCore.Multitenant.TenantServiceCollectionExtensions.AddMultiTenancy
+- uid: IServiceCollection
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: IServiceCollection
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder{{TTenant}}
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantBuilder{``0}
+  parent: Talegen.AspNetCore.Multitenant
+  definition: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  name: TenantBuilder<TTenant>
+  nameWithType: TenantBuilder<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>
+  nameWithType.vb: TenantBuilder(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant)
+  name.vb: TenantBuilder(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+    name: TenantBuilder
+    nameWithType: TenantBuilder
+    fullName: Talegen.AspNetCore.Multitenant.TenantBuilder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+    name: TenantBuilder
+    nameWithType: TenantBuilder
+    fullName: Talegen.AspNetCore.Multitenant.TenantBuilder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  commentId: T:Talegen.AspNetCore.Multitenant.TenantBuilder`1
+  parent: Talegen.AspNetCore.Multitenant
+  name: TenantBuilder<TTenant>
+  nameWithType: TenantBuilder<TTenant>
+  fullName: Talegen.AspNetCore.Multitenant.TenantBuilder<TTenant>
+  nameWithType.vb: TenantBuilder(Of TTenant)
+  fullName.vb: Talegen.AspNetCore.Multitenant.TenantBuilder(Of TTenant)
+  name.vb: TenantBuilder(Of TTenant)
+  spec.csharp:
+  - uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+    name: TenantBuilder
+    nameWithType: TenantBuilder
+    fullName: Talegen.AspNetCore.Multitenant.TenantBuilder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Talegen.AspNetCore.Multitenant.TenantBuilder`1
+    name: TenantBuilder
+    nameWithType: TenantBuilder
+    fullName: Talegen.AspNetCore.Multitenant.TenantBuilder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTenant
+    nameWithType: TTenant
+    fullName: TTenant
+  - name: )
+    nameWithType: )
+    fullName: )

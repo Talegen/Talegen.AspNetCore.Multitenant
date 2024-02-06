@@ -1,52 +1,78 @@
 name: Publish to Nuget
 on:
-  push:
+ workflow_dispatch: # Allow running the workflow manually from GitHub UI
+ push:
     branches:
-      - main # Default release branch
+      - 'main'   # Run the workflow when pushing to the main branch
+ pull_request:
+   branches:
+     - '*'       # Run the workflow for all pull requests.
+ release:
+   types:
+     - published # Run the workflow when a new GitHub release is published 
+env:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+  DOTNET_NOLOGO: true
+  NuGetDirectory: ${{github.workspace}}/nuget
+  
 jobs:
-  publish:
-    name: build, pack & publish
+  create_nuget:
+    name: nuget prep
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+      with:
+       fetch-depth: 0 # Get all history to allow automatic versioning using MinVer
+    # Install the .NET SDK indicated in the global.json file
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+           dotnet-version: '8.0.x'
+           
+    # Create the NuGet package in the folder from the environment variable NuGetDirectory
+    - run: dotnet pack ./src/Talegen.AspNetCore.Multitenant.csproj --configuration Release --output ${{env.NuGetDirectory}}
 
-      - name: Setup dotnet core
-        uses: actions/setup-dotnet@v1
+    # Publish the NuGet package as an artifact, so they can be used in follow-on jobs
+    - uses: actions/upload-artifact@v4
+      with:
+        name: nuget
+        if-no-files-found: error
+        retention-days: 7
+        path: ${{env.NuGetDirectory}}/*.nupkg
+
+  run_test:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+           dotnet-version: '8.0.x'
+    - name: Run tests
+      run: dotnet test ./src/Talegen.AspNetCore.Multitenant.sln --configuration Release
+
+  deploy:
+    # Publish only when creating a GitHub Release
+    if: github.event_name == 'release'
+    runs-on: windows-latest
+    needs: [create_nuget,run_test]
+    steps:
+      # Download the NuGet package created in the previous job
+      - uses: actions/download-artifact@v4
         with:
-           dotnet-version: '6.0.x'
+          name: nuget
+          path: ${{env.NuGetDirectory}}
 
-      # Publish
-      - name: publish on version change
-        id: publish_nuget
-        #uses: rohith/publish-nuget@v2
-        uses: brandedoutcast/publish-nuget@v2.5.5
+      # Install the .NET SDK
+      - name: Setup .NET core
+        uses: actions/setup-dotnet@v4
         with:
-          # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: src/Talegen.AspNetCore.Multitenant.csproj
-          
-          # NuGet package id, used for version detection & defaults to project name
-          # PACKAGE_NAME: Core
-          
-          # Filepath with version info, relative to root of repository & defaults to PROJECT_FILE_PATH
-          # VERSION_FILE_PATH: Directory.Build.props
+           dotnet-version: '8.0.x'
 
-          # Regex pattern to extract version info in a capturing group
-          # VERSION_REGEX: <Version>(.*)<\/Version>
-          
-          # Useful with external providers like Nerdbank.GitVersioning, ignores VERSION_FILE_PATH & VERSION_REGEX
-          # VERSION_STATIC: 1.0.0
-
-          # Flag to toggle git tagging, enabled by default
-          # TAG_COMMIT: true
-
-          # Format of the git tag, [*] gets replaced with actual version
-          # TAG_FORMAT: v*
-
-          # API key to authenticate with NuGet server
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-
-          # NuGet server uri hosting the packages, defaults to https://api.nuget.org
-          # NUGET_SOURCE: https://api.nuget.org
-
-          # Flag to toggle pushing symbols along with nuget package to the server, disabled by default
-          # INCLUDE_SYMBOLS: false
+      # Publish all NuGet packages to NuGet.org
+      - name: Publish NuGet package
+        run: |
+          foreach($file in (Get-ChildItem "${{env.NuGetDirectory}}" -Recurse -Include *.nupkg)) {
+              dotnet nuget push $file --api-key "${{secrets.NUGET_API_KEY}}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+          }
+  

@@ -11,8 +11,8 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.AspNetCore.Multitenant</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Tenant</PackageTags>
-    <PackageReleaseNotes>Updated packages.</PackageReleaseNotes>
-    <Version>1.0.9.0</Version>
+    <PackageReleaseNotes>Updated packages. Refactored for docfx tool.</PackageReleaseNotes>
+    <Version>1.0.11.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <ApplicationIcon>assets\logo.ico</ApplicationIcon>
     <PackageIcon>logo.png</PackageIcon>
@@ -26,15 +26,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Internal\**" />
+    <EmbeddedResource Remove="Internal\**" />
+    <None Remove="Internal\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="docfx.console" Version="2.59.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
-    <PackageReference Include="Talegen.Backchannel" Version="1.0.6" />
-    <PackageReference Include="Talegen.Common.Core" Version="1.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.1" />
+    <PackageReference Include="Talegen.Backchannel" Version="1.0.7" />
+    <PackageReference Include="Talegen.Common.Core" Version="1.0.12" />
     <PackageReference Include="Vasont.AspnetCore.RedisClient" Version="1.0.3" />
   </ItemGroup>
 
@@ -58,10 +64,6 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Internal\" />
   </ItemGroup>
 
 </Project>

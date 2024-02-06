@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <Authors>Talegen, LLC</Authors>
     <Description>Multi-Tenant Support Strategy Library for ASP.net Core</Description>
     <Copyright>Copyright (c) Talegen, LLC. All rights reserved.</Copyright>
